@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Catalogues — Glass Hardware &amp; Bathroom Accessories | Top Line Glass Products Accessories</title>
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<style>
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid;border-color:#d6e2db}
+html{font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+body{background-color:#f8faf9;color:#0f2a1c}
+h1,h2,h3,h4{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.02em;font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+a:hover{color:inherit}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+ul,ol{list-style:none}
+</style>
+</helmet>
+<div style="display:flex;min-height:100vh;flex-direction:column">
+<dc-import name="SiteHeader" active="catalogues" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
+<main style="flex:1 1 0%">
+<div style="max-width:1240px;margin:0 auto;padding:32px 20px">
+  <nav aria-label="Breadcrumb" style="font-size:12px;line-height:16px;color:#4a5b52">
+    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
+      <li style="display:flex;align-items:center;gap:4px"><a href="Home.dc.html" style-hover="color:#0f2a1c">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:12px;width:12px;opacity:0.5"><path d="m9 18 6-6-6-6"></path></svg></li>
+      <li style="display:flex;align-items:center;gap:4px"><span style="color:#0f2a1c;font-weight:500">Catalogues</span></li>
+    </ol>
+  </nav>
+  <h1 style="font-size:36px;line-height:40px;margin-top:12px">Catalogues</h1>
+  <p style="color:#4a5b52;margin-top:8px;max-width:672px">Download our latest product catalogues covering glass hardware, bathroom accessories, and door control systems.</p>
+
+  <div style="margin-top:40px;display:grid;grid-template-columns:{{ cols }};gap:24px">
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="9">
+      <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer" download="{{ c.filename }}" onMouseEnter="{{ c.h.enter }}" onMouseLeave="{{ c.h.leave }}" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;display:flex;flex-direction:column;transition:transform 300ms ease, box-shadow 300ms ease;transform:{{ c.lift }};box-shadow:{{ c.shadow }}">
+        <div style="position:relative;aspect-ratio:1/1.414;overflow:hidden;background:#ffffff;display:flex;align-items:center;justify-content:center;padding:12px">
+          <img src="{{ c.thumb }}" alt="{{ c.alt }}" width="420" height="594" loading="lazy" decoding="async" style="max-height:100%;max-width:100%;object-fit:contain;transition:transform 500ms cubic-bezier(0.4,0,0.2,1);transform:{{ c.zoom }}">
+          <div style="position:absolute;top:12px;left:12px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;padding:4px 8px">PDF</div>
+          <div style="position:absolute;inset:0;background-image:linear-gradient(to top in oklab, rgb(0 0 0 / 0.6), transparent, transparent);opacity:{{ c.op }};transition:opacity 150ms cubic-bezier(0.4,0,0.2,1)"></div>
+          <div style="position:absolute;bottom:12px;right:12px;display:grid;height:40px;width:40px;place-items:center;border-radius:9999px;background:#ffffff;color:#006c35;opacity:{{ c.op }};translate:0 {{ c.ty }};transition:all 150ms cubic-bezier(0.4,0,0.2,1);box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
+          </div>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;flex:1 1 0%">
+          <h2 style="font-size:18px;line-height:1.25">{{ c.title }}</h2>
+          <div style="margin-top:auto;padding-top:16px;display:flex;align-items:center;justify-content:space-between;font-size:12px;line-height:16px;color:#4a5b52">
+            <span style="text-transform:uppercase;letter-spacing:0.18em">Download</span>
+            <span>{{ c.size }}</span>
+          </div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+
+  <div style="margin-top:48px;border-radius:16px;background:linear-gradient(135deg, #005228, #008a44);color:#f8faf9;padding:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+    <div>
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Need something specific?</div>
+      <div style="font-size:24px;line-height:32px;margin-top:4px;letter-spacing:-0.02em">Request a custom catalogue on WhatsApp.</div>
+    </div>
+    <a href="https://wa.me/966564508627?text=Hi%2C%20please%20share%20your%20latest%20product%20catalogues." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:12px 20px;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c;transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+      Request on WhatsApp
+    </a>
+  </div>
+</div>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,400px" style="display:block"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ORIGIN = "https://sahro-top-line-glass.lovable.app";
+const CATALOGUES = [
+  ["Master Catalogue - All Categories","Master_Catalogue_All_Categories.pdf","447b6262-c238-49f9-8844-fa11ab84f2b1/Master_Catalogue_All_Categories.pdf",19097596,"4e706ac3-066c-494b-a395-17e2f51d3604/Master_Catalogue_All_Categories_thumb.jpg"],
+  ["Luxurious Handle Series","Luxurious Handle Series.pdf","eb6e4673-5e17-4a61-8d11-d5c442a05065/Luxurious_Handle_Series.pdf",2021268,"d14b76c6-ad96-4d8d-a6b0-37c01d715ec9/Luxurious_Handle_Series_thumb.jpg"],
+  ["Glass Door Lock Series","Glass Door Lock Series.pdf","98aae034-0327-4000-bfb3-cf75711035c5/Glass_Door_Lock_Series.pdf",1057433,"136d33df-a37f-49d2-86fa-0acfd4731055/Glass_Door_Lock_Series_thumb.jpg"],
+  ["Balustrade Accesseories Series","Balustrade Accesseories Series.pdf","08e0fa45-472d-4bda-abcd-685d1ff9f31c/Balustrade_Accesseories_Series.pdf",1094243,"c447e66a-77b5-49a0-9dea-dade80942863/Balustrade_Accesseories_Series_thumb.jpg"],
+  ["Star Handrail Series","Star Handrail Series.pdf","2d523469-84a9-45d7-b11b-1a89c712e347/Star_Handrail_Series.pdf",471679,"5d287e67-e6c1-4485-84be-38d3d65fc133/Star_Handrail_Series_thumb.jpg"],
+  ["Silent Hydraulic Hinge Series","Silent Hydraulic Hinge Series.pdf","1ba5fc22-a728-4217-bd6a-41076762700d/Silent_Hydraulic_Hinge_Series.pdf",369699,"0f30dc88-4937-4a91-8252-d7fa09c26f04/Silent_Hydraulic_Hinge_Series_thumb.jpg"],
+  ["Door Closer Series","Door Closer Series.pdf","92951bd5-aabf-4b3b-bc87-ca5946874fee/Door_Closer_Series.pdf",332797,"f304b87a-4d0e-41ce-adad-371e55db56ae/Door_Closer_Series_thumb.jpg"],
+  ["Identification Plates","Identification Plates.pdf","dabcbdbb-b415-44c3-94e2-44d1cb8ee83c/Identification_Plates.pdf",168187,"74f71a59-561b-40e6-a57d-cb1cf9f2414f/Identification_Plates_thumb.jpg"],
+  ["Screen & Stair Fence Series","Screen & Stair Fence Series.pdf","a5ef7b83-292c-41af-8e47-4c5cc9b44a25/Screen_Stair_Fence_Series.pdf",396535,"e579e507-a5c2-42e4-bc40-81dea7e82877/Screen_&_Stair_Fence_Series_thumb.jpg"],
+  ["Finger Print Door Look Series","Finger Print Door Look Series.pdf","9f0713b7-0ace-4cb3-a19e-2130c8aa4503/Finger_Print_Door_Look_Series.pdf",225975,"a8cda53b-9daf-45ad-90a3-275f3706e23c/Finger_Print_Door_Look_Series_thumb.jpg"],
+  ["Automatic Sliding Door System","Automatic Sliding Door System.pdf","ec04f8df-0c22-4e7a-9872-240a945491b5/Automatic_Sliding_Door_System.pdf",717892,"6964b32b-b538-4503-8b00-c16a9b379033/Automatic_Sliding_Door_System_thumb.jpg"],
+  ["Floor Hinge Series","Floor Hinge Series.pdf","deebb73c-d793-4ff5-99a1-ff9f9eb180f5/Floor_Hinge_Series.pdf",1908346,"a2578aa1-345e-4494-9461-24c9ac911c7b/Floor_Hinge_Series_thumb.jpg"],
+  ["Patch Fitting Series","Patch Fitting Series.pdf","79bd6c83-271c-4a5c-83aa-69e8596619bf/Patch_Fitting_Series.pdf",2724381,"aeecbe44-c815-4210-a8f0-d091ebd6535d/Patch_Fitting_Series_thumb.jpg"],
+  ["Gating Set Series","Gating Set Series.pdf","02817d5d-9601-466b-a516-9e03fc49e2b0/Gating_Set_Series.pdf",505453,"0249ff17-8a1a-4414-bd1d-f3e109c42107/Gating_Set_Series_thumb.jpg"],
+  ["Curtain Wall Series","Curtain Wall Series.pdf","eb9dd4f2-31cc-4f13-a3e3-4beeb6af9a9e/Curtain_Wall_Series.pdf",200648,"83a316c3-91e7-4b30-89cd-9cddfe887fe6/Curtain_Wall_Series_thumb.jpg"],
+  ["Glass Connection Series","Glass Connection Series.pdf","e4776544-9757-41f6-b68b-8e4575701873/Glass_Connection_Series.pdf",398174,"e01d027e-df04-41a1-b45d-14141eb249c7/Glass_Connection_Series_thumb.jpg"],
+  ["Swing Door Series","Swing Door Series.pdf","5353d88f-83dc-44ad-9f9f-24d39437c89a/Swing_Door_Series.pdf",167363,"321e2b32-e011-4ca6-a9a5-a700317f8c09/Swing_Door_Series_thumb.jpg"],
+  ["Hanging Wheel Series","Hanging Wheel Series.pdf","0c16919c-ad62-4da6-9cb7-35e0c41866ee/Hanging_Wheel_Series.pdf",194821,"1b9c2bd4-d045-469e-87d5-a95c2b936f40/Hanging_Wheel_Series_thumb.jpg"],
+  ["Sliding Wheel Series","Sliding Wheel Series.pdf","44612fd4-f6d4-424d-997d-5d447a8cc928/Sliding_Wheel_Series.pdf",1258197,"b673a00a-a172-4f16-a12b-c8554b9334fa/Sliding_Wheel_Series_thumb.jpg"],
+  ["Folding Door System Series","Folding Door System Series.pdf","3c1e2dd9-7668-4d2f-a5f0-d32c47c20176/Folding_Door_System_Series.pdf",316726,"3247383e-d382-4a6c-88d8-81308b4c3bfb/Folding_Door_System_Series_thumb.jpg"],
+  ["PVC Sealing Strip Series","PVC Sealing Strip Series.pdf","769bf23b-463d-4e94-8b84-03469d8ed17d/PVC_Sealing_Strip_Series.pdf",214641,"f7293507-f1ac-4db2-bbff-0b18b195ad39/PVC_Sealing_Strip_Series_thumb.jpg"],
+  ["Bathroom Handle Series","Bathroom Handle Series.pdf","5c477518-541f-45e1-9cf6-26b80239da95/Bathroom_Handle_Series.pdf",276786,"028803ec-f28f-4ab7-8e2d-4b9ea80c8791/Bathroom_Handle_Series_thumb.jpg"],
+  ["Bathroom Connector Series","Bathroom Connector Series.pdf","84075e70-b559-4225-b94e-b5ea5bfd12e8/Bathroom_Connector_Series.pdf",232809,"16c1bf2e-c1e5-4e9d-9f2f-5edd7e7c58bc/Bathroom_Connector_Series_thumb.jpg"],
+  ["Bathroom Holder Series","Bathroom Holder Series.pdf","8ee24e19-35f0-43fb-926f-8724a27d2fc1/Bathroom_Holder_Series.pdf",523850,"ea85ab86-9573-49ff-a35c-69e4cf5801ed/Bathroom_Holder_Series_thumb.jpg"],
+  ["Glass Connector Series","Glass Connector Series.pdf","0bc8ad41-b67c-4ee6-9b47-a7ffcb8c4a68/Glass_Connector_Series.pdf",1642096,"df2df45f-060f-40f8-ae12-d1bfcf5e92c9/Glass_Connector_Series_thumb.jpg"],
+  ["Glass Door Hinge Series","Glass Door Hinge Series.pdf","78133221-babf-44cc-9c65-2dbb3d242010/Glass_Door_Hinge_Series.pdf",478387,"21f683a1-c0a7-419c-a30b-3707b79a0609/Glass_Door_Hinge_Series_thumb.jpg"],
+  ["Bathroom Hinge Series","Bathroom Hinge Series.pdf","5c3200ce-942d-45e6-99f9-04e49d4ba1ba/Bathroom_Hinge_Series.pdf",1204829,"c0e87376-8714-4ac3-920c-e0de54212a04/Bathroom_Hinge_Series_thumb.jpg"],
+  ["Bathroom Glass Clamp","Bathroom Glass Clamp.pdf","1baf4c0a-db1e-4e59-811e-b932db335d16/Bathroom_Glass_Clamp.pdf",1377328,"6cd149f9-9b29-4376-9a83-b74fc41fe719/Bathroom_Glass_Clamp_thumb.jpg"],
+  ["Shower Room Supporting","Showe Room Supporting.pdf","96ddb1d0-41ec-4843-985e-24807fb302c5/Showe_Room_Supporting.pdf",988100,"cf769d82-acf9-461d-b97c-02340b2428e8/Showe_Room_Supporting_thumb.jpg"],
+];
+const formatSize = (b) => (b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b / (1024 * 1024)).toFixed(1)} MB`);
+
+class Component extends DCLogic {
+  state = { w: window.innerWidth, hov: null };
+  hc = {};
+  componentDidMount() { this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  h(key) {
+    if (!this.hc[key]) this.hc[key] = { enter: () => this.setState({ hov: key }), leave: () => this.setState((s) => (s.hov === key ? { hov: null } : null)) };
+    return this.hc[key];
+  }
+  renderVals() {
+    const { w, hov } = this.state;
+    return {
+      cols: w >= 1024 ? "repeat(3,minmax(0,1fr))" : w >= 640 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      cats: CATALOGUES.map(([title, filename, url, size, thumb]) => {
+        const on = hov === filename;
+        return { title, filename, url: `${ORIGIN}/__l5e/assets-v1/${url}`, thumb: `${ORIGIN}/__l5e/assets-v1/${thumb}`,
+          alt: `${title} — first page preview`, size: formatSize(size), h: this.h(filename),
+          lift: on ? "translateY(-4px)" : "none", shadow: on ? "0 10px 30px -10px rgb(15 23 42 / 0.25)" : "none",
+          zoom: on ? "scale(1.05)" : "none", op: on ? 1 : 0, ty: on ? "0" : "8px" };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>

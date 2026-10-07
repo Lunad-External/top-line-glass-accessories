@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Projects — Top Line Glass Products Accessories | KSA</title>
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<style>
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid;border-color:#d6e2db}
+html{font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+body{background-color:#f8faf9;color:#0f2a1c}
+h1,h2,h3,h4{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.02em;font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+a:hover{color:inherit}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+ul,ol{list-style:none}
+</style>
+</helmet>
+<div style="display:flex;min-height:100vh;flex-direction:column">
+<dc-import name="SiteHeader" active="projects" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
+<main style="flex:1 1 0%">
+<div style="max-width:1240px;margin:0 auto;padding:32px 20px">
+  <nav aria-label="Breadcrumb" style="font-size:12px;line-height:16px;color:#4a5b52">
+    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
+      <li style="display:flex;align-items:center;gap:4px"><a href="Home.dc.html" style-hover="color:#0f2a1c">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:12px;width:12px;opacity:0.5"><path d="m9 18 6-6-6-6"></path></svg></li>
+      <li style="display:flex;align-items:center;gap:4px"><span style="color:#0f2a1c;font-weight:500">Projects</span></li>
+    </ol>
+  </nav>
+  <h1 style="font-size:36px;line-height:40px;margin-top:12px">Our Projects</h1>
+  <p style="color:#4a5b52;margin-top:8px;max-width:672px">A snapshot of recent installations where Top Line Glass Products Accessories supplied the complete hardware package — from concept to delivery.</p>
+
+  <div style="margin-top:40px;display:flex;flex-direction:column;gap:40px">
+    <sc-for list="{{ projects }}" as="p" hint-placeholder-count="2">
+      <article style="display:grid;grid-template-columns:{{ cols }};gap:32px;border-radius:16px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
+        <div style="overflow:hidden;order:{{ p.order }}">
+          <img src="{{ p.image }}" alt="{{ p.title }}" loading="lazy" width="1200" height="900" style="height:100%;width:100%;object-fit:cover;aspect-ratio:4/3;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease" style-hover="transform:scale(1.06);filter:brightness(1.05)">
+        </div>
+        <div style="padding:{{ pad }}px;display:flex;flex-direction:column;justify-content:center">
+          <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Case Study</div>
+          <h2 style="font-size:{{ h2Size }}px;line-height:{{ h2Lh }}px;margin-top:8px">{{ p.title }}</h2>
+          <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:16px;font-size:14px;line-height:20px;color:#4a5b52">
+            <span style="display:inline-flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>{{ p.location }}</span>
+            <span style="display:inline-flex;align-items:center;gap:6px"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>{{ p.year }}</span>
+          </div>
+          <p style="margin-top:16px;font-size:14px;line-height:1.625">{{ p.summary }}</p>
+          <ul style="margin-top:16px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px">
+            <sc-for list="{{ p.scope }}" as="s" hint-placeholder-count="3">
+              <li style="display:flex;gap:8px"><svg viewBox="0 0 24 24" fill="none" stroke="#006c35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>{{ s }}</li>
+            </sc-for>
+          </ul>
+          <div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px">
+            <a href="{{ p.wa }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;padding:10px 16px;font-size:14px;line-height:20px;font-weight:600;color:#ffffff;background-color:#25D366;transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+              <svg viewBox="0 0 32 32" fill="currentColor" style="height:16px;width:16px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
+              Discuss a Similar Project
+            </a>
+            <a href="Products.dc.html" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;font-size:14px;line-height:20px;font-weight:600">
+              Explore Products
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</div>
+</main>
+<dc-import name="SiteFooter" hint-size="100%,400px" style="display:block"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const waLink = (msg) => `https://wa.me/966564508627?text=${encodeURIComponent(msg)}`;
+const PROJECTS = [
+  { title: "Al Nakheel Residential Tower — Riyadh", location: "Riyadh, Saudi Arabia", year: "2024", image: "src/assets/hero-bathroom.webp",
+    summary: "Complete supply of frameless shower enclosures, bathroom accessories and glass hardware across 180 luxury apartments.",
+    scope: ["Shower hinges, glass clamps and support rods", "Chrome-finished bathroom accessory sets", "Frameless glass door patch fittings"] },
+  { title: "Grand Plaza Business Hotel — Riyadh", location: "Al Sina'iyah, Riyadh, KSA", year: "2023", image: "src/assets/hero-glass-door.webp",
+    summary: "End-to-end glass door hardware for the lobby, meeting rooms and 240 guest bathrooms — including automatic sliding entrances.",
+    scope: ["Automatic sliding door systems at main entrances", "Floor springs and glass door locks for meeting rooms", "Full bathroom hardware package across all guest floors"] },
+];
+
+class Component extends DCLogic {
+  state = { w: window.innerWidth };
+  componentDidMount() { this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    const w = this.state.w, md = w >= 768, lg = w >= 1024;
+    return {
+      cols: lg ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      pad: lg ? 36 : 28, h2Size: md ? 30 : 24, h2Lh: md ? 36 : 32,
+      projects: PROJECTS.map((p, i) => ({ ...p, order: lg && i % 2 === 1 ? 2 : 0,
+        wa: waLink(`Hi, I saw the ${p.title} project on your website and would like to discuss a similar project.`) })),
+    };
+  }
+}
+</script>
+</body>
+</html>

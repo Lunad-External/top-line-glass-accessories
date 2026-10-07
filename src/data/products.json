@@ -1,0 +1,4655 @@
+{
+  "categories": [
+    {
+      "name": "Glass Door Accessories",
+      "slug": "glass-door-accessories",
+      "products": [
+        {
+          "serial": 1,
+          "slug": "10100",
+          "model_number": "10100",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10100",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10100.png",
+          "specification_image": "src/assets/specs/10100-spec.png"
+        },
+        {
+          "serial": 2,
+          "slug": "10110",
+          "model_number": "10110",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10110",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10110.png",
+          "specification_image": "src/assets/specs/10110-spec.png"
+        },
+        {
+          "serial": 3,
+          "slug": "10130",
+          "model_number": "10130",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10130",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10130.png",
+          "specification_image": "src/assets/specs/10130-spec.png"
+        },
+        {
+          "serial": 4,
+          "slug": "10140",
+          "model_number": "10140",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10140",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10140.png",
+          "specification_image": "src/assets/specs/10140-spec.png"
+        },
+        {
+          "serial": 5,
+          "slug": "10150",
+          "model_number": "10150",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10150",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10150.png",
+          "specification_image": "src/assets/specs/10150-spec.png"
+        },
+        {
+          "serial": 6,
+          "slug": "10160",
+          "model_number": "10160",
+          "english_name": "Floor Spring Series",
+          "item_description": "Floor Spring 10160",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/10160.png",
+          "specification_image": "src/assets/specs/10160-spec.png"
+        },
+        {
+          "serial": 7,
+          "slug": "40460",
+          "model_number": "40460",
+          "english_name": "Overpanel Corner \"L\" Patch",
+          "item_description": "Corner Patch 40460",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40460.png",
+          "specification_image": "src/assets/specs/40460-spec.png"
+        },
+        {
+          "serial": 8,
+          "slug": "40405",
+          "model_number": "40405",
+          "english_name": "Bottom Patch",
+          "item_description": "Bottom Patch 40405",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40405.png",
+          "specification_image": "src/assets/specs/40405-spec.png"
+        },
+        {
+          "serial": 9,
+          "slug": "40425",
+          "model_number": "40425",
+          "english_name": "Top Patch",
+          "item_description": "Top Patch 40425",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40425.png",
+          "specification_image": "src/assets/specs/40425-spec.png"
+        },
+        {
+          "serial": 10,
+          "slug": "40440",
+          "model_number": "40440",
+          "english_name": "Overpanel Pivot Patch",
+          "item_description": "Overpanel Pivot Patch 40440",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40440.png",
+          "specification_image": "src/assets/specs/40440-spec.png"
+        },
+        {
+          "serial": 11,
+          "slug": "40461",
+          "model_number": "40461",
+          "english_name": "Connector Patch",
+          "item_description": "Connector Patch 40461",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40461.png",
+          "specification_image": "src/assets/specs/40461-spec.png"
+        },
+        {
+          "serial": 12,
+          "slug": "40480",
+          "model_number": "40480",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40480",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40480.png",
+          "specification_image": "src/assets/specs/40480-spec.png"
+        },
+        {
+          "serial": 13,
+          "slug": "40520",
+          "model_number": "40520",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40520",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40520.png",
+          "specification_image": "src/assets/specs/40520-spec.png"
+        },
+        {
+          "serial": 14,
+          "slug": "40510",
+          "model_number": "40510",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40510",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40510.png",
+          "specification_image": "src/assets/specs/40510-spec.png"
+        },
+        {
+          "serial": 15,
+          "slug": "40500",
+          "model_number": "40500",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40500",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40500.png",
+          "specification_image": "src/assets/specs/40500-spec.png"
+        },
+        {
+          "serial": 16,
+          "slug": "40540",
+          "model_number": "40540",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40540",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40540.png",
+          "specification_image": "src/assets/specs/40540-spec.png"
+        },
+        {
+          "serial": 17,
+          "slug": "40560",
+          "model_number": "40560",
+          "english_name": "Turn Knob Lock",
+          "item_description": "Turn Knob Lock 40560",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40560.png",
+          "specification_image": "src/assets/specs/40560-spec.png"
+        },
+        {
+          "serial": 18,
+          "slug": "40575",
+          "model_number": "40575",
+          "english_name": "Patch Lock",
+          "item_description": "Patch Lock 40575",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40575.png",
+          "specification_image": "src/assets/specs/40575-spec.png"
+        },
+        {
+          "serial": 19,
+          "slug": "40595",
+          "model_number": "40595",
+          "english_name": "Overpanel Pivot Patch",
+          "item_description": "Overpanel Pivot Patch 40595",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40595.png",
+          "specification_image": "src/assets/specs/40595-spec.png"
+        },
+        {
+          "serial": 20,
+          "slug": "40596",
+          "model_number": "40596",
+          "english_name": "Overpanel Pivot Patch",
+          "item_description": "Overpanel Pivot Patch 40596",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40596.png",
+          "specification_image": "src/assets/specs/40596-spec.png"
+        },
+        {
+          "serial": 21,
+          "slug": "42745",
+          "model_number": "42745",
+          "english_name": "Glass Door Lock Series",
+          "item_description": "Glass Door Lock 42745",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42745.png",
+          "specification_image": "src/assets/specs/42745-spec.png"
+        },
+        {
+          "serial": 22,
+          "slug": "42755",
+          "model_number": "42755",
+          "english_name": "Glass Door Lock Series (Round)",
+          "item_description": "Glass Door Lock 42755",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42755.png",
+          "specification_image": "src/assets/specs/42755-spec.png"
+        },
+        {
+          "serial": 23,
+          "slug": "42760",
+          "model_number": "42760",
+          "english_name": "Glass Door Lock Series",
+          "item_description": "Glass Door Lock 42760",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42760.png",
+          "specification_image": "src/assets/specs/42760-spec.png"
+        },
+        {
+          "serial": 24,
+          "slug": "42765",
+          "model_number": "42765",
+          "english_name": "Glass Door Lock Series",
+          "item_description": "Glass Door Lock 42765",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42765.png",
+          "specification_image": "src/assets/specs/42765-spec.png"
+        },
+        {
+          "serial": 25,
+          "slug": "u-channel",
+          "model_number": "",
+          "english_name": "U Channel",
+          "item_description": "U Channel",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/u-channel.png",
+          "specification_image": "src/assets/specs/u-channel-spec.png"
+        },
+        {
+          "serial": 26,
+          "slug": "40600",
+          "model_number": "40600",
+          "english_name": "For 10mm Glass",
+          "item_description": "Glass Door Trim 40600",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40600.png",
+          "specification_image": "src/assets/specs/40600-spec.png"
+        },
+        {
+          "serial": 27,
+          "slug": "40620",
+          "model_number": "40620",
+          "english_name": "For 10mm Glass",
+          "item_description": "Glass Door Trim 40620",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40620.png",
+          "specification_image": "src/assets/specs/40620-spec.png"
+        },
+        {
+          "serial": 28,
+          "slug": "40640",
+          "model_number": "40640",
+          "english_name": "For 10mm Glass",
+          "item_description": "Glass Door Trim 40640",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40640.png",
+          "specification_image": "src/assets/specs/40640-spec.png"
+        },
+        {
+          "serial": 29,
+          "slug": "40660",
+          "model_number": "40660",
+          "english_name": "For 10mm Glass",
+          "item_description": "Glass Door Trim 40660",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40660.png",
+          "specification_image": "src/assets/specs/40660-spec.png"
+        },
+        {
+          "serial": 30,
+          "slug": "42850",
+          "model_number": "42850",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 42850",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42850.png",
+          "specification_image": "src/assets/specs/42850-spec.png"
+        },
+        {
+          "serial": 31,
+          "slug": "42865",
+          "model_number": "42865",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 42865",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42865.png",
+          "specification_image": "src/assets/specs/42865-spec.png"
+        },
+        {
+          "serial": 32,
+          "slug": "42900",
+          "model_number": "42900",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 42900",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42900.png",
+          "specification_image": "src/assets/specs/42900-spec.png"
+        },
+        {
+          "serial": 33,
+          "slug": "42935",
+          "model_number": "42935",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 42935",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42935.png",
+          "specification_image": "src/assets/specs/42935-spec.png"
+        },
+        {
+          "serial": 34,
+          "slug": "42970",
+          "model_number": "42970",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 42970",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/42970.png",
+          "specification_image": "src/assets/specs/42970-spec.png"
+        },
+        {
+          "serial": 35,
+          "slug": "43005",
+          "model_number": "43005",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43005",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43005.png",
+          "specification_image": "src/assets/specs/43005-spec.png"
+        },
+        {
+          "serial": 36,
+          "slug": "43040",
+          "model_number": "43040",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43040",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43040.png",
+          "specification_image": "src/assets/specs/43040-spec.png"
+        },
+        {
+          "serial": 37,
+          "slug": "43060",
+          "model_number": "43060",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43060",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43060.png",
+          "specification_image": "src/assets/specs/43060-spec.png"
+        },
+        {
+          "serial": 38,
+          "slug": "43065",
+          "model_number": "43065",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43065",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43065.png",
+          "specification_image": "src/assets/specs/43065-spec.png"
+        },
+        {
+          "serial": 39,
+          "slug": "43080",
+          "model_number": "43080",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43080",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43080.png",
+          "specification_image": "src/assets/specs/43080-spec.png"
+        },
+        {
+          "serial": 40,
+          "slug": "43100",
+          "model_number": "43100",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43100",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43100.png",
+          "specification_image": "src/assets/specs/43100-spec.png"
+        },
+        {
+          "serial": 41,
+          "slug": "43120",
+          "model_number": "43120",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43120",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43120.png",
+          "specification_image": "src/assets/specs/43120-spec.png"
+        },
+        {
+          "serial": 42,
+          "slug": "43140",
+          "model_number": "43140",
+          "english_name": "Handles Series",
+          "item_description": "Glass Door Handle 43140",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/43140.png",
+          "specification_image": "src/assets/specs/43140-spec.png"
+        },
+        {
+          "serial": 43,
+          "slug": "40915",
+          "model_number": "40915",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40915",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40915.png",
+          "specification_image": "src/assets/specs/40915-spec.png"
+        },
+        {
+          "serial": 44,
+          "slug": "40945",
+          "model_number": "40945",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40945",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40945.png",
+          "specification_image": "src/assets/specs/40945-spec.png"
+        },
+        {
+          "serial": 45,
+          "slug": "40975",
+          "model_number": "40975",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40975",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40975.png",
+          "specification_image": "src/assets/specs/40975-spec.png"
+        },
+        {
+          "serial": 46,
+          "slug": "40976",
+          "model_number": "40976",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40976",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40976.png",
+          "specification_image": "src/assets/specs/40976-spec.png"
+        },
+        {
+          "serial": 47,
+          "slug": "40977",
+          "model_number": "40977",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40977",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40977.png",
+          "specification_image": "src/assets/specs/40977-spec.png"
+        },
+        {
+          "serial": 48,
+          "slug": "40978",
+          "model_number": "40978",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40978",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40978.png",
+          "specification_image": "src/assets/specs/40978-spec.png"
+        },
+        {
+          "serial": 49,
+          "slug": "40979",
+          "model_number": "40979",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40979",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40979.png",
+          "specification_image": "src/assets/specs/40979-spec.png"
+        },
+        {
+          "serial": 50,
+          "slug": "40981",
+          "model_number": "40981",
+          "english_name": "Sliding Wheels Series",
+          "item_description": "Sliding Wheels & Accessories 40981",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40981.png",
+          "specification_image": "src/assets/specs/40981-spec.png"
+        },
+        {
+          "serial": 51,
+          "slug": "40982",
+          "model_number": "40982",
+          "english_name": "Clamp Fixing for Track",
+          "item_description": "Sliding Wheels & Accessories 40982",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40982.png",
+          "specification_image": "src/assets/specs/40982-spec.png"
+        },
+        {
+          "serial": 52,
+          "slug": "40983",
+          "model_number": "40983",
+          "english_name": "Clamp Fixing for Track",
+          "item_description": "Glass Clamp 40983",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/40983.png",
+          "specification_image": "src/assets/specs/40983-spec.png"
+        },
+        {
+          "serial": 53,
+          "slug": "41060",
+          "model_number": "41060",
+          "english_name": "Glass Hanging Wheel",
+          "item_description": "Glass Hanging Wheel 41060",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41060.png",
+          "specification_image": "src/assets/specs/41060-spec.png"
+        },
+        {
+          "serial": 54,
+          "slug": "41070",
+          "model_number": "41070",
+          "english_name": "Glass Hanging Wheel",
+          "item_description": "Glass Hanging Wheel 41070",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41070.png",
+          "specification_image": "src/assets/specs/41070-spec.png"
+        },
+        {
+          "serial": 55,
+          "slug": "41080",
+          "model_number": "41080",
+          "english_name": "Wood Door Hanging Wheel",
+          "item_description": "Wood Door Hanging Wheel 41080",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41080.png",
+          "specification_image": "src/assets/specs/41080-spec.png"
+        },
+        {
+          "serial": 56,
+          "slug": "41085",
+          "model_number": "41085",
+          "english_name": "Wood Door Hanging Wheel",
+          "item_description": "Wood Door Hanging Wheel 41085",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41085.png",
+          "specification_image": "src/assets/specs/41085-spec.png"
+        },
+        {
+          "serial": 57,
+          "slug": "41095",
+          "model_number": "41095",
+          "english_name": "T-Type Fittings",
+          "item_description": "T-Type Fittings 41095",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41095.png",
+          "specification_image": "src/assets/specs/41095-spec.png"
+        },
+        {
+          "serial": 58,
+          "slug": "41110",
+          "model_number": "41110",
+          "english_name": "Fixed Fittings",
+          "item_description": "Fixed Fittings 41110",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41110.png",
+          "specification_image": "src/assets/specs/41110-spec.png"
+        },
+        {
+          "serial": 59,
+          "slug": "41285",
+          "model_number": "41285",
+          "english_name": "Glass/Wall Corner Connector Standard",
+          "item_description": "Glass/Wall Corner Connector 41285",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41285.png",
+          "specification_image": "src/assets/specs/41285-spec.png"
+        },
+        {
+          "serial": 60,
+          "slug": "41290",
+          "model_number": "41290",
+          "english_name": "Rear Cantilever Wall Bracket Standard (Cable Connection)",
+          "item_description": "Rear Cantilever Wall Bracket Standard (Cable Connection) 41290",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41290.png",
+          "specification_image": "src/assets/specs/41290-spec.png"
+        },
+        {
+          "serial": 61,
+          "slug": "41295",
+          "model_number": "41295",
+          "english_name": "Front Cantilever Wall Bracket Standard (Cable Connection)",
+          "item_description": "Front Cantilever Wall Bracket Standard (Cable Connection) 41295",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41295.png",
+          "specification_image": "src/assets/specs/41295-spec.png"
+        },
+        {
+          "serial": 62,
+          "slug": "41660",
+          "model_number": "41660",
+          "english_name": "Covered Single-Sided",
+          "item_description": "Covered Single-Sided Hinge 41660",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41660.png",
+          "specification_image": "src/assets/specs/41660-spec.png"
+        },
+        {
+          "serial": 63,
+          "slug": "41670",
+          "model_number": "41670",
+          "english_name": "Covered Single-Sided (Round)",
+          "item_description": "Covered Single-Sided Hinge 41670",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41670.png",
+          "specification_image": "src/assets/specs/41670-spec.png"
+        },
+        {
+          "serial": 64,
+          "slug": "41680",
+          "model_number": "41680",
+          "english_name": "Covered Single-Sided",
+          "item_description": "Covered Single-Sided Hinge 41680",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41680.png",
+          "specification_image": "src/assets/specs/41680-spec.png"
+        },
+        {
+          "serial": 65,
+          "slug": "41300",
+          "model_number": "41300",
+          "english_name": "Wall to Glass 90° Two-Way",
+          "item_description": "Wall to Glass 90° Two-Way Hinge 41300",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41300.png",
+          "specification_image": "src/assets/specs/41300-spec.png"
+        },
+        {
+          "serial": 66,
+          "slug": "41330",
+          "model_number": "41330",
+          "english_name": "Glass to Glass 135°",
+          "item_description": "Glass to Glass 135° Hinge 41330",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41330.png",
+          "specification_image": "src/assets/specs/41330-spec.png"
+        },
+        {
+          "serial": 67,
+          "slug": "41360",
+          "model_number": "41360",
+          "english_name": "Glass to Glass 180°",
+          "item_description": "Glass to Glass 180° Hinge 41360",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41360.png",
+          "specification_image": "src/assets/specs/41360-spec.png"
+        },
+        {
+          "serial": 68,
+          "slug": "41390",
+          "model_number": "41390",
+          "english_name": "Glass to Glass 90°",
+          "item_description": "Glass to Glass 90° Hinge 41390",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41390.png",
+          "specification_image": "src/assets/specs/41390-spec.png"
+        },
+        {
+          "serial": 69,
+          "slug": "41420",
+          "model_number": "41420",
+          "english_name": "Wall to Glass 90° Two-Way",
+          "item_description": "Wall to Glass 90° Two-Way Hinge 41420",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41420.png",
+          "specification_image": "src/assets/specs/41420-spec.png"
+        },
+        {
+          "serial": 70,
+          "slug": "41450",
+          "model_number": "41450",
+          "english_name": "Glass to Glass 135°",
+          "item_description": "Glass to Glass 135° Hinge 41450",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41450.png",
+          "specification_image": "src/assets/specs/41450-spec.png"
+        },
+        {
+          "serial": 71,
+          "slug": "41480",
+          "model_number": "41480",
+          "english_name": "Glass to Glass 180°",
+          "item_description": "Glass to Glass 180° Hinge 41480",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41480.png",
+          "specification_image": "src/assets/specs/41480-spec.png"
+        },
+        {
+          "serial": 72,
+          "slug": "41535",
+          "model_number": "41535",
+          "english_name": "Glass to Glass 90°",
+          "item_description": "Glass to Glass 90° Hinge 41535",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41535.png",
+          "specification_image": "src/assets/specs/41535-spec.png"
+        },
+        {
+          "serial": 73,
+          "slug": "41540",
+          "model_number": "41540",
+          "english_name": "90° WTG Double Hydraulic 304# 5mm",
+          "item_description": "90° WTG Double Hydraulic Hinge 304# 5mm 41540",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41540.png",
+          "specification_image": "src/assets/specs/41540-spec.png"
+        },
+        {
+          "serial": 74,
+          "slug": "41550",
+          "model_number": "41550",
+          "english_name": "180° WTG Double Hydraulic 304# 5mm",
+          "item_description": "180° WTG Double Hydraulic Hinge 304# 5mm 41550",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41550.png",
+          "specification_image": "src/assets/specs/41550-spec.png"
+        },
+        {
+          "serial": 75,
+          "slug": "41560",
+          "model_number": "41560",
+          "english_name": "Round Bead Single-Sided",
+          "item_description": "Round Bead Single-Sided Hinge 41560",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41560.png",
+          "specification_image": "src/assets/specs/41560-spec.png"
+        },
+        {
+          "serial": 76,
+          "slug": "41570",
+          "model_number": "41570",
+          "english_name": "Round Bead Bilateral",
+          "item_description": "Round Bead Bilateral Hinge 41570",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41570.png",
+          "specification_image": "src/assets/specs/41570-spec.png"
+        },
+        {
+          "serial": 77,
+          "slug": "41580",
+          "model_number": "41580",
+          "english_name": "Oblique Single-Sided",
+          "item_description": "Oblique Single-Sided Hinge 41580",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41580.png",
+          "specification_image": "src/assets/specs/41580-spec.png"
+        },
+        {
+          "serial": 78,
+          "slug": "41590",
+          "model_number": "41590",
+          "english_name": "Oblique Bilateral",
+          "item_description": "Oblique Bilateral Hinge 41590",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41590.png",
+          "specification_image": "src/assets/specs/41590-spec.png"
+        },
+        {
+          "serial": 79,
+          "slug": "41600",
+          "model_number": "41600",
+          "english_name": "Camber Single-Sided",
+          "item_description": "Camber Single-Sided Hinge 41600",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41600.png",
+          "specification_image": "src/assets/specs/41600-spec.png"
+        },
+        {
+          "serial": 80,
+          "slug": "41610",
+          "model_number": "41610",
+          "english_name": "Camber Bilateral",
+          "item_description": "Camber Bilateral Hinge 41610",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41610.png",
+          "specification_image": "src/assets/specs/41610-spec.png"
+        },
+        {
+          "serial": 81,
+          "slug": "41620",
+          "model_number": "41620",
+          "english_name": "Straight Single-Sided",
+          "item_description": "Straight Single-Sided Hinge 41620",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41620.png",
+          "specification_image": "src/assets/specs/41620-spec.png"
+        },
+        {
+          "serial": 82,
+          "slug": "41630",
+          "model_number": "41630",
+          "english_name": "Straight Bilateral",
+          "item_description": "Straight Bilateral Hinge 41630",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41630.png",
+          "specification_image": "src/assets/specs/41630-spec.png"
+        },
+        {
+          "serial": 83,
+          "slug": "41640",
+          "model_number": "41640",
+          "english_name": "Round Bead Single-Sided",
+          "item_description": "Round Bead Single-Sided Hinge 41640",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41640.png",
+          "specification_image": "src/assets/specs/41640-spec.png"
+        },
+        {
+          "serial": 84,
+          "slug": "41650",
+          "model_number": "41650",
+          "english_name": "Round Bead Bilateral",
+          "item_description": "Round Bead Bilateral Hinge 41650",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201",
+            "Zinc"
+          ],
+          "image": "src/assets/products/41650.png",
+          "specification_image": "src/assets/specs/41650-spec.png"
+        }
+      ]
+    },
+    {
+      "name": "Shower Enclosure Accessories",
+      "slug": "shower-enclosure-accessories",
+      "products": [
+        {
+          "serial": 1,
+          "ref": "glass-door-accessories",
+          "slug": "40915"
+        },
+        {
+          "serial": 2,
+          "ref": "glass-door-accessories",
+          "slug": "40945"
+        },
+        {
+          "serial": 3,
+          "ref": "glass-door-accessories",
+          "slug": "40975"
+        },
+        {
+          "serial": 4,
+          "ref": "glass-door-accessories",
+          "slug": "40976"
+        },
+        {
+          "serial": 5,
+          "ref": "glass-door-accessories",
+          "slug": "40977"
+        },
+        {
+          "serial": 6,
+          "ref": "glass-door-accessories",
+          "slug": "40978"
+        },
+        {
+          "serial": 7,
+          "ref": "glass-door-accessories",
+          "slug": "40979"
+        },
+        {
+          "serial": 8,
+          "ref": "glass-door-accessories",
+          "slug": "40981"
+        },
+        {
+          "serial": 9,
+          "ref": "glass-door-accessories",
+          "slug": "40982"
+        },
+        {
+          "serial": 10,
+          "ref": "glass-door-accessories",
+          "slug": "40983"
+        },
+        {
+          "serial": 12,
+          "ref": "glass-door-accessories",
+          "slug": "40600"
+        },
+        {
+          "serial": 13,
+          "ref": "glass-door-accessories",
+          "slug": "40620"
+        },
+        {
+          "serial": 14,
+          "ref": "glass-door-accessories",
+          "slug": "40640"
+        },
+        {
+          "serial": 15,
+          "ref": "glass-door-accessories",
+          "slug": "40660"
+        },
+        {
+          "serial": 16,
+          "ref": "glass-door-accessories",
+          "slug": "u-channel"
+        },
+        {
+          "serial": 17,
+          "slug": "42275",
+          "model_number": "42275",
+          "english_name": "Pipe-to-Glass Connector for Ø25mm Pipe",
+          "item_description": "Through-Type Pipe-to-Glass Connector for Ø25mm Pipe 42275",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42275.png",
+          "specification_image": "src/assets/specs/42275-spec.png"
+        },
+        {
+          "serial": 18,
+          "slug": "42295",
+          "model_number": "42295",
+          "english_name": "Pipe-to-Glass Connector for Ø25mm Pipe",
+          "item_description": "End-Type Pipe-to-Glass Connector for Ø25mm Pipe 42295",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42295.png",
+          "specification_image": "src/assets/specs/42295-spec.png"
+        },
+        {
+          "serial": 19,
+          "slug": "42770",
+          "model_number": "42770",
+          "english_name": "Sliding Rail 30x15x1.5mm, 2.5m",
+          "item_description": "Oval Sliding Rail 30x15mm, SS304, 2.5m 42770",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42770.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 20,
+          "slug": "42785",
+          "model_number": "42785",
+          "english_name": "Sliding Rail Ø25x1.5mm, 2.5m",
+          "item_description": "Round Sliding Rail Ø25mm, SS304, 2.5m 42785",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42785.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 21,
+          "slug": "42810",
+          "model_number": "42810",
+          "english_name": "Sliding Rail 30x10x1.5mm, 2.5m",
+          "item_description": "Rectangular Sliding Rail 30x10mm, SS304, 2.5m 42810",
+          "available_finish": [
+            "Gold"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42810.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 22,
+          "slug": "42815",
+          "model_number": "42815",
+          "english_name": "Aluminium-Clad Stainless Steel Tube, Sold per Metre",
+          "item_description": "Flat Sliding Rail 50x10mm, Aluminium-Clad Stainless Steel 42815",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium-Clad Stainless Steel"
+          ],
+          "image": "src/assets/products/42815.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 23,
+          "slug": "42830",
+          "model_number": "42830",
+          "english_name": "Profile Sliding Rail",
+          "item_description": "Grooved Profile Sliding Rail, Aluminium 42830",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42830.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 24,
+          "ref": "glass-door-accessories",
+          "slug": "41300"
+        },
+        {
+          "serial": 25,
+          "ref": "glass-door-accessories",
+          "slug": "41330"
+        },
+        {
+          "serial": 26,
+          "ref": "glass-door-accessories",
+          "slug": "41360"
+        },
+        {
+          "serial": 27,
+          "ref": "glass-door-accessories",
+          "slug": "41390"
+        },
+        {
+          "serial": 28,
+          "ref": "glass-door-accessories",
+          "slug": "41420"
+        },
+        {
+          "serial": 29,
+          "ref": "glass-door-accessories",
+          "slug": "41450"
+        },
+        {
+          "serial": 30,
+          "ref": "glass-door-accessories",
+          "slug": "41480"
+        },
+        {
+          "serial": 31,
+          "ref": "glass-door-accessories",
+          "slug": "41535"
+        },
+        {
+          "serial": 32,
+          "ref": "glass-door-accessories",
+          "slug": "41540"
+        },
+        {
+          "serial": 33,
+          "ref": "glass-door-accessories",
+          "slug": "41550"
+        },
+        {
+          "serial": 34,
+          "ref": "glass-door-accessories",
+          "slug": "41560"
+        },
+        {
+          "serial": 35,
+          "ref": "glass-door-accessories",
+          "slug": "41570"
+        },
+        {
+          "serial": 36,
+          "ref": "glass-door-accessories",
+          "slug": "41580"
+        },
+        {
+          "serial": 37,
+          "ref": "glass-door-accessories",
+          "slug": "41590"
+        },
+        {
+          "serial": 38,
+          "ref": "glass-door-accessories",
+          "slug": "41600"
+        },
+        {
+          "serial": 39,
+          "ref": "glass-door-accessories",
+          "slug": "41610"
+        },
+        {
+          "serial": 40,
+          "ref": "glass-door-accessories",
+          "slug": "41620"
+        },
+        {
+          "serial": 41,
+          "ref": "glass-door-accessories",
+          "slug": "41630"
+        },
+        {
+          "serial": 42,
+          "ref": "glass-door-accessories",
+          "slug": "41640"
+        },
+        {
+          "serial": 43,
+          "ref": "glass-door-accessories",
+          "slug": "41650"
+        },
+        {
+          "serial": 44,
+          "slug": "42360",
+          "model_number": "42360",
+          "english_name": "Shower Door Knob",
+          "item_description": "Teardrop Back-to-Back Shower Door Knob, Ø33mm 42360",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42360.png",
+          "specification_image": "src/assets/specs/42360-spec.png"
+        },
+        {
+          "serial": 45,
+          "slug": "42375",
+          "model_number": "42375",
+          "english_name": "Shower Door Knob",
+          "item_description": "Mushroom Back-to-Back Shower Door Knob, Ø30mm 42375",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42375.png",
+          "specification_image": "src/assets/specs/42375-spec.png"
+        },
+        {
+          "serial": 46,
+          "slug": "42380",
+          "model_number": "42380",
+          "english_name": "Shower Door Knob",
+          "item_description": "Fully Ribbed Cone Shower Door Knob, Ø34mm 42380",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42380.png",
+          "specification_image": "src/assets/specs/42380-spec.png"
+        },
+        {
+          "serial": 47,
+          "slug": "42395",
+          "model_number": "42395",
+          "english_name": "Shower Door Knob",
+          "item_description": "Flared Spool Shower Door Knob, Ø32mm 42395",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42395.png",
+          "specification_image": "src/assets/specs/42395-spec.png"
+        },
+        {
+          "serial": 48,
+          "slug": "42400",
+          "model_number": "42400",
+          "english_name": "Shower Door Knob",
+          "item_description": "Tapered Cylinder Shower Door Knob, Ø30mm 42400",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42400.png",
+          "specification_image": "src/assets/specs/42400-spec.png"
+        },
+        {
+          "serial": 49,
+          "slug": "42415",
+          "model_number": "42415",
+          "english_name": "Shower Door Knob",
+          "item_description": "Grooved Disc Shower Door Knob, Ø30mm 42415",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42415.png",
+          "specification_image": "src/assets/specs/42415-spec.png"
+        },
+        {
+          "serial": 50,
+          "slug": "42420",
+          "model_number": "42420",
+          "english_name": "Shower Door Knob",
+          "item_description": "Ribbed Cylinder Shower Door Knob, Ø30mm 42420",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42420.png",
+          "specification_image": "src/assets/specs/42420-spec.png"
+        },
+        {
+          "serial": 51,
+          "slug": "42435",
+          "model_number": "42435",
+          "english_name": "Shower Door Knob",
+          "item_description": "Notched-Grip Cylinder Shower Door Knob, Ø30mm 42435",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42435.png",
+          "specification_image": "src/assets/specs/42435-spec.png"
+        },
+        {
+          "serial": 52,
+          "slug": "42440",
+          "model_number": "42440",
+          "english_name": "Shower Door Knob",
+          "item_description": "Domed Flat-Top Shower Door Knob, Ø35mm 42440",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42440.png",
+          "specification_image": "src/assets/specs/42440-spec.png"
+        },
+        {
+          "serial": 53,
+          "slug": "42455",
+          "model_number": "42455",
+          "english_name": "Shower Door Knob",
+          "item_description": "Ball Shower Door Knob, Ø32mm 42455",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42455.png",
+          "specification_image": "src/assets/specs/42455-spec.png"
+        },
+        {
+          "serial": 54,
+          "slug": "42460",
+          "model_number": "42460",
+          "english_name": "Shower Door Knob",
+          "item_description": "Banded Trumpet Shower Door Knob 42460",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/42460.png",
+          "specification_image": "src/assets/specs/42460-spec.png"
+        },
+        {
+          "serial": 55,
+          "slug": "41690",
+          "model_number": "41690",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Square 0° Glass Clip with Face Screw, 45x49mm 41690",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/41690.png",
+          "specification_image": "src/assets/specs/41690-spec.png"
+        },
+        {
+          "serial": 56,
+          "slug": "41700",
+          "model_number": "41700",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Rectangular 0° Glass U-Clip, 58x30mm 41700",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/41700.png",
+          "specification_image": "src/assets/specs/41700-spec.png"
+        },
+        {
+          "serial": 57,
+          "slug": "42015",
+          "model_number": "42015",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Half-Round 0° Glass Clip, 50x25mm 42015",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/42015.png",
+          "specification_image": "src/assets/specs/42015-spec.png"
+        },
+        {
+          "serial": 58,
+          "slug": "42020",
+          "model_number": "42020",
+          "english_name": "Fix Clip 90° Single Hole",
+          "item_description": "90° Wall-to-Glass Clip, 58x40mm 42020",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/42020.png",
+          "specification_image": "src/assets/specs/42020-spec.png"
+        },
+        {
+          "serial": 59,
+          "slug": "42035",
+          "model_number": "42035",
+          "english_name": "Fix Clip 90° Single Hole",
+          "item_description": "90° Wall-to-Glass Clip, 45x44mm 42035",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/42035.png",
+          "specification_image": "src/assets/specs/42035-spec.png"
+        },
+        {
+          "serial": 60,
+          "slug": "42700",
+          "model_number": "42700",
+          "english_name": "180° Glass Clamp",
+          "item_description": "180° Glass-to-Glass Clamp, 87mm, SS304 42700",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42700.png",
+          "specification_image": "src/assets/specs/42700-spec.png"
+        },
+        {
+          "serial": 61,
+          "slug": "42715",
+          "model_number": "42715",
+          "english_name": "F Glass Wall Clamp",
+          "item_description": "F-Type Glass-to-Wall Clamp, 66x66mm, SS304 42715",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42715.png",
+          "specification_image": "src/assets/specs/42715-spec.png"
+        },
+        {
+          "serial": 62,
+          "slug": "42720",
+          "model_number": "42720",
+          "english_name": "F Glass Angle Clamp",
+          "item_description": "F-Type 90° Glass Angle Clamp, 66x67mm, SS304 42720",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42720.png",
+          "specification_image": "src/assets/specs/42720-spec.png"
+        },
+        {
+          "serial": 63,
+          "slug": "42735",
+          "model_number": "42735",
+          "english_name": "Glass Cardan Clamp",
+          "item_description": "Adjustable-Angle Cardan Glass Clamp, 101mm, SS304 42735",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42735.png",
+          "specification_image": "src/assets/specs/42735-spec.png"
+        },
+        {
+          "serial": 64,
+          "slug": "41710",
+          "model_number": "41710",
+          "english_name": "Fix Clip Single 90°",
+          "item_description": "Round-Face Wall-to-Glass Clip, 90° 41710",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41710.png",
+          "specification_image": "src/assets/specs/41710-spec.png"
+        },
+        {
+          "serial": 65,
+          "slug": "41720",
+          "model_number": "41720",
+          "english_name": "Fix Clip Double 90°",
+          "item_description": "Round-Face Glass-to-Glass Clip, 90° 41720",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41720.png",
+          "specification_image": "src/assets/specs/41720-spec.png"
+        },
+        {
+          "serial": 66,
+          "slug": "41730",
+          "model_number": "41730",
+          "english_name": "Fix Clip Single 135°",
+          "item_description": "Round-Face Wall-to-Glass Clip, 135° 41730",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41730.png",
+          "specification_image": "src/assets/specs/41730-spec.png"
+        },
+        {
+          "serial": 67,
+          "slug": "41740",
+          "model_number": "41740",
+          "english_name": "Fix Clip Double 135°",
+          "item_description": "Round-Face Glass-to-Glass Clip, 135° 41740",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41740.png",
+          "specification_image": "src/assets/specs/41740-spec.png"
+        },
+        {
+          "serial": 68,
+          "slug": "41750",
+          "model_number": "41750",
+          "english_name": "Fix Clip Single 180°",
+          "item_description": "Round-Face Wall-to-Glass Clip, 180° 41750",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41750.png",
+          "specification_image": "src/assets/specs/41750-spec.png"
+        },
+        {
+          "serial": 69,
+          "slug": "41760",
+          "model_number": "41760",
+          "english_name": "Fix Clip Double 180°",
+          "item_description": "Round-Face Glass-to-Glass Clip, 180° 41760",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41760.png",
+          "specification_image": "src/assets/specs/41760-spec.png"
+        },
+        {
+          "serial": 70,
+          "slug": "41770",
+          "model_number": "41770",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Curved-Face Glass Clip, 0° 41770",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41770.png",
+          "specification_image": "src/assets/specs/41770-spec.png"
+        },
+        {
+          "serial": 71,
+          "slug": "41780",
+          "model_number": "41780",
+          "english_name": "Fix Clip Single 90°",
+          "item_description": "Curved-Face Wall-to-Glass Clip, 90° 41780",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41780.png",
+          "specification_image": "src/assets/specs/41780-spec.png"
+        },
+        {
+          "serial": 72,
+          "slug": "41790",
+          "model_number": "41790",
+          "english_name": "Fix Clip Double 90°",
+          "item_description": "Curved-Face Glass-to-Glass Clip, 90° 41790",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41790.png",
+          "specification_image": "src/assets/specs/41790-spec.png"
+        },
+        {
+          "serial": 73,
+          "slug": "41800",
+          "model_number": "41800",
+          "english_name": "Fix Clip Single 135°",
+          "item_description": "Curved-Face Wall-to-Glass Clip, 135° 41800",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41800.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 74,
+          "slug": "41810",
+          "model_number": "41810",
+          "english_name": "Fix Clip Double 135°",
+          "item_description": "Curved-Face Glass-to-Glass Clip, 135° 41810",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41810.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 75,
+          "slug": "41820",
+          "model_number": "41820",
+          "english_name": "Fix Clip Single 180°",
+          "item_description": "Curved-Face Wall-to-Glass Clip, 180° 41820",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41820.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 76,
+          "slug": "41830",
+          "model_number": "41830",
+          "english_name": "Fix Clip Double 180°",
+          "item_description": "Curved-Face Glass-to-Glass Clip, 180° 41830",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41830.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 77,
+          "slug": "41840",
+          "model_number": "41840",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Bevelled Square Glass Clip, 0° 41840",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41840.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 78,
+          "slug": "41855",
+          "model_number": "41855",
+          "english_name": "Fix Clip Double 90°",
+          "item_description": "Bevelled Square Glass-to-Glass Clip, 90° 41855",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41855.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 79,
+          "slug": "41860",
+          "model_number": "41860",
+          "english_name": "Fix Clip Single 90°",
+          "item_description": "Bevelled Square Wall-to-Glass Clip, 90° 41860",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41860.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 80,
+          "slug": "41875",
+          "model_number": "41875",
+          "english_name": "Fix Clip Double 135°",
+          "item_description": "Bevelled Square Glass-to-Glass Clip, 135° 41875",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41875.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 81,
+          "slug": "41880",
+          "model_number": "41880",
+          "english_name": "Fix Clip Single 135°",
+          "item_description": "Bevelled Square Wall-to-Glass Clip, 135° 41880",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41880.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 82,
+          "slug": "41895",
+          "model_number": "41895",
+          "english_name": "Fix Clip Double 180°",
+          "item_description": "Bevelled Square Glass-to-Glass Clip, 180° 41895",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41895.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 83,
+          "slug": "41900",
+          "model_number": "41900",
+          "english_name": "Fix Clip Single 180°",
+          "item_description": "Bevelled Square Wall-to-Glass Clip, 180° 41900",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41900.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 84,
+          "slug": "41920",
+          "model_number": "41920",
+          "english_name": "Fix Clip Single 90°",
+          "item_description": "Flat Square Wall-to-Glass Clip, 90° 41920",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41920.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 85,
+          "slug": "41935",
+          "model_number": "41935",
+          "english_name": "Fix Clip Double 90°",
+          "item_description": "Flat Square Glass-to-Glass Clip, 90° 41935",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41935.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 86,
+          "slug": "41940",
+          "model_number": "41940",
+          "english_name": "Fix Clip Single 135°",
+          "item_description": "Flat Square Wall-to-Glass Clip, 135° 41940",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41940.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 87,
+          "slug": "41950",
+          "model_number": "41950",
+          "english_name": "Fix Clip Double 135°",
+          "item_description": "Flat Square Glass-to-Glass Clip, 135° 41950",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41950.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 88,
+          "slug": "41965",
+          "model_number": "41965",
+          "english_name": "Fix Clip Single 180°",
+          "item_description": "Flat Square Wall-to-Glass Clip, 180° 41965",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41965.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 89,
+          "slug": "41970",
+          "model_number": "41970",
+          "english_name": "Fix Clip Double 180°",
+          "item_description": "Flat Square Glass-to-Glass Clip, 180° 41970",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/41970.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 90,
+          "slug": "41995",
+          "model_number": "41995",
+          "english_name": "Fix Clip T-Type",
+          "item_description": "Flat Square T-Type 3-Way Glass Clip, SS304 41995",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/41995.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 91,
+          "slug": "42000",
+          "model_number": "42000",
+          "english_name": "Fix Clip 0° Single Hole",
+          "item_description": "Slim Rectangular 0° Glass Clip 42000",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/42000.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 92,
+          "slug": "42040",
+          "model_number": "42040",
+          "english_name": "Fix Clip 90° Single Hole",
+          "item_description": "90° Wall-to-Glass Clip, 50x31mm 42040",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS201"
+          ],
+          "image": "src/assets/products/42040.png",
+          "specification_image": "src/assets/specs/42040-spec.png"
+        },
+        {
+          "serial": 93,
+          "slug": "42190",
+          "model_number": "42190",
+          "english_name": "0° Edge Clamp",
+          "item_description": "0° Glass Edge Clamp, Brass 42190",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Brass"
+          ],
+          "image": "src/assets/products/42190.png",
+          "specification_image": "src/assets/specs/42190-spec.png"
+        },
+        {
+          "serial": 94,
+          "slug": "42205",
+          "model_number": "42205",
+          "english_name": "135° Edge Clamp",
+          "item_description": "135° Glass Edge Clamp, Brass 42205",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Brass"
+          ],
+          "image": "src/assets/products/42205.png",
+          "specification_image": "src/assets/specs/42205-spec.png"
+        },
+        {
+          "serial": 95,
+          "slug": "42210",
+          "model_number": "42210",
+          "english_name": "90° Edge Clamp",
+          "item_description": "90° Glass Edge Clamp, Brass 42210",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Brass"
+          ],
+          "image": "src/assets/products/42210.png",
+          "specification_image": "src/assets/specs/42210-spec.png"
+        },
+        {
+          "serial": 96,
+          "slug": "42225",
+          "model_number": "42225",
+          "english_name": "T-Type Edge Clamp",
+          "item_description": "T-Type Glass Edge Clamp, Brass 42225",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Brass"
+          ],
+          "image": "src/assets/products/42225.png",
+          "specification_image": "src/assets/specs/42225-spec.png"
+        },
+        {
+          "serial": 97,
+          "slug": "42475",
+          "model_number": "42475",
+          "english_name": "For 10mm Glass",
+          "item_description": "Lever Latch Knob for Shower Door, 10mm Glass, SS304 42475",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42475.png",
+          "specification_image": "src/assets/specs/42475-spec.png"
+        },
+        {
+          "serial": 98,
+          "slug": "42480",
+          "model_number": "42480",
+          "english_name": "For 10mm Glass",
+          "item_description": "Lever Latch with Round Keeper Knob, Glass-to-Glass, 10mm Glass, SS304 42480",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42480.png",
+          "specification_image": "src/assets/specs/42480-spec.png"
+        },
+        {
+          "serial": 99,
+          "slug": "42495",
+          "model_number": "42495",
+          "english_name": "For 10mm Glass",
+          "item_description": "Turn-Knob Bolt Latch, Glass-to-Wall, 10mm Glass 42495",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42495.png",
+          "specification_image": "src/assets/specs/42495-spec.png"
+        },
+        {
+          "serial": 100,
+          "slug": "42500",
+          "model_number": "42500",
+          "english_name": "For 10mm Glass",
+          "item_description": "Turn-Knob Bolt Latch, Glass-to-Glass, 10mm Glass 42500",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42500.png",
+          "specification_image": "src/assets/specs/42500-spec.png"
+        },
+        {
+          "serial": 101,
+          "slug": "42515",
+          "model_number": "42515",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Bathroom Indicator Lock, Pin Bolt, Glass-to-Wall, 55x90mm 42515",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42515.png",
+          "specification_image": "src/assets/specs/42515-spec.png"
+        },
+        {
+          "serial": 102,
+          "slug": "42520",
+          "model_number": "42520",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Bathroom Indicator Lock, Pin Bolt, Glass-to-Glass, 55x90mm 42520",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42520.png",
+          "specification_image": "src/assets/specs/42520-spec.png"
+        },
+        {
+          "serial": 103,
+          "slug": "42535",
+          "model_number": "42535",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Bathroom Indicator Lock, Flat Bolt, Glass-to-Wall, 55x90mm 42535",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42535.png",
+          "specification_image": "src/assets/specs/42535-spec.png"
+        },
+        {
+          "serial": 104,
+          "slug": "42540",
+          "model_number": "42540",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Bathroom Indicator Lock, Flat Bolt, Glass-to-Glass, 55x90mm 42540",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42540.png",
+          "specification_image": "src/assets/specs/42540-spec.png"
+        },
+        {
+          "serial": 105,
+          "slug": "42555",
+          "model_number": "42555",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Bathroom Indicator Lock, Curved Wrap Body, Glass-to-Wall, 65x90mm 42555",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42555.png",
+          "specification_image": "src/assets/specs/42555-spec.png"
+        },
+        {
+          "serial": 106,
+          "slug": "42560",
+          "model_number": "42560",
+          "english_name": "For 10mm Glass",
+          "item_description": "Square Recessed Pull for Sliding Glass Door, 83x70mm 42560",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42560.png",
+          "specification_image": "src/assets/specs/42560-spec.png"
+        },
+        {
+          "serial": 107,
+          "slug": "42575",
+          "model_number": "42575",
+          "english_name": "For 10mm Glass",
+          "item_description": "Rectangular Recessed Pull for Sliding Glass Door, 120x70mm 42575",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42575.png",
+          "specification_image": "src/assets/specs/42575-spec.png"
+        },
+        {
+          "serial": 108,
+          "slug": "42580",
+          "model_number": "42580",
+          "english_name": "SS304, for 10mm Glass",
+          "item_description": "Round Flush Pull for Sliding Glass Door, Ø68mm, SS304 42580",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "SS304"
+          ],
+          "image": "src/assets/products/42580.png",
+          "specification_image": "src/assets/specs/42580-spec.png"
+        },
+        {
+          "serial": 109,
+          "slug": "42600",
+          "model_number": "42600",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Sliding Glass Door Key Lock, Glass-to-Wall 42600",
+          "available_finish": [
+            "Polished"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42600.png",
+          "specification_image": "src/assets/specs/42600-spec.png"
+        },
+        {
+          "serial": 110,
+          "slug": "42615",
+          "model_number": "42615",
+          "english_name": "Zinc Alloy, for 10mm Glass",
+          "item_description": "Sliding Glass Door Key Lock, Glass-to-Glass 42615",
+          "available_finish": [
+            "Black"
+          ],
+          "main_material": [
+            "Zinc Alloy"
+          ],
+          "image": "src/assets/products/42615.png",
+          "specification_image": "src/assets/specs/42615-spec.png"
+        }
+      ]
+    },
+    {
+      "name": "Handrail Accessories",
+      "slug": "handrail-accessories",
+      "products": [
+        {
+          "serial": 1,
+          "slug": "40680",
+          "model_number": "40680",
+          "english_name": "Glass Railing Spigot, Square Base, No Glass Drilling",
+          "item_description": "Square-Base Glass Spigot, 160mm, No Glass Drilling, 1.2kg 40680",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40680.png",
+          "specification_image": "src/assets/specs/40680-spec.png",
+          "weight": "1.2kg"
+        },
+        {
+          "serial": 2,
+          "slug": "40690",
+          "model_number": "40690",
+          "english_name": "Glass Railing Spigot, Square Base, No Glass Drilling",
+          "item_description": "Square-Base Glass Spigot, 220mm, No Glass Drilling, 1.5kg 40690",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40690.png",
+          "specification_image": "src/assets/specs/40690-spec.png",
+          "weight": "1.5kg"
+        },
+        {
+          "serial": 3,
+          "slug": "40685",
+          "model_number": "40685",
+          "english_name": "Glass Railing Spigot, Square Base, No Glass Drilling",
+          "item_description": "Heavy-Duty Square-Base Glass Spigot, 220mm, No Glass Drilling, 1.8kg 40685",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40685.png",
+          "specification_image": "src/assets/specs/40685-spec.png",
+          "weight": "1.8kg"
+        },
+        {
+          "serial": 4,
+          "slug": "40695",
+          "model_number": "40695",
+          "english_name": "Glass Railing Spigot, Round Base, Glass Drilling Required",
+          "item_description": "Round-Base Glass Spigot, 160mm, for Drilled Glass, 1.2kg 40695",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40695.png",
+          "specification_image": "src/assets/specs/40695-spec.png",
+          "weight": "1.2kg"
+        },
+        {
+          "serial": 5,
+          "slug": "40705",
+          "model_number": "40705",
+          "english_name": "Glass Railing Spigot, Round Base, Glass Drilling Required",
+          "item_description": "Round-Base Glass Spigot, 220mm, for Drilled Glass, 1.5kg 40705",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40705.png",
+          "specification_image": "src/assets/specs/40705-spec.png",
+          "weight": "1.5kg"
+        },
+        {
+          "serial": 6,
+          "slug": "40700",
+          "model_number": "40700",
+          "english_name": "Glass Railing Spigot, Round Base, Glass Drilling Required",
+          "item_description": "Heavy-Duty Round-Base Glass Spigot, 220mm, for Drilled Glass, 1.8kg 40700",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40700.png",
+          "specification_image": "src/assets/specs/40700-spec.png",
+          "weight": "1.8kg"
+        },
+        {
+          "serial": 7,
+          "slug": "40800",
+          "model_number": "40800",
+          "english_name": "Aluminium Glass Railing Spigot, No Glass Drilling",
+          "item_description": "Aluminium Glass Spigot, No Glass Drilling, 0.56kg 40800",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/40800.png",
+          "specification_image": "",
+          "weight": "0.56kg"
+        },
+        {
+          "serial": 8,
+          "slug": "40825",
+          "model_number": "40825",
+          "english_name": "Aluminium Glass Railing Spigot, No Glass Drilling",
+          "item_description": "Heavy-Duty Aluminium Glass Spigot, No Glass Drilling, 0.68kg 40825",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/40825.png",
+          "specification_image": "",
+          "weight": "0.68kg"
+        },
+        {
+          "serial": 9,
+          "slug": "44000",
+          "model_number": "44000",
+          "english_name": "Standoff Connector, 20mm",
+          "item_description": "Round Standoff Connector with Lag Screw, Ø48 x 20mm 44000",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/44000.png",
+          "specification_image": "src/assets/specs/44000-spec.png",
+          "size": "20mm"
+        },
+        {
+          "serial": 10,
+          "slug": "44005",
+          "model_number": "44005",
+          "english_name": "Standoff Connector, 30mm",
+          "item_description": "Round Standoff Connector with Lag Screw, Ø48 x 30mm 44005",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/44005.png",
+          "specification_image": "src/assets/specs/44005-spec.png",
+          "size": "30mm"
+        },
+        {
+          "serial": 11,
+          "slug": "44010",
+          "model_number": "44010",
+          "english_name": "Standoff Connector, 40mm",
+          "item_description": "Round Standoff Connector with Lag Screw, Ø48 x 40mm 44010",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/44010.png",
+          "specification_image": "src/assets/specs/44010-spec.png",
+          "size": "40mm"
+        },
+        {
+          "serial": 12,
+          "slug": "44011",
+          "model_number": "44011",
+          "english_name": "Standoff Connector, 50mm",
+          "item_description": "Round Standoff Connector with Lag Screw, Ø48 x 50mm 44011",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/44011.png",
+          "specification_image": "src/assets/specs/44011-spec.png",
+          "size": "50mm"
+        },
+        {
+          "serial": 13,
+          "slug": "40885",
+          "model_number": "40885",
+          "english_name": "Aluminium Glass Balustrade Base Channel",
+          "item_description": "Aluminium Balustrade Base Channel with Light-Strip Gasket, for 6+6 to 10+10mm Laminated Glass, 3m 40885",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40885.png",
+          "specification_image": "src/assets/specs/40885-spec.png"
+        },
+        {
+          "serial": 14,
+          "slug": "40895",
+          "model_number": "40895",
+          "english_name": "Aluminium Glass Balustrade Base Channel",
+          "item_description": "Rounded Aluminium Balustrade Base Channel, 70x100mm, for 12–15mm Glass 40895",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40895.png",
+          "specification_image": "src/assets/specs/40895-spec.png"
+        },
+        {
+          "serial": 15,
+          "slug": "40905",
+          "model_number": "40905",
+          "english_name": "Aluminium Glass Balustrade Base Channel",
+          "item_description": "Compact Aluminium Balustrade Base Channel, 60mm, for 6+6 Laminated Glass up to 1m 40905",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40905.png",
+          "specification_image": "src/assets/specs/40905-spec.png"
+        },
+        {
+          "serial": 16,
+          "slug": "42080",
+          "model_number": "42080",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "D-Shape Glass Clamp, Flat Back, for 10–12mm Glass 42080",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42080.png",
+          "specification_image": "src/assets/specs/42080-spec.png"
+        },
+        {
+          "serial": 17,
+          "slug": "42065",
+          "model_number": "42065",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "D-Shape Glass Clamp for Round Post, for 10–12mm Glass 42065",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42065.png",
+          "specification_image": "src/assets/specs/42065-spec.png"
+        },
+        {
+          "serial": 18,
+          "slug": "42070",
+          "model_number": "42070",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "Square Glass Clamp, Flat Back, for 10–12mm Glass 42070",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42070.png",
+          "specification_image": "src/assets/specs/42070-spec.png"
+        },
+        {
+          "serial": 19,
+          "slug": "42100",
+          "model_number": "42100",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "Square Glass Clamp for Round Post, for 10–12mm Glass 42100",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42100.png",
+          "specification_image": "src/assets/specs/42100-spec.png"
+        },
+        {
+          "serial": 20,
+          "slug": "42125",
+          "model_number": "42125",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "Square Glass Clamp with Safety Pin, for 10–12mm Glass 42125",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42125.png",
+          "specification_image": "src/assets/specs/42125-spec.png"
+        },
+        {
+          "serial": 21,
+          "slug": "42126",
+          "model_number": "42126",
+          "english_name": "Glass Clamp for 10–12mm Glass",
+          "item_description": "D-Shape Glass Clamp with Safety Pin, for 10–12mm Glass 42126",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42126.png",
+          "specification_image": "src/assets/specs/42126-spec.png"
+        },
+        {
+          "serial": 22,
+          "slug": "42130",
+          "model_number": "42130",
+          "english_name": "Fix Clip 0°",
+          "item_description": "0° Glass U-Clip, 58x30mm 42130",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42130.png",
+          "specification_image": "src/assets/specs/42130-spec.png"
+        },
+        {
+          "serial": 23,
+          "slug": "42145",
+          "model_number": "42145",
+          "english_name": "Fix Clip Double 135°",
+          "item_description": "135° Double Glass Clip, Glass-to-Glass, 40mm 42145",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42145.png",
+          "specification_image": "src/assets/specs/42145-spec.png"
+        },
+        {
+          "serial": 24,
+          "slug": "42150",
+          "model_number": "42150",
+          "english_name": "Fix Clip Double 90°",
+          "item_description": "90° Double Glass Clip, Glass-to-Glass, 38mm 42150",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42150.png",
+          "specification_image": "src/assets/specs/42150-spec.png"
+        },
+        {
+          "serial": 25,
+          "slug": "42165",
+          "model_number": "42165",
+          "english_name": "Fix Clip T-Type",
+          "item_description": "T-Type 3-Way Glass Clip, 56mm 42165",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42165.png",
+          "specification_image": "src/assets/specs/42165-spec.png"
+        },
+        {
+          "serial": 26,
+          "slug": "42170",
+          "model_number": "42170",
+          "english_name": "Fix Clip Double 180°",
+          "item_description": "180° Inline Double Glass Clip, 56mm 42170",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42170.png",
+          "specification_image": "src/assets/specs/42170-spec.png"
+        },
+        {
+          "serial": 27,
+          "slug": "42185",
+          "model_number": "42185",
+          "english_name": "Fix Clip Cross-Type",
+          "item_description": "Cross-Type 4-Way Glass Clip, 58mm 42185",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42185.png",
+          "specification_image": "src/assets/specs/42185-spec.png"
+        },
+        {
+          "serial": 28,
+          "slug": "42785-1",
+          "model_number": "42785-1",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Concealed Base, Adjustable Curved Saddle 42785",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42785-1.png",
+          "specification_image": "src/assets/specs/42785-1-spec.png"
+        },
+        {
+          "serial": 29,
+          "slug": "42786",
+          "model_number": "42786",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Exposed-Screw Base, Fixed Flat Saddle 42786",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42786.png",
+          "specification_image": "src/assets/specs/42786-spec.png"
+        },
+        {
+          "serial": 30,
+          "slug": "42787",
+          "model_number": "42787",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Concealed Base, Fixed Curved Saddle 42787",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42787.png",
+          "specification_image": "src/assets/specs/42787-spec.png"
+        },
+        {
+          "serial": 31,
+          "slug": "42788",
+          "model_number": "42788",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Concealed Base, Fixed Flat Saddle 42788",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42788.png",
+          "specification_image": "src/assets/specs/42788-spec.png"
+        },
+        {
+          "serial": 32,
+          "slug": "42789",
+          "model_number": "42789",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Concealed Base, Adjustable Round-Rail Saddle 42789",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42789.png",
+          "specification_image": "src/assets/specs/42789-spec.png"
+        },
+        {
+          "serial": 33,
+          "slug": "42790",
+          "model_number": "42790",
+          "english_name": "Handrail Bracket",
+          "item_description": "Curved Handrail Bracket, Concealed Base, Adjustable Flat Saddle 42790",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42790.png",
+          "specification_image": "src/assets/specs/42790-spec.png"
+        },
+        {
+          "serial": 34,
+          "slug": "42791",
+          "model_number": "42791",
+          "english_name": "Handrail Bracket",
+          "item_description": "Wall-Mounted Handrail Bracket, Ø63mm Flange, Adjustable Flat Saddle 42791",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42791.png",
+          "specification_image": "src/assets/specs/42791-spec.png"
+        },
+        {
+          "serial": 35,
+          "slug": "42792",
+          "model_number": "42792",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted Handrail Bracket, Adjustable Curved Saddle, 10–16mm Glass 42792",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42792.png",
+          "specification_image": "src/assets/specs/42792-spec.png"
+        },
+        {
+          "serial": 36,
+          "slug": "42793",
+          "model_number": "42793",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted Handrail Bracket, Fixed Curved Saddle, 10–16mm Glass 42793",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42793.png",
+          "specification_image": "src/assets/specs/42793-spec.png"
+        },
+        {
+          "serial": 37,
+          "slug": "42794",
+          "model_number": "42794",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted Handrail Bracket, Adjustable Flat Saddle, 10–16mm Glass 42794",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42794.png",
+          "specification_image": "src/assets/specs/42794-spec.png"
+        },
+        {
+          "serial": 38,
+          "slug": "42795",
+          "model_number": "42795",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted Handrail Bracket, Fixed Flat Saddle, 10–16mm Glass 42795",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42795.png",
+          "specification_image": "src/assets/specs/42795-spec.png"
+        },
+        {
+          "serial": 39,
+          "slug": "42796",
+          "model_number": "42796",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted Handrail Bracket with Top Glass Clamp, 10–16mm Glass 42796",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42796.png",
+          "specification_image": "src/assets/specs/42796-spec.png"
+        },
+        {
+          "serial": 40,
+          "slug": "42797",
+          "model_number": "42797",
+          "english_name": "Handrail Bracket",
+          "item_description": "Base-Mounted Glass Support Bracket with Standoff Head, 10–16mm Glass 42797",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42797.png",
+          "specification_image": "src/assets/specs/42797-spec.png"
+        },
+        {
+          "serial": 41,
+          "slug": "42798",
+          "model_number": "42798",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted T-Post Handrail Bracket, Adjustable Flat Saddle, 10–20mm Glass 42798",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42798.png",
+          "specification_image": "src/assets/specs/42798-spec.png"
+        },
+        {
+          "serial": 42,
+          "slug": "42799",
+          "model_number": "42799",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted T-Post Handrail Bracket, Adjustable Curved Saddle, 10–20mm Glass 42799",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42799.png",
+          "specification_image": "src/assets/specs/42799-spec.png"
+        },
+        {
+          "serial": 43,
+          "slug": "42800",
+          "model_number": "42800",
+          "english_name": "Handrail Bracket",
+          "item_description": "Glass-Mounted T-Post Handrail Bracket, Fixed Flat Saddle, 10–20mm Glass 42800",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42800.png",
+          "specification_image": "src/assets/specs/42800-spec.png"
+        },
+        {
+          "serial": 44,
+          "slug": "42801",
+          "model_number": "42801",
+          "english_name": "Handrail Bracket",
+          "item_description": "Wall-Mounted T-Post Handrail Bracket, Exposed-Screw Flange, Fixed Flat Saddle 42801",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42801.png",
+          "specification_image": "src/assets/specs/42801-spec.png"
+        },
+        {
+          "serial": 45,
+          "slug": "42802",
+          "model_number": "42802",
+          "english_name": "Handrail Bracket",
+          "item_description": "Wall-Mounted T-Post Handrail Bracket, Exposed-Screw Flange, Adjustable Flat Saddle 42802",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42802.png",
+          "specification_image": "src/assets/specs/42802-spec.png"
+        },
+        {
+          "serial": 46,
+          "slug": "42803",
+          "model_number": "42803",
+          "english_name": "Handrail Bracket",
+          "item_description": "Wall-Mounted T-Post Handrail Bracket, Concealed Flange, Adjustable Curved Saddle 42803",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42803.png",
+          "specification_image": "src/assets/specs/42803-spec.png"
+        },
+        {
+          "serial": 47,
+          "slug": "42804",
+          "model_number": "42804",
+          "english_name": "Wall-to-Glass Connector Standard (Cable Connection)",
+          "item_description": "Wall-to-Glass Canopy Connector, Cable Connection 42804",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42804.png",
+          "specification_image": "src/assets/specs/42804-spec.png"
+        },
+        {
+          "serial": 48,
+          "slug": "42805",
+          "model_number": "42805",
+          "english_name": "Rear Cantilever Wall Bracket Standard (Cable Connection)",
+          "item_description": "Rear Cantilever Wall Bracket for Glass Canopy, Cable Connection 42805",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42805.png",
+          "specification_image": "src/assets/specs/42805-spec.png"
+        },
+        {
+          "serial": 49,
+          "slug": "42806",
+          "model_number": "42806",
+          "english_name": "Front Cantilever Wall Bracket Standard (Cable Connection)",
+          "item_description": "Front Cantilever Glass Bracket for Glass Canopy, Cable Connection, 100kg 42806",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/42806.png",
+          "specification_image": "src/assets/specs/42806-spec.png"
+        },
+        {
+          "serial": 58,
+          "slug": "40830",
+          "model_number": "40830",
+          "english_name": "Glass Standoff, 30mm",
+          "item_description": "Ø40mm Glass Standoff for 12–20mm Glass, 30mm 40830",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40830.png",
+          "specification_image": "src/assets/specs/40830-spec.png",
+          "size": "30mm"
+        },
+        {
+          "serial": 61,
+          "slug": "40845",
+          "model_number": "40845",
+          "english_name": "Glass Standoff, 40mm",
+          "item_description": "Ø40mm Glass Standoff for 12–20mm Glass, 40mm 40845",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40845.png",
+          "specification_image": "src/assets/specs/40845-spec.png",
+          "size": "40mm"
+        },
+        {
+          "serial": 105,
+          "slug": "40850",
+          "model_number": "40850",
+          "english_name": "Glass Standoff, 50mm",
+          "item_description": "Ø40mm Glass Standoff for 12–20mm Glass, 50mm 40850",
+          "available_finish": [
+            "Polished",
+            "Black",
+            "Satin",
+            "Gold"
+          ],
+          "main_material": [
+            "SS316",
+            "SS304",
+            "SS201"
+          ],
+          "image": "src/assets/products/40850.png",
+          "specification_image": "src/assets/specs/40850-spec.png",
+          "size": "50mm"
+        }
+      ]
+    },
+    {
+      "name": "Automatic Door Accessories",
+      "slug": "automatic-door-accessories",
+      "products": [
+        {
+          "serial": 1,
+          "slug": "sahro-150-single-door-type",
+          "model_number": "",
+          "english_name": "SAHRO-150 Single Door Type",
+          "item_description": "SAHRO-150 Automatic Sliding Door Operator, Single Door (One-Way Opening)",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/sahro-150-single-door-type.png",
+          "specification_image": "src/assets/specs/sahro-150-single-door-type-spec.png"
+        },
+        {
+          "serial": 2,
+          "slug": "sahro-150-two-door-type",
+          "model_number": "",
+          "english_name": "SAHRO-150 Two Door Type",
+          "item_description": "SAHRO-150 Automatic Sliding Door Operator, Double Door (Two-Way Opening)",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/sahro-150-two-door-type.png",
+          "specification_image": "src/assets/specs/sahro-150-two-door-type-spec.png"
+        },
+        {
+          "serial": 3,
+          "slug": "sahro-250-single-door-type",
+          "model_number": "",
+          "english_name": "SAHRO-250 Single Door Type",
+          "item_description": "SAHRO-250 Automatic Sliding Door Operator, Single Door (One-Way Opening)",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/sahro-250-single-door-type.png",
+          "specification_image": "src/assets/specs/sahro-250-single-door-type-spec.png"
+        },
+        {
+          "serial": 4,
+          "slug": "sahro-250-two-door-type",
+          "model_number": "",
+          "english_name": "SAHRO-250 Two Door Type",
+          "item_description": "SAHRO-250 Automatic Sliding Door Operator, Double Door (Two-Way Opening)",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/sahro-250-two-door-type.png",
+          "specification_image": "src/assets/specs/sahro-250-two-door-type-spec.png"
+        },
+        {
+          "serial": 5,
+          "slug": "motorunit-type-a",
+          "model_number": "",
+          "english_name": "Motor Unit (Type A)",
+          "item_description": "Automatic Door Motor Unit, Type A",
+          "available_finish": [],
+          "main_material": [],
+          "image": "src/assets/products/motorunit-type-a.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 6,
+          "slug": "motorunit-type-b",
+          "model_number": "",
+          "english_name": "Motor Unit (Type B)",
+          "item_description": "Automatic Door Motor Unit, Type B",
+          "available_finish": [],
+          "main_material": [],
+          "image": "src/assets/products/motorunit-type-b.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 7,
+          "slug": "controller-device",
+          "model_number": "",
+          "english_name": "Controller Device",
+          "item_description": "Automatic Door Control Unit",
+          "available_finish": [],
+          "main_material": [],
+          "image": "src/assets/products/controller-device.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 8,
+          "slug": "driven-wheel",
+          "model_number": "",
+          "english_name": "Driven Wheel",
+          "item_description": "Automatic Door Driven Pulley with Belt Tensioner",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/driven-wheel.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 9,
+          "slug": "terminalblock-device",
+          "model_number": "",
+          "english_name": "Terminal Block Device",
+          "item_description": "Automatic Door Terminal Block",
+          "available_finish": [],
+          "main_material": [],
+          "image": "src/assets/products/terminalblock-device.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 10,
+          "slug": "hanger",
+          "model_number": "",
+          "english_name": "Hanger",
+          "item_description": "Automatic Door Twin-Wheel Hanger Assembly",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/hanger.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 11,
+          "slug": "connection-frame-left",
+          "model_number": "",
+          "english_name": "Connection Frame (Left)",
+          "item_description": "Automatic Door Belt Connection Frame, Left",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/connection-frame-left.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 12,
+          "slug": "connection-frame-right-dobule-door",
+          "model_number": "",
+          "english_name": "Connection Frame (Right) – Double Door",
+          "item_description": "Automatic Door Belt Connection Frame, Right (Double Door)",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/connection-frame-right-dobule-door.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 13,
+          "slug": "stopper",
+          "model_number": "",
+          "english_name": "Stopper",
+          "item_description": "Automatic Door Track Stopper",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "Aluminium"
+          ],
+          "image": "src/assets/products/stopper.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 14,
+          "slug": "belt",
+          "model_number": "",
+          "english_name": "Belt",
+          "item_description": "Automatic Door Toothed Drive Belt",
+          "available_finish": [],
+          "main_material": [],
+          "image": "src/assets/products/belt.png",
+          "specification_image": ""
+        }
+      ]
+    },
+    {
+      "name": "Curtain Accessories",
+      "slug": "curtain-accessories",
+      "products": [
+        {
+          "serial": 1,
+          "slug": "43705",
+          "model_number": "43705",
+          "english_name": "Curtain Wall Angle Bracket with Rubber Pad",
+          "item_description": "Galvanised Curtain Wall Angle Bracket with Rubber Isolation Pad 43705",
+          "available_finish": [
+            "Black",
+            "Polished"
+          ],
+          "main_material": [
+            "SS201 (0.8mm)",
+            "Zinc (3.0mm)"
+          ],
+          "image": "src/assets/products/43705.png",
+          "specification_image": ""
+        },
+        {
+          "serial": 2,
+          "slug": "48005",
+          "model_number": "48005",
+          "english_name": "Four-Arm Curtain Wall Spider Fitting, 200",
+          "item_description": "X-Type Four-Arm Curtain Wall Spider, 200 Series, 3.6kg 48005",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48005.jpeg",
+          "specification_image": "",
+          "weight": "3.6kg"
+        },
+        {
+          "serial": 3,
+          "slug": "48030",
+          "model_number": "48030",
+          "english_name": "Four-Arm Curtain Wall Spider Fitting, 250",
+          "item_description": "X-Type Four-Arm Curtain Wall Spider, 250 Series, 6.6kg 48030",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48030.jpeg",
+          "specification_image": "",
+          "weight": "6.6kg"
+        },
+        {
+          "serial": 4,
+          "slug": "48045",
+          "model_number": "48045",
+          "english_name": "Four-Arm Spider Fitting, 220",
+          "item_description": "Four-Arm Spider Fitting with Centre Tube, 220 Series, 3.4kg 48045",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48045.jpeg",
+          "specification_image": "",
+          "weight": "3.4kg"
+        },
+        {
+          "serial": 5,
+          "slug": "48050",
+          "model_number": "48050",
+          "english_name": "Three-Arm Spider Fitting, 220",
+          "item_description": "Three-Arm Spider Fitting, 220 Series, 2.9kg 48050",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48050.jpeg",
+          "specification_image": "",
+          "weight": "2.9kg"
+        },
+        {
+          "serial": 6,
+          "slug": "48055",
+          "model_number": "48055",
+          "english_name": "90° Spider Fitting, 220L",
+          "item_description": "90° Two-Arm Corner Spider Fitting, 220L Series, 2kg 48055",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48055.jpeg",
+          "specification_image": "",
+          "weight": "2kg"
+        },
+        {
+          "serial": 7,
+          "slug": "48060",
+          "model_number": "48060",
+          "english_name": "Long Single-Arm Spider Fitting, 220L",
+          "item_description": "Long Single-Arm Spider Fitting, 220L Series, 1.4kg 48060",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48060.jpeg",
+          "specification_image": "",
+          "weight": "1.4kg"
+        },
+        {
+          "serial": 8,
+          "slug": "48065",
+          "model_number": "48065",
+          "english_name": "180° Spider Fitting, 220I",
+          "item_description": "180° Two-Arm Inline Spider Fitting, 220I Series, 1.8kg 48065",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48065.jpeg",
+          "specification_image": "",
+          "weight": "1.8kg"
+        },
+        {
+          "serial": 9,
+          "slug": "48070",
+          "model_number": "48070",
+          "english_name": "Short Single-Arm Spider Fitting, 220SI",
+          "item_description": "Short Single-Arm Spider Fitting, 220SI Series, 1.3kg 48070",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold"
+          ],
+          "main_material": [
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/48070.jpeg",
+          "specification_image": "",
+          "weight": "1.3kg"
+        }
+      ]
+    },
+    {
+      "name": "Metal Channels",
+      "slug": "metal-channels",
+      "products": [
+        {
+          "serial": 1,
+          "slug": "00100",
+          "model_number": "00100",
+          "english_name": "Stainless Steel U-Channel",
+          "item_description": "Stainless Steel U-Channel Profile, 30mm 00100",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00100.png",
+          "specification_image": "",
+          "size": "30mm"
+        },
+        {
+          "serial": 2,
+          "slug": "00105",
+          "model_number": "00105",
+          "english_name": "Stainless Steel U-Channel",
+          "item_description": "Stainless Steel U-Channel Profile, 40mm 00105",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00105.png",
+          "specification_image": "",
+          "size": "40mm"
+        },
+        {
+          "serial": 3,
+          "slug": "00110",
+          "model_number": "00110",
+          "english_name": "Stainless Steel U-Channel",
+          "item_description": "Stainless Steel U-Channel Profile, 50mm 00110",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00110.png",
+          "specification_image": "",
+          "size": "50mm"
+        },
+        {
+          "serial": 4,
+          "slug": "00115",
+          "model_number": "00115",
+          "english_name": "Stainless Steel U-Channel",
+          "item_description": "Stainless Steel U-Channel Profile, 60mm 00115",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00115.png",
+          "specification_image": "",
+          "size": "60mm"
+        },
+        {
+          "serial": 5,
+          "slug": "00120",
+          "model_number": "00120",
+          "english_name": "Stainless Steel L-Corner",
+          "item_description": "Stainless Steel L-Corner Angle Profile, 30mm 00120",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00120.png",
+          "specification_image": "",
+          "size": "30mm"
+        },
+        {
+          "serial": 6,
+          "slug": "00125",
+          "model_number": "00125",
+          "english_name": "Stainless Steel L-Corner",
+          "item_description": "Stainless Steel L-Corner Angle Profile, 40mm 00125",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00125.png",
+          "specification_image": "",
+          "size": "40mm"
+        },
+        {
+          "serial": 7,
+          "slug": "00130",
+          "model_number": "00130",
+          "english_name": "Stainless Steel L-Corner",
+          "item_description": "Stainless Steel L-Corner Angle Profile, 50mm 00130",
+          "available_finish": [
+            "Black",
+            "Polished",
+            "Gold",
+            "Satin"
+          ],
+          "main_material": [
+            "SS430",
+            "SS201",
+            "SS304"
+          ],
+          "image": "src/assets/products/00130.png",
+          "specification_image": "",
+          "size": "50mm"
+        }
+      ]
+    }
+  ]
+}

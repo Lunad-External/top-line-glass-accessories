@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div>
+<footer style="margin-top:80px;border-top:1px solid #d6e2db;background:#006c35;color:#f8faf9">
+  <div style="max-width:1240px;margin:0 auto;padding:56px 20px;display:grid;gap:40px;grid-template-columns:{{ footerCols }}">
+    <div>
+      <div style="display:inline-flex;align-items:center;justify-content:center;border-radius:6px;background:#ffffff;padding:8px">
+        <img src="public/favicon.png" alt="Top Line Glass Products Accessories" width="80" height="40" style="height:40px;width:auto">
+      </div>
+      <div style="font-size:18px;line-height:28px;margin-top:16px;font-weight:600">Top Line Glass Products Accessories</div>
+      <p style="margin-top:12px;font-size:14px;color:rgba(248,250,249,0.7);line-height:1.625">Premium glass door control systems, bathroom accessories, and door &amp; window hardware for the Middle East.</p>
+    </div>
+    <div>
+      <div style="font-size:14px;line-height:20px;font-weight:600;margin-bottom:12px">Explore</div>
+      <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;color:rgba(248,250,249,0.7)">
+        <li><a href="About.dc.html" style-hover="color:#f8faf9">About Us</a></li>
+        <li><a href="Products.dc.html" style-hover="color:#f8faf9">Products</a></li>
+        <li><a href="Catalogues.dc.html" style-hover="color:#f8faf9">Catalogues</a></li>
+        <li><a href="Projects.dc.html" style-hover="color:#f8faf9">Projects</a></li>
+        <li><a href="Contact.dc.html" style-hover="color:#f8faf9">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div style="font-size:14px;line-height:20px;font-weight:600;margin-bottom:12px">Categories</div>
+      <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;color:rgba(248,250,249,0.7)">
+        <sc-for list="{{ footCats }}" as="c" hint-placeholder-count="1">
+          <li><a href="{{ c.href }}" style-hover="color:#f8faf9">{{ c.name }}</a></li>
+        </sc-for>
+      </ul>
+    </div>
+    <div>
+      <div style="font-size:14px;line-height:20px;font-weight:600;margin-bottom:12px">Get in touch</div>
+      <ul style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:20px;color:rgba(248,250,249,0.7)">
+        <li style="display:flex;gap:8px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.920z"></path></svg>
+          <a href="tel:+966564508627">+966 56 450 8627</a>
+        </li>
+        <li style="display:flex;gap:8px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          <a href="mailto:kcdtc@gmail.com">kcdtc@gmail.com</a>
+        </li>
+        <li style="display:flex;gap:8px">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>JQR4+798, Al Madina Al Munawwarah Rd, Al Sina'iyah, Riyadh 12845, KSA</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.1)">
+    <div style="max-width:1240px;margin:0 auto;padding:20px;font-size:12px;line-height:16px;color:rgba(248,250,249,0.6);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
+      <span>© {{ year }} Top Line Glass Products Accessories. All rights reserved.</span>
+      <span>Manufacturer · Exporter · KSA</span>
+    </div>
+  </div>
+</footer>
+
+<a href="{{ wa }}" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" style="position:fixed;bottom:20px;right:20px;z-index:50;display:grid;height:56px;width:56px;place-items:center;border-radius:9999px;color:#ffffff;box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25);transition:transform 150ms cubic-bezier(0.4,0,0.2,1);background-color:#25D366" style-hover="transform:scale(1.1)">
+  <span style="position:absolute;display:inline-flex;height:100%;width:100%;border-radius:9999px;opacity:0.4;background-color:#25D366;animation:ping 1s cubic-bezier(0,0,0.2,1) infinite"></span>
+  <svg viewBox="0 0 32 32" fill="currentColor" style="position:relative;height:28px;width:28px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
+</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const WA = "https://wa.me/966564508627?text=" + encodeURIComponent("Hi, I would like to send an enquiry about Top Line Glass Products Accessories.");
+class Component extends DCLogic {
+  state = { w: window.innerWidth, cats: [] };
+  componentDidMount() { fetch("src/data/products.json").then((r) => r.json()).then((d) => this.setState({ cats: d.categories })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    return {
+      wa: WA, year: new Date().getFullYear(),
+      footerCols: this.state.w >= 768 ? "repeat(4,minmax(0,1fr))" : "minmax(0,1fr)",
+      footCats: this.state.cats.slice(0, 8).map((c) => ({ name: c.name, href: "Products.dc.html?c=" + c.slug })),
+    };
+  }
+}
+</script>
+</body>
+</html>

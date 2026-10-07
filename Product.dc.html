@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Product — Top Line Glass Products Accessories</title>
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<style>
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid;border-color:#d6e2db}
+html{font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+body{background-color:#f8faf9;color:#0f2a1c}
+h1,h2,h3,h4{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.02em;font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+a:hover{color:inherit}
+button{font:inherit;color:inherit;background:transparent;cursor:pointer}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+ul,ol{list-style:none}
+</style>
+</helmet>
+<div style="display:flex;min-height:100vh;flex-direction:column">
+<dc-import name="SiteHeader" active="products" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
+<main style="flex:1 1 0%">
+
+<sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 20px;text-align:center">
+    <h1 style="font-size:30px;line-height:36px">Product not found</h1>
+    <a href="Products.dc.html" style="margin-top:16px;display:inline-block;color:#c9a24a">Browse all products</a>
+  </div>
+</sc-if>
+
+<sc-if value="{{ found }}" hint-placeholder-val="{{ true }}">
+<div style="max-width:1240px;margin:0 auto;padding:32px 20px">
+  <nav aria-label="Breadcrumb" style="font-size:12px;line-height:16px;color:#4a5b52">
+    <ol style="display:flex;flex-wrap:wrap;align-items:center;gap:4px">
+      <li style="display:flex;align-items:center;gap:4px"><a href="Home.dc.html" style-hover="color:#0f2a1c">Home</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:12px;width:12px;opacity:0.5"><path d="m9 18 6-6-6-6"></path></svg></li>
+      <li style="display:flex;align-items:center;gap:4px"><a href="Products.dc.html" style-hover="color:#0f2a1c">Products</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:12px;width:12px;opacity:0.5"><path d="m9 18 6-6-6-6"></path></svg></li>
+      <li style="display:flex;align-items:center;gap:4px"><a href="{{ catHref }}" style-hover="color:#0f2a1c">{{ category }}</a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:12px;width:12px;opacity:0.5"><path d="m9 18 6-6-6-6"></path></svg></li>
+      <li style="display:flex;align-items:center;gap:4px"><span style="color:#0f2a1c;font-weight:500">{{ title }}</span></li>
+    </ol>
+  </nav>
+
+  <div style="margin-top:24px;display:grid;grid-template-columns:{{ twoCols }};gap:40px">
+    <div onMouseEnter="{{ imgH.enter }}" onMouseLeave="{{ imgH.leave }}" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);overflow:hidden">
+      <div style="position:relative;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80))">
+        <img src="{{ img }}" alt="{{ title }}" width="800" height="800" decoding="async" style="position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:24px;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease;transform:{{ zoom }};filter:{{ bright }}">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, oklch(1 0 0 / 0.6), transparent 60%);pointer-events:none"></div>
+        <div style="position:absolute;top:0;left:{{ shine }};width:50%;height:100%;background:linear-gradient(120deg, transparent, rgb(255 255 255 / 0.45), transparent);transform:skewX(-20deg);transition:left 800ms ease;pointer-events:none;z-index:2"></div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">{{ category }}</div>
+      <h1 style="font-size:{{ h1Size }}px;line-height:{{ h1Lh }}px;margin-top:8px;text-wrap:balance">{{ title }}</h1>
+      <div style="margin-top:8px;color:#4a5b52">{{ series }}</div>
+
+      <div style="margin-top:24px;border-radius:12px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden">
+        <dl>
+          <sc-if value="{{ showModel }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center">
+            <dt style="color:#4a5b52">Model No.</dt>
+            <dd style="font-weight:500;color:#0f2a1c">{{ model }}</dd>
+          </div>
+          </sc-if>
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center;border-top:{{ seriesBorder }}">
+            <dt style="color:#4a5b52">Series</dt>
+            <dd style="font-weight:500;color:#0f2a1c">{{ series }}</dd>
+          </div>
+          <sc-if value="{{ hasFinish }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center;border-top:1px solid #d6e2db">
+            <dt style="color:#4a5b52">Available Finish</dt>
+            <dd style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ finishes }}" as="c" hint-placeholder-count="4">
+                <span style="display:inline-flex;align-items:center;border-radius:9999px;border:1px solid #d6e2db;background:#e6f0ea;color:#006c35;padding:2px 10px;font-size:12px;line-height:18px;font-weight:500">{{ c }}</span>
+              </sc-for>
+            </dd>
+          </div>
+          </sc-if>
+          <sc-if value="{{ hasMaterial }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center;border-top:1px solid #d6e2db">
+            <dt style="color:#4a5b52">Main Material</dt>
+            <dd style="display:flex;flex-wrap:wrap;gap:6px">
+              <sc-for list="{{ materials }}" as="c" hint-placeholder-count="4">
+                <span style="display:inline-flex;align-items:center;border-radius:9999px;border:1px solid #d6e2db;background:#e6f0ea;color:#006c35;padding:2px 10px;font-size:12px;line-height:18px;font-weight:500">{{ c }}</span>
+              </sc-for>
+            </dd>
+          </div>
+          </sc-if>
+          <sc-if value="{{ hasSize }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center;border-top:1px solid #d6e2db">
+            <dt style="color:#4a5b52">Size</dt>
+            <dd style="font-weight:500;color:#0f2a1c">{{ size }}</dd>
+          </div>
+          </sc-if>
+          <sc-if value="{{ hasWeight }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:{{ rowCols }};gap:16px;padding:12px 20px;font-size:14px;line-height:20px;align-items:center;border-top:1px solid #d6e2db">
+            <dt style="color:#4a5b52">Weight</dt>
+            <dd style="font-weight:500;color:#0f2a1c">{{ weight }}</dd>
+          </div>
+          </sc-if>
+        </dl>
+      </div>
+
+      <a href="{{ orderLink }}" target="_blank" rel="noopener noreferrer" style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:12px 24px;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+        Order Now on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <sc-if value="{{ hasSpec }}" hint-placeholder-val="{{ true }}">
+  <section style="margin-top:48px;border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:{{ specPad }}px">
+    <h2 style="font-size:24px;line-height:32px">Specifications</h2>
+    <button onClick="{{ openSpec }}" aria-label="Enlarge specification drawing" style="margin-top:20px;display:block;width:100%;cursor:zoom-in;border-radius:12px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden">
+      <img src="{{ spec }}" alt="{{ specAlt }}" loading="lazy" style="display:block;width:100%;height:auto">
+    </button>
+    <div style="margin-top:8px;font-size:12px;line-height:16px;color:#4a5b52">Click the drawing to enlarge.</div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ hasRelated }}" hint-placeholder-val="{{ true }}">
+    <section style="margin-top:56px">
+      <h2 style="font-size:24px;line-height:32px;margin-bottom:20px">More from {{ category }}</h2>
+      <div style="display:grid;grid-template-columns:{{ relCols }};gap:20px">
+        <sc-for list="{{ related }}" as="p" hint-placeholder-count="4">
+          <a href="{{ p.href }}" onMouseEnter="{{ p.h.enter }}" onMouseLeave="{{ p.h.leave }}" style="display:block;border-radius:12px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;transition:transform 300ms ease, box-shadow 300ms ease;transform:{{ p.lift }};box-shadow:{{ p.shadow }}">
+            <div style="position:relative;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80))">
+              <img src="{{ p.img }}" alt="{{ p.title }}" width="640" height="480" loading="lazy" decoding="async" style="position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:12px;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease;transform:{{ p.zoom }};filter:{{ p.bright }}">
+              <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, oklch(1 0 0 / 0.6), transparent 60%);pointer-events:none"></div>
+              <div style="position:absolute;top:0;left:{{ p.shine }};width:50%;height:100%;background:linear-gradient(120deg, transparent, rgb(255 255 255 / 0.45), transparent);transform:skewX(-20deg);transition:left 800ms ease;pointer-events:none;z-index:2"></div>
+            </div>
+            <div style="padding:16px">
+              <h3 style="font-size:14px;line-height:1.375;font-weight:500;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2">{{ p.title }}</h3>
+              <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:#4a5b52;min-height:15px">{{ p.modelLabel }}</div>
+              <div style="margin-top:8px;display:inline-flex;align-items:center;font-size:12px;line-height:16px;color:#c9a24a;font-weight:500">View details →</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </section>
+  </sc-if>
+</div>
+
+<sc-if value="{{ specOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeSpec }}" role="dialog" aria-label="Specification drawing" style="position:fixed;inset:0;z-index:60;background:rgba(15,42,28,0.85);overflow:auto;cursor:zoom-out;padding:{{ lbPad }}px">
+    <button onClick="{{ closeSpec }}" aria-label="Close" style="position:fixed;top:16px;right:16px;display:grid;height:44px;width:44px;place-items:center;border-radius:9999px;background:#ffffff;color:#0f2a1c;box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <img src="{{ spec }}" alt="{{ specAlt }}" onClick="{{ toggleFull }}" style="display:block;margin:0 auto;background:#ffffff;border-radius:8px;height:auto;max-width:{{ lbMaxW }};width:{{ lbW }};cursor:{{ lbCursor }}">
+  </div>
+</sc-if>
+</sc-if>
+
+</main>
+<dc-import name="SiteFooter" hint-size="100%,400px" style="display:block"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const waLink = (msg) => `https://wa.me/966564508627?text=${encodeURIComponent(msg)}`;
+const SHADOW_CARD = "0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)";
+const SHADOW_LIFT = "0 10px 30px -10px rgb(15 23 42 / 0.25)";
+
+class Component extends DCLogic {
+  state = { w: window.innerWidth, data: null, hov: null, specOpen: false, full: false };
+  hc = {};
+  params = new URLSearchParams(location.search);
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onKey = (e) => { if (e.key === "Escape") this.setState({ specOpen: false, full: false }); };
+    window.addEventListener("resize", this.onResize);
+    window.addEventListener("keydown", this.onKey);
+    fetch("src/data/products.json").then((r) => r.json()).then((data) => {
+      this.setState({ data });
+      const f = this.find(data);
+      document.title = f ? `${f.p.item_description} — ${f.cat.name} | Top Line Glass Products Accessories` : "Product not found";
+    });
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize);
+    window.removeEventListener("keydown", this.onKey);
+  }
+  resolve(data, x) {
+    if (!x.ref) return x;
+    const home = data.categories.find((c) => c.slug === x.ref);
+    return home && home.products.find((y) => !y.ref && y.slug === x.slug);
+  }
+  find(data) {
+    const cat = data.categories.find((c) => c.slug === this.params.get("c"));
+    const entry = cat && cat.products.find((x) => x.slug === this.params.get("p"));
+    const p = entry && this.resolve(data, entry);
+    return p ? { cat, p, native: !entry.ref, data } : null;
+  }
+  h(key) {
+    if (!this.hc[key]) this.hc[key] = { enter: () => this.setState({ hov: key }), leave: () => this.setState((s) => (s.hov === key ? { hov: null } : null)) };
+    return this.hc[key];
+  }
+  renderVals() {
+    const { w, data, hov, specOpen, full } = this.state;
+    const sm = w >= 640, md = w >= 768, lg = w >= 1024;
+    const f = data ? this.find(data) : null;
+    if (!f) return { notFound: !!data, found: false };
+    const { cat, p } = f;
+    const on = hov === "img";
+    const related = cat.products.filter((x) => x.slug !== p.slug).slice(0, 4).map((x) => this.resolve(data, x)).filter(Boolean);
+    const firstCat = data.categories[0].slug;
+    const hideModel = !p.model_number && cat.slug !== firstCat && f.native;
+    return {
+      notFound: false, found: true,
+      category: cat.name, catHref: `Products.dc.html?c=${cat.slug}`,
+      title: p.item_description, series: p.english_name, model: p.model_number,
+      showModel: !hideModel, seriesBorder: hideModel ? "0" : "1px solid #d6e2db",
+      hasSpec: !!p.specification_image,
+      hasFinish: (p.available_finish || []).length > 0, hasMaterial: (p.main_material || []).length > 0,
+      hasSize: !!p.size, hasWeight: !!p.weight, size: p.size || "", weight: p.weight || "",
+      finishes: p.available_finish, materials: p.main_material,
+      img: p.image, spec: p.specification_image, specAlt: `${p.item_description} — specification drawing`,
+      imgH: this.h("img"), zoom: on ? "scale(1.06)" : "none", bright: on ? "brightness(1.05)" : "none", shine: on ? "130%" : "-75%",
+      twoCols: lg ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      rowCols: sm ? "160px 1fr" : "120px 1fr",
+      h1Size: md ? 36 : 30, h1Lh: md ? 40 : 36,
+      specPad: md ? 32 : 20,
+      orderLink: waLink(`Hi I am looking for ${p.item_description}, can you assist me further?`),
+      specOpen,
+      openSpec: () => this.setState({ specOpen: true, full: false }),
+      closeSpec: () => this.setState({ specOpen: false, full: false }),
+      toggleFull: (e) => { e.stopPropagation(); this.setState((s) => ({ full: !s.full })); },
+      lbPad: md ? 48 : 16,
+      lbMaxW: full ? "none" : "100%", lbW: full ? "200%" : "auto", lbCursor: full ? "zoom-out" : "zoom-in",
+      hasRelated: related.length > 0,
+      relCols: lg ? "repeat(4,minmax(0,1fr))" : sm ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      related: related.map((r) => {
+        const k = "r:" + r.slug, o = hov === k;
+        return { href: `Product.dc.html?c=${cat.slug}&p=${r.slug}`, img: r.image, title: r.item_description,
+          modelLabel: r.model_number ? `Model No. ${r.model_number}` : "", h: this.h(k),
+          lift: o ? "translateY(-4px)" : "none", shadow: o ? SHADOW_LIFT : SHADOW_CARD,
+          zoom: o ? "scale(1.06)" : "none", bright: o ? "brightness(1.05)" : "none", shine: o ? "130%" : "-75%" };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>
