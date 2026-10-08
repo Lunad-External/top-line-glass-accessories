@@ -76,9 +76,9 @@ ul,ol{list-style:none}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-const ORIGIN = "https://sahro-top-line-glass.lovable.app";
+const ASSETS = "public/catalogues";
 const CATALOGUES = [
-  ["Master Catalogue - All Categories","Master_Catalogue_All_Categories.pdf","447b6262-c238-49f9-8844-fa11ab84f2b1/Master_Catalogue_All_Categories.pdf",19097596,"4e706ac3-066c-494b-a395-17e2f51d3604/Master_Catalogue_All_Categories_thumb.jpg"],
+  ["Master Catalogue - All Categories","Master_Catalogue_All_Categories.pdf","Master_Catalogue_All_Categories.pdf",19097596,"Master_Catalogue_All_Categories_thumb.jpg"],
 ];
 const formatSize = (b) => (b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b / (1024 * 1024)).toFixed(1)} MB`);
 
@@ -97,7 +97,7 @@ class Component extends DCLogic {
       cols: w >= 1024 ? "repeat(3,minmax(0,1fr))" : w >= 640 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
       cats: CATALOGUES.map(([title, filename, url, size, thumb]) => {
         const on = hov === filename;
-        return { title, filename, url: `${ORIGIN}/__l5e/assets-v1/${url}`, thumb: `${ORIGIN}/__l5e/assets-v1/${thumb}`,
+        return { title, filename, url: `${ASSETS}/${url}`, thumb: `${ASSETS}/${thumb}`,
           alt: `${title} — first page preview`, size: formatSize(size), h: this.h(filename),
           lift: on ? "translateY(-4px)" : "none", shadow: on ? "0 10px 30px -10px rgb(15 23 42 / 0.25)" : "none",
           zoom: on ? "scale(1.05)" : "none", op: on ? 1 : 0, ty: on ? "0" : "8px" };
