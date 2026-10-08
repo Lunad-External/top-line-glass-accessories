@@ -20,11 +20,11 @@
     <div>
       <div style="font-size:14px;line-height:20px;font-weight:600;margin-bottom:12px">Explore</div>
       <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:20px;color:rgba(248,250,249,0.7)">
-        <li><a href="About.dc.html" style-hover="color:#f8faf9">About Us</a></li>
-        <li><a href="Products.dc.html" style-hover="color:#f8faf9">Products</a></li>
-        <li><a href="Catalogues.dc.html" style-hover="color:#f8faf9">Catalogues</a></li>
-        <li><a href="Projects.dc.html" style-hover="color:#f8faf9">Projects</a></li>
-        <li><a href="Contact.dc.html" style-hover="color:#f8faf9">Contact Us</a></li>
+        <li><a href="about" style-hover="color:#f8faf9">About Us</a></li>
+        <li><a href="products" style-hover="color:#f8faf9">Products</a></li>
+        <li><a href="catalogues" style-hover="color:#f8faf9">Catalogues</a></li>
+        <li><a href="projects" style-hover="color:#f8faf9">Projects</a></li>
+        <li><a href="contact" style-hover="color:#f8faf9">Contact Us</a></li>
       </ul>
     </div>
     <div>
@@ -78,7 +78,7 @@ class Component extends DCLogic {
     return {
       wa: WA, year: new Date().getFullYear(),
       footerCols: this.state.w >= 768 ? "repeat(4,minmax(0,1fr))" : "minmax(0,1fr)",
-      footCats: this.state.cats.slice(0, 8).map((c) => ({ name: c.name, href: "Products.dc.html?c=" + c.slug })),
+      footCats: this.state.cats.slice(0, 8).map((c) => ({ name: c.name, href: "products?c=" + c.slug })),
     };
   }
 }
