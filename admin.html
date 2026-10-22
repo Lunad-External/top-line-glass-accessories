@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Admin Panel — Top Line Glass Products Accessories</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="stylesheet" href="public/fonts/inter.css">
+<script src="src/site-cms.js"></script>
+<style>
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid;border-color:#d6e2db}
+html{font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+body{background-color:#f8faf9;color:#0f2a1c}
+h1,h2,h3,h4{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.02em;font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+a:hover{color:inherit}
+button,input,textarea{font:inherit;color:inherit;background:transparent}
+button{cursor:pointer}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%}
+ul,ol{list-style:none}
+</style>
+</helmet>
+
+<sc-if value="{{ notAuthed }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Admin Login" style="min-height:100vh;display:grid;place-items:center;padding:20px">
+    <form onSubmit="{{ login }}" style="width:100%;max-width:400px;border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:32px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px">
+      <img src="public/favicon.png" alt="Top Line Glass Products Accessories" style="height:48px;width:auto;align-self:flex-start">
+      <div>
+        <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Admin Panel</div>
+        <h1 style="font-size:24px;line-height:32px;font-weight:600;margin-top:4px">Sign in</h1>
+      </div>
+      <label style="display:block">
+        <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Username</span>
+        <input type="email" autocomplete="username" value="{{ u }}" onChange="{{ setU }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35">
+      </label>
+      <label style="display:block">
+        <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Password</span>
+        <input type="password" autocomplete="current-password" value="{{ p }}" onChange="{{ setP }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35">
+      </label>
+      <sc-if value="{{ hasErr }}" hint-placeholder-val="{{ false }}">
+        <div style="font-size:13px;line-height:18px;color:#b42318">{{ err }}</div>
+      </sc-if>
+      <button type="submit" style="display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:12px 20px;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">Sign in</button>
+      <a href="./" style="font-size:13px;line-height:18px;color:#4a5b52" style-hover="color:#0f2a1c">← Back to website</a>
+    </form>
+  </div>
+</sc-if>
+
+<sc-if value="{{ authed }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="position:sticky;top:0;z-index:40;background:#ffffff;border-bottom:1px solid #d6e2db">
+    <div style="max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="public/favicon.png" alt="Top Line Glass Products Accessories" style="height:40px;width:auto">
+        <div>
+          <div style="font-size:14px;line-height:20px;font-weight:600">Admin Panel</div>
+          <div style="font-size:12px;line-height:16px;color:#4a5b52">Changes are saved in this browser only</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <a href="./" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">View website</a>
+        <button onClick="{{ logout }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Sign out</button>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1240px;width:100%;margin:0 auto;padding:32px 20px 80px;display:grid;grid-template-columns:{{ layoutCols }};gap:32px;align-items:start">
+    <nav style="display:flex;flex-direction:{{ navDir }};flex-wrap:wrap;gap:4px;position:{{ navPos }};top:96px">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+        <button onClick="{{ n.go }}" style="text-align:left;border-radius:6px;padding:{{ n.pad }};font-size:{{ n.fs }}px;line-height:20px;font-weight:{{ n.fw }};background:{{ n.bg }};color:{{ n.color }};display:flex;align-items:center;justify-content:space-between;gap:12px">
+          <span>{{ n.label }}</span>
+          <sc-if value="{{ n.dirty }}" hint-placeholder-val="{{ false }}"><span title="Unsaved changes" style="height:8px;width:8px;border-radius:9999px;background:#c9a24a"></span></sc-if>
+        </button>
+      </sc-for>
+    </nav>
+
+    <main style="min-width:0;display:flex;flex-direction:column;gap:24px">
+      <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+        <div style="color:#4a5b52;font-size:14px">Loading…</div>
+      </sc-if>
+
+      <sc-if value="{{ hasBar }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+          <div>
+            <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">{{ scr.kicker }}</div>
+            <h1 style="font-size:30px;line-height:36px;margin-top:4px">{{ scr.title }}</h1>
+            <p style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px;max-width:560px">{{ scr.desc }}</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+            <sc-if value="{{ scr.dirty }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;line-height:16px;font-weight:600;color:#b2863a">Unsaved changes</span></sc-if>
+            <button onClick="{{ scr.restore }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Restore original</button>
+            <button onClick="{{ scr.discard }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Discard</button>
+            <button onClick="{{ scr.save }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">Save changes</button>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- HOME -->
+      <sc-if value="{{ isHome }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin Home" style="display:flex;flex-direction:column;gap:24px">
+          <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+              <div>
+                <h2 style="font-size:20px;line-height:28px;font-weight:600">Hero sliders</h2>
+                <p style="font-size:13px;line-height:18px;color:#4a5b52;margin-top:2px">Shown in this order. Slides change every 5.5 seconds.</p>
+              </div>
+              <button onClick="{{ addSlide }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">+ Add slide</button>
+            </div>
+            <sc-for list="{{ slides }}" as="s" hint-placeholder-count="5">
+              <div style="border-radius:12px;border:1px solid #d6e2db;background:#f8faf9;padding:16px;display:grid;grid-template-columns:{{ slideCols }};gap:16px">
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <div style="position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#e7eeea;display:grid;place-items:center">
+                    <sc-if value="{{ s.hasImg }}" hint-placeholder-val="{{ false }}"><img src="{{ s.src }}" alt="" style="position:absolute;inset:0;height:100%;width:100%;object-fit:cover"></sc-if>
+                    <sc-if value="{{ s.noImg }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;color:#4a5b52">No image</span></sc-if>
+                  </div>
+                  <label style="display:inline-flex;justify-content:center;align-items:center;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;padding:8px 12px;font-size:13px;line-height:18px;font-weight:600;cursor:pointer">
+                    <input type="file" accept="image/*" onChange="{{ s.onImg }}" style="display:none">{{ s.imgLabel }}
+                  </label>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+                    <div style="font-size:13px;line-height:18px;font-weight:600;color:#4a5b52">Slide {{ s.n }}</div>
+                    <div style="display:flex;gap:6px">
+                      <button onClick="{{ s.up }}" aria-label="Move up" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m18 15-6-6-6 6"></path></svg></button>
+                      <button onClick="{{ s.down }}" aria-label="Move down" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m6 9 6 6 6-6"></path></svg></button>
+                      <button onClick="{{ s.remove }}" aria-label="Remove slide" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                    </div>
+                  </div>
+                  <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Kicker (small gold label)</span>
+                    <input value="{{ s.kicker }}" onChange="{{ s.onKicker }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;padding:8px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+                  <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Heading</span>
+                    <input value="{{ s.title }}" onChange="{{ s.onTitle }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;padding:8px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+                  <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Subtitle</span>
+                    <textarea rows="2" value="{{ s.sub }}" onChange="{{ s.onSub }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;padding:8px 12px;font-size:14px;line-height:20px;outline:none;resize:vertical" style-focus="box-shadow:0 0 0 2px #006c35"></textarea></label>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+              <div>
+                <h2 style="font-size:20px;line-height:28px;font-weight:600">"Why Choose Us" images</h2>
+                <p style="font-size:13px;line-height:18px;color:#4a5b52;margin-top:2px">With more than one image, the section plays them as a carousel (every 4 seconds, with dots).</p>
+              </div>
+              <label style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;cursor:pointer">
+                <input type="file" accept="image/*" multiple="{{ true }}" onChange="{{ addWhy }}" style="display:none">+ Add images
+              </label>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px">
+              <sc-for list="{{ why }}" as="wi" hint-placeholder-count="1">
+                <div style="border-radius:12px;border:1px solid #d6e2db;background:#f8faf9;padding:10px;display:flex;flex-direction:column;gap:8px">
+                  <div style="aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#e7eeea"><img src="{{ wi.src }}" alt="" style="height:100%;width:100%;object-fit:cover"></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+                    <span style="font-size:12px;font-weight:600;color:#4a5b52">Image {{ wi.n }}</span>
+                    <div style="display:flex;gap:6px">
+                      <label aria-label="Replace image" title="Replace image" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;cursor:pointer"><input type="file" accept="image/*" onChange="{{ wi.onImg }}" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></label>
+                      <button onClick="{{ wi.up }}" aria-label="Move earlier" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m15 18-6-6 6-6"></path></svg></button>
+                      <button onClick="{{ wi.down }}" aria-label="Move later" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m9 18 6-6-6-6"></path></svg></button>
+                      <button onClick="{{ wi.remove }}" aria-label="Remove image" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- ABOUT -->
+      <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin About" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px">
+          <div>
+            <h2 style="font-size:20px;line-height:28px;font-weight:600">"About Top Line Glass Products Accessories" image</h2>
+            <p style="font-size:13px;line-height:18px;color:#4a5b52;margin-top:2px">Shown beside the introduction on the About Us page.</p>
+          </div>
+          <div style="max-width:480px;border-radius:12px;overflow:hidden;background:#e7eeea;aspect-ratio:4/3"><img src="{{ aboutSrc }}" alt="" style="height:100%;width:100%;object-fit:cover"></div>
+          <label style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;cursor:pointer">
+            <input type="file" accept="image/*" onChange="{{ onAboutImg }}" style="display:none">Replace image
+          </label>
+        </section>
+      </sc-if>
+
+      <!-- PRODUCTS -->
+      <sc-if value="{{ isProducts }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin Products" style="display:flex;flex-direction:column;gap:24px">
+          <div>
+            <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Products</div>
+            <h1 style="font-size:30px;line-height:36px;margin-top:4px">{{ pc.name }}</h1>
+            <p style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px;max-width:560px">{{ pc.desc }}</p>
+          </div>
+
+          <sc-if value="{{ pc.listing }}" hint-placeholder-val="{{ true }}">
+            <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
+              <sc-for list="{{ pc.rows }}" as="r" hint-placeholder-count="8">
+                <div style="display:grid;grid-template-columns:{{ pc.rowCols }};gap:16px;align-items:center;padding:10px 16px;border-top:{{ r.bt }}">
+                  <span style="font-size:12px;line-height:16px;color:#4a5b52;text-align:right">{{ r.n }}</span>
+                  <div style="height:56px;width:56px;border-radius:8px;border:1px solid #d6e2db;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80));overflow:hidden"><img src="{{ r.thumb }}" alt="" loading="lazy" style="height:100%;width:100%;object-fit:contain;padding:4px"></div>
+                  <div style="min-width:0">
+                    <div style="font-size:14px;line-height:20px;font-weight:500">{{ r.title }}</div>
+                    <div style="font-size:12px;line-height:16px;color:#4a5b52;margin-top:2px">{{ r.meta }}</div>
+                  </div>
+                  <button onClick="{{ r.edit }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:14px;width:14px"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>Edit
+                  </button>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ pc.editing }}" hint-placeholder-val="{{ false }}">
+            <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:20px">
+              <div>
+                <button onClick="{{ pc.cancel }}" style="font-size:13px;line-height:18px;font-weight:600;color:#006c35">← Back to {{ pc.name }}</button>
+                <h2 style="font-size:22px;line-height:30px;font-weight:600;margin-top:10px">{{ pc.eTitle }}</h2>
+                <div style="font-size:13px;line-height:18px;color:#4a5b52;margin-top:2px">{{ pc.eMeta }}</div>
+                <sc-if value="{{ pc.eShared }}" hint-placeholder-val="{{ false }}">
+                  <div style="margin-top:10px;font-size:12px;line-height:16px;color:#7a5a17;background:#faf3e2;border:1px solid #ecdcb2;border-radius:6px;padding:6px 10px;display:block;width:fit-content;max-width:100%;height:auto">{{ pc.eSharedNote }}</div>
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+                <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Product images. The first image is the featured image; the others show as thumbnails under it.</span>
+                <label style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:6px 12px;white-space:nowrap;font-size:13px;line-height:18px;font-weight:600;cursor:pointer">
+                  <input type="file" accept="image/*" multiple="{{ true }}" onChange="{{ pc.addImages }}" style="display:none">+ Add images
+                </label>
+              </div>
+              <sc-if value="{{ pc.noImages }}" hint-placeholder-val="{{ false }}">
+                <div style="border-radius:12px;border:1px dashed #b9cbc1;padding:24px;text-align:center;font-size:13px;color:#4a5b52">No images. Add at least one.</div>
+              </sc-if>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px">
+                <sc-for list="{{ pc.images }}" as="im" hint-placeholder-count="1">
+                  <div style="border-radius:12px;border:1px solid #d6e2db;background:#f8faf9;padding:8px;display:flex;flex-direction:column;gap:8px">
+                    <div style="position:relative;aspect-ratio:1/1;border-radius:8px;overflow:hidden;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80))">
+                      <img src="{{ im.src }}" alt="" style="height:100%;width:100%;object-fit:contain;padding:8px">
+                      <sc-if value="{{ im.featured }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:8px;left:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c;font-size:10px;line-height:14px;text-transform:uppercase;letter-spacing:0.14em;font-weight:600;padding:3px 7px">Featured</span></sc-if>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;gap:4px">
+                      <label aria-label="Replace image" title="Replace image" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;cursor:pointer"><input type="file" accept="image/*" onChange="{{ im.onImg }}" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></label>
+                      <button onClick="{{ im.up }}" aria-label="Move earlier" title="Move earlier" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="m15 18-6-6 6-6"></path></svg></button>
+                      <button onClick="{{ im.down }}" aria-label="Move later" title="Move later" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="m9 18 6-6-6-6"></path></svg></button>
+                      <button onClick="{{ im.remove }}" aria-label="Delete image" title="Delete image" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;border-top:1px solid #d6e2db;padding-top:16px">
+                <button onClick="{{ pc.restore }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Restore original image</button>
+                <div style="display:flex;gap:8px">
+                  <button onClick="{{ pc.cancel }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Cancel</button>
+                  <button onClick="{{ pc.save }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">Save images</button>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+        </section>
+      </sc-if>
+
+      <!-- CATALOGUES -->
+      <sc-if value="{{ isCatalogues }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin Catalogues" style="display:flex;flex-direction:column;gap:24px">
+          <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px">
+            <h2 style="font-size:20px;line-height:28px;font-weight:600">Add a catalogue</h2>
+            <div style="display:grid;grid-template-columns:{{ addCatCols }};gap:16px;align-items:end">
+              <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Title</span>
+                <input value="{{ nc.title }}" onChange="{{ nc.onTitle }}" placeholder="e.g. Floor Hinge Series" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+              <div>
+                <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">PDF file (PDF only)</span>
+                <label style="margin-top:4px;display:flex;align-items:center;gap:8px;border-radius:6px;border:1px dashed #b9cbc1;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;cursor:pointer;min-width:0">
+                  <input type="file" accept="application/pdf,.pdf" onChange="{{ nc.onPdf }}" style="display:none">
+                  <span style="font-weight:600;flex-shrink:0">Choose PDF</span><span style="color:#4a5b52;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ nc.pdfName }}</span>
+                </label>
+              </div>
+              <div>
+                <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Cover image (optional)</span>
+                <label style="margin-top:4px;display:flex;align-items:center;gap:8px;border-radius:6px;border:1px dashed #b9cbc1;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;cursor:pointer;min-width:0">
+                  <input type="file" accept="image/*" onChange="{{ nc.onThumb }}" style="display:none">
+                  <span style="font-weight:600;flex-shrink:0">Choose image</span><span style="color:#4a5b52;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ nc.thumbName }}</span>
+                </label>
+              </div>
+              <button onClick="{{ nc.add }}" style="display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">Add catalogue</button>
+            </div>
+            <p style="font-size:12px;line-height:16px;color:#4a5b52">New catalogues are added at the top of the list. Click "Save changes" to publish.</p>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ cats }}" as="c" hint-placeholder-count="6">
+              <div style="border-radius:12px;border:1px solid #d6e2db;background:#ffffff;padding:12px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:center">
+                <div style="aspect-ratio:1/1.414;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;display:grid;place-items:center">
+                  <sc-if value="{{ c.hasThumb }}" hint-placeholder-val="{{ true }}"><img src="{{ c.thumb }}" alt="" loading="lazy" style="max-height:100%;max-width:100%;object-fit:contain"></sc-if>
+                  <sc-if value="{{ c.noThumb }}" hint-placeholder-val="{{ false }}"><span style="font-size:10px;font-weight:600;letter-spacing:0.18em;color:#006c35">PDF</span></sc-if>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <input value="{{ c.title }}" onChange="{{ c.onTitle }}" aria-label="Catalogue title" style="flex:1 1 0%;min-width:0;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 12px;font-size:14px;line-height:20px;font-weight:600;outline:none" style-focus="box-shadow:0 0 0 2px #006c35">
+                    <button onClick="{{ c.up }}" aria-label="Move up" style="display:grid;place-items:center;height:32px;width:32px;flex-shrink:0;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m18 15-6-6-6 6"></path></svg></button>
+                    <button onClick="{{ c.down }}" aria-label="Move down" style="display:grid;place-items:center;height:32px;width:32px;flex-shrink:0;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m6 9 6 6 6-6"></path></svg></button>
+                    <button onClick="{{ c.remove }}" aria-label="Delete catalogue" style="display:grid;place-items:center;height:32px;width:32px;flex-shrink:0;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                  </div>
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:12px;line-height:16px;color:#4a5b52">
+                    <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer" style="max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" style-hover="color:#006c35">{{ c.filename }} · {{ c.size }}</a>
+                    <label style="font-weight:600;color:#006c35;cursor:pointer"><input type="file" accept="application/pdf,.pdf" onChange="{{ c.onPdf }}" style="display:none">Replace PDF</label>
+                    <label style="font-weight:600;color:#006c35;cursor:pointer"><input type="file" accept="image/*" onChange="{{ c.onThumb }}" style="display:none">Change cover</label>
+                    <sc-if value="{{ c.hasThumb }}" hint-placeholder-val="{{ true }}"><button onClick="{{ c.clearThumb }}" style="font-size:12px;font-weight:600;color:#b42318">Remove cover</button></sc-if>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </section>
+      </sc-if>
+
+      <!-- PROJECTS -->
+      <sc-if value="{{ isProjects }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin Projects" style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px">
+            <div>
+              <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Projects Page</div>
+              <h1 style="font-size:30px;line-height:36px;margin-top:4px">{{ projHeading }}</h1>
+              <p style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px;max-width:560px">Project cards with more than one image play them as a carousel. Changes here save as soon as you save or delete a project.</p>
+            </div>
+            <sc-if value="{{ notEditing }}" hint-placeholder-val="{{ true }}">
+              <button onClick="{{ addProject }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">+ Add project</button>
+            </sc-if>
+          </div>
+
+          <sc-if value="{{ notEditing }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:{{ projCols }};gap:20px">
+              <sc-for list="{{ projects }}" as="pr" hint-placeholder-count="2">
+                <article style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column">
+                  <div style="position:relative;aspect-ratio:16/9;background:#e7eeea">
+                    <sc-if value="{{ pr.hasImg }}" hint-placeholder-val="{{ true }}"><img src="{{ pr.thumb }}" alt="" style="position:absolute;inset:0;height:100%;width:100%;object-fit:cover"></sc-if>
+                    <span style="position:absolute;top:10px;left:10px;border-radius:6px;background:rgba(15,42,28,0.75);color:#ffffff;font-size:11px;line-height:16px;font-weight:600;padding:3px 8px">{{ pr.imgCount }}</span>
+                  </div>
+                  <div style="padding:16px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1 1 0%">
+                    <h2 style="font-size:18px;line-height:24px;font-weight:600">{{ pr.title }}</h2>
+                    <div style="font-size:13px;line-height:18px;color:#4a5b52">{{ pr.meta }}</div>
+                    <div style="margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px">
+                      <button onClick="{{ pr.edit }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Edit</button>
+                      <button onClick="{{ pr.remove }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;padding:8px 14px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#b42318">Delete</button>
+                      <span style="flex:1 1 0%"></span>
+                      <button onClick="{{ pr.up }}" aria-label="Move up" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m18 15-6-6-6 6"></path></svg></button>
+                      <button onClick="{{ pr.down }}" aria-label="Move down" style="display:grid;place-items:center;height:32px;width:32px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="m6 9 6 6 6-6"></path></svg></button>
+                    </div>
+                  </div>
+                </article>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ editing }}" hint-placeholder-val="{{ false }}">
+            <div style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:20px">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
+                  <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Project images</span>
+                  <label style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:6px 12px;white-space:nowrap;font-size:13px;line-height:18px;font-weight:600;cursor:pointer">
+                    <input type="file" accept="image/*" multiple="{{ true }}" onChange="{{ pe.addImages }}" style="display:none">+ Add images
+                  </label>
+                </div>
+                <sc-if value="{{ pe.noImages }}" hint-placeholder-val="{{ false }}">
+                  <div style="border-radius:12px;border:1px dashed #b9cbc1;padding:24px;text-align:center;font-size:13px;color:#4a5b52">No images yet. Add at least one.</div>
+                </sc-if>
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px">
+                  <sc-for list="{{ pe.images }}" as="im" hint-placeholder-count="1">
+                    <div style="border-radius:12px;border:1px solid #d6e2db;background:#f8faf9;padding:8px;display:flex;flex-direction:column;gap:8px">
+                      <div style="aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#e7eeea"><img src="{{ im.src }}" alt="" style="height:100%;width:100%;object-fit:cover"></div>
+                      <div style="display:flex;justify-content:space-between;gap:4px">
+                        <label aria-label="Replace image" title="Replace image" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;cursor:pointer"><input type="file" accept="image/*" onChange="{{ im.onImg }}" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></label>
+                        <button onClick="{{ im.up }}" aria-label="Move earlier" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="m15 18-6-6 6-6"></path></svg></button>
+                        <button onClick="{{ im.down }}" aria-label="Move later" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="m9 18 6-6-6-6"></path></svg></button>
+                        <button onClick="{{ im.remove }}" aria-label="Remove image" style="display:grid;place-items:center;height:30px;width:30px;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:15px;width:15px"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Project heading</span>
+                <input value="{{ pe.title }}" onChange="{{ pe.onTitle }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+              <div style="display:grid;grid-template-columns:{{ twoCols }};gap:16px">
+                <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Location</span>
+                  <input value="{{ pe.location }}" onChange="{{ pe.onLocation }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+                <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Year</span>
+                  <input value="{{ pe.year }}" onChange="{{ pe.onYear }}" inputmode="numeric" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+              </div>
+              <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Content</span>
+                <textarea rows="4" value="{{ pe.summary }}" onChange="{{ pe.onSummary }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none;resize:vertical" style-focus="box-shadow:0 0 0 2px #006c35"></textarea></label>
+
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Tick point statements</span>
+                <sc-for list="{{ pe.scope }}" as="sc" hint-placeholder-count="3">
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#006c35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;flex-shrink:0"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <input value="{{ sc.text }}" onChange="{{ sc.onChange }}" placeholder="{{ sc.ph }}" style="flex:1 1 0%;min-width:0;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:8px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35">
+                    <button onClick="{{ sc.remove }}" aria-label="Remove tick point" style="display:grid;place-items:center;height:32px;width:32px;flex-shrink:0;border-radius:6px;border:1px solid #f1c4bf;background:#ffffff;color:#b42318"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+                  </div>
+                </sc-for>
+                <button onClick="{{ pe.addScope }}" style="align-self:flex-start;font-size:13px;line-height:18px;font-weight:600;color:#006c35">+ Add tick point</button>
+              </div>
+
+              <div style="display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;border-top:1px solid #d6e2db;padding-top:16px">
+                <button onClick="{{ pe.cancel }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600">Cancel</button>
+                <button onClick="{{ pe.save }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:10px 16px;white-space:nowrap;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c">Save project</button>
+              </div>
+            </div>
+          </sc-if>
+        </section>
+      </sc-if>
+
+      <!-- CONTACT -->
+      <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+        <section data-screen-label="Admin Contact" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);display:flex;flex-direction:column;gap:16px;max-width:720px">
+          <div style="display:grid;grid-template-columns:{{ twoCols }};gap:16px">
+            <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Mobile number</span>
+              <input type="tel" value="{{ ct.phone }}" onChange="{{ ct.onPhone }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+            <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Email address</span>
+              <input type="email" value="{{ ct.email }}" onChange="{{ ct.onEmail }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+          </div>
+          <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Showroom address (each line shows on its own line)</span>
+            <textarea rows="3" value="{{ ct.address }}" onChange="{{ ct.onAddress }}" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none;resize:vertical" style-focus="box-shadow:0 0 0 2px #006c35"></textarea></label>
+          <label style="display:block"><span style="font-size:12px;line-height:16px;font-weight:500;color:#4a5b52">Google Maps location link</span>
+            <input type="url" value="{{ ct.mapUrl }}" onChange="{{ ct.onMap }}" placeholder="https://maps.app.goo.gl/…" style="margin-top:4px;width:100%;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:10px 12px;font-size:14px;line-height:20px;outline:none" style-focus="box-shadow:0 0 0 2px #006c35"></label>
+          <a href="{{ ct.mapUrl }}" target="_blank" rel="noopener noreferrer" style="align-self:flex-start;font-size:13px;line-height:18px;font-weight:600;color:#006c35">Test link ↗</a>
+          <p style="font-size:12px;line-height:16px;color:#4a5b52">Mobile, email and address also update in the website footer. Clicking the map on the Contact page opens this link.</p>
+        </section>
+      </sc-if>
+    </main>
+  </div>
+</div>
+
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div role="status" style="position:fixed;bottom:20px;right:20px;z-index:60;max-width:360px;border-radius:8px;background:{{ toastBg }};color:#ffffff;padding:12px 16px;font-size:14px;line-height:20px;font-weight:500;box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.35)">{{ toast }}</div>
+</sc-if>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const USER = "sahro@tlksa.com", PASS = "ksahro@26";
+const KEYS = ["slides", "why", "about", "catalogues", "projects", "contact"];
+const SCREENS = [
+  { id: "home", label: "Home Page", keys: ["slides", "why"], kicker: "Home Page", title: "Sliders & Why Choose Us", desc: "Add, edit, reorder or remove hero slides, and manage the Why Choose Us images." },
+  { id: "about", label: "About Us", keys: ["about"], kicker: "About Us Page", title: "About section image", desc: "Change the image in the About Top Line Glass Products Accessories section." },
+  { id: "products", label: "Products", keys: [] },
+  { id: "catalogues", label: "Catalogues", keys: ["catalogues"], kicker: "Catalogues Page", title: "Catalogues", desc: "Add, edit or delete downloadable PDF catalogues." },
+  { id: "projects", label: "Projects", keys: ["projects"] },
+  { id: "contact", label: "Contact Us", keys: ["contact"], kicker: "Contact Us Page", title: "Contact details", desc: "Edit the mobile number, email, showroom address and Google Maps link." },
+];
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
+const clone = (v) => JSON.parse(JSON.stringify(v));
+const fmtSize = (b) => (!b ? "" : b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b / (1024 * 1024)).toFixed(1)} MB`);
+const isPdf = (f) => f && (f.type === "application/pdf" || /\.pdf$/i.test(f.name));
+const isImg = (f) => f && /^image\//.test(f.type);
+const uid = () => "x" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const move = (a, i, d) => { const j = i + d; if (j < 0 || j >= a.length) return a; [a[i], a[j]] = [a[j], a[i]]; return a; };
+const EMPTY_NC = { title: "", url: "", filename: "", size: 0, thumb: "", thumbName: "" };
+
+class Component extends DCLogic {
+  state = { w: window.innerWidth, authed: sessionStorage.getItem("sahro_admin") === "1", u: "", p: "", err: "",
+    screen: "home", d: null, saved: null, urls: {}, toast: "", toastErr: false, proj: null, nc: { ...EMPTY_NC },
+    catalog: null, pimg: {}, pcat: null, pedit: null };
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this.onResize);
+    cms().then(async (c) => {
+      this.c = c;
+      await c.gc();
+      const vals = await Promise.all(KEYS.map((k) => c.get(k)));
+      const d = Object.fromEntries(KEYS.map((k, i) => [k, vals[i]]));
+      const pimg = (await c.getStored("productImages")) || {};
+      this.setState({ d, saved: clone(d), pimg });
+      this.resolveRefs(d);
+      this.resolveRefs(pimg);
+    });
+    fetch("src/data/products.json").then((r) => r.json()).then((catalog) => this.setState((s) => ({ catalog, pcat: s.pcat || catalog.categories[0].slug })));
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); clearTimeout(this.tt); }
+
+  async resolveRefs(v) {
+    const refs = [...new Set((JSON.stringify(v).match(/"idb:[^"]+"/g) || []).map((s) => s.slice(1, -1)))];
+    const pairs = await Promise.all(refs.map(async (r) => [r, await this.c.url(r)]));
+    this.setState((s) => ({ urls: { ...s.urls, ...Object.fromEntries(pairs) } }));
+  }
+  src(ref) { return typeof ref === "string" && ref.startsWith("idb:") ? this.state.urls[ref] || "" : ref || ""; }
+  flash(msg, err) { clearTimeout(this.tt); this.setState({ toast: msg, toastErr: !!err }); this.tt = setTimeout(() => this.setState({ toast: "" }), 3000); }
+  async upload(f) { const ref = await this.c.putFile(f); const u = await this.c.url(ref); this.setState((s) => ({ urls: { ...s.urls, [ref]: u } })); return ref; }
+  pickImgs(e, cb) {
+    const files = [...(e.target.files || [])]; e.target.value = "";
+    if (!files.length) return;
+    if (files.some((f) => !isImg(f))) return this.flash("Please choose image files only (JPG, PNG, WebP).", true);
+    Promise.all(files.map((f) => this.upload(f))).then(cb);
+  }
+  pickImg(e, cb) { this.pickImgs(e, (refs) => cb(refs[0])); }
+  pickPdf(e, cb) {
+    const f = (e.target.files || [])[0]; e.target.value = "";
+    if (!f) return;
+    if (!isPdf(f)) return this.flash("Only PDF files can be uploaded.", true);
+    this.upload(f).then((ref) => cb(ref, f));
+  }
+  setD(key, fn) { this.setState((s) => ({ d: { ...s.d, [key]: fn(clone(s.d[key])) } })); }
+  setPE(fn) { this.setState((s) => ({ proj: { ...s.proj, data: fn(clone(s.proj.data)) } })); }
+  dirty(keys) { const { d, saved } = this.state; return !!d && keys.some((k) => JSON.stringify(d[k]) !== JSON.stringify(saved[k])); }
+
+  validate(k, v) {
+    if (k === "slides") { if (!v.length) return "Add at least one slide."; const i = v.findIndex((s) => !s.img); if (i >= 0) return `Slide ${i + 1} needs an image.`; }
+    if (k === "why" && !v.length) return "Add at least one Why Choose Us image.";
+    if (k === "catalogues") { const i = v.findIndex((c) => !c.title.trim()); if (i >= 0) return `Catalogue ${i + 1} needs a title.`; }
+    if (k === "contact" && (!v.phone.trim() || !v.email.trim())) return "Mobile number and email are required.";
+    return "";
+  }
+  async saveKeys(keys) {
+    for (const k of keys) { const err = this.validate(k, this.state.d[k]); if (err) return this.flash(err, true); }
+    for (const k of keys) await this.c.set(k, this.state.d[k]);
+    this.setState((s) => { const saved = { ...s.saved }; keys.forEach((k) => (saved[k] = clone(s.d[k]))); return { saved }; });
+    this.flash("Saved. Reload the website to see your changes.");
+  }
+  discardKeys(keys) { this.setState((s) => { const d = { ...s.d }; keys.forEach((k) => (d[k] = clone(s.saved[k]))); return { d }; }); }
+  async restoreKeys(keys) {
+    if (!confirm("Restore the original content for this page? Your saved changes for it will be removed.")) return;
+    for (const k of keys) await this.c.reset(k);
+    const def = this.c.DEFAULTS;
+    this.setState((s) => { const d = { ...s.d }, saved = { ...s.saved }; keys.forEach((k) => { d[k] = clone(def[k]); saved[k] = clone(def[k]); }); return { d, saved }; });
+    this.flash("Original content restored.");
+  }
+  async persistProjects(list, msg) {
+    await this.c.set("projects", list);
+    this.setState((s) => ({ d: { ...s.d, projects: clone(list) }, saved: { ...s.saved, projects: clone(list) }, proj: null }));
+    this.flash(msg);
+  }
+
+  productVals(md) {
+    const s = this.state, cat = s.catalog && s.catalog.categories.find((c) => c.slug === s.pcat);
+    if (!cat) return { name: "Products", desc: "Loading…", listing: false, editing: false, rows: [], images: [] };
+    const canon = (p) => (p.ref ? s.catalog.categories.find((c) => c.slug === p.ref).products.find((y) => !y.ref && y.slug === p.slug) : p);
+    const homeOf = (slug) => s.catalog.categories.find((c) => c.products.some((y) => !y.ref && y.slug === slug));
+    const sharedIn = (slug) => s.catalog.categories.filter((c) => c.products.some((y) => y.slug === slug && (y.ref || true))).map((c) => c.name);
+    const imgsOf = (p) => s.pimg[p.slug] || [p.image];
+    const pe = s.pedit;
+    const rows = cat.products.map((e, i) => {
+      const p = canon(e), imgs = imgsOf(p);
+      return { n: i + 1, title: p.item_description, thumb: this.src(imgs[0]), bt: i ? "1px solid #d6e2db" : "0",
+        meta: [p.model_number ? `Model No. ${p.model_number}` : "", `${imgs.length} image${imgs.length === 1 ? "" : "s"}`].filter(Boolean).join(" · "),
+        edit: () => { this.setState({ pedit: { slug: p.slug, images: imgsOf(p).slice() } }); window.scrollTo(0, 0); } };
+    });
+    const v = { name: cat.name, listing: !pe, editing: !!pe, rows, rowCols: "28px 56px minmax(0,1fr) auto",
+      desc: pe ? "Edit, delete or add images for this product." : `${cat.products.length} products, in website order. Click Edit to manage a product's images.` };
+    if (!pe) return { ...v, images: [] };
+    const p = canon(cat.products.find((y) => y.slug === pe.slug));
+    const cats = sharedIn(p.slug);
+    const setI = (fn) => this.setState((st) => ({ pedit: { ...st.pedit, images: fn(st.pedit.images.slice()) } }));
+    return { ...v,
+      eTitle: p.item_description, eMeta: [p.model_number ? `Model No. ${p.model_number}` : "", p.english_name].filter(Boolean).join(" · "),
+      eShared: cats.length > 1, eSharedNote: `Listed in ${cats.join(" and ")}. Changes apply in both.`,
+      noImages: !pe.images.length,
+      images: pe.images.map((ref, i) => ({ src: this.src(ref), featured: i === 0,
+        onImg: (e) => this.pickImg(e, (r) => setI((a) => { a[i] = r; return a; })),
+        up: () => setI((a) => move(a, i, -1)), down: () => setI((a) => move(a, i, 1)),
+        remove: () => setI((a) => { a.splice(i, 1); return a; }) })),
+      addImages: (e) => this.pickImgs(e, (refs) => setI((a) => [...a, ...refs])),
+      cancel: () => this.setState({ pedit: null }),
+      restore: () => setI(() => [p.image]),
+      save: async () => {
+        if (!pe.images.length) return this.flash("Add at least one image.", true);
+        const pimg = { ...s.pimg };
+        if (pe.images.length === 1 && pe.images[0] === p.image) delete pimg[p.slug]; else pimg[p.slug] = pe.images.slice();
+        await this.c.set("productImages", pimg);
+        this.setState({ pimg, pedit: null });
+        this.flash("Product images saved.");
+      },
+    };
+  }
+
+  renderVals() {
+    const s = this.state, w = s.w, md = w >= 768, lg = w >= 1024;
+    const d = s.d || { slides: [], why: [], about: {}, catalogues: [], projects: [], contact: {} };
+    const sc = SCREENS.find((x) => x.id === s.screen);
+    const v = {
+      authed: s.authed, notAuthed: !s.authed, u: s.u, p: s.p, err: s.err, hasErr: !!s.err,
+      setU: (e) => this.setState({ u: e.target.value, err: "" }), setP: (e) => this.setState({ p: e.target.value, err: "" }),
+      login: (e) => {
+        e.preventDefault();
+        if (s.u.trim().toLowerCase() === USER && s.p === PASS) { sessionStorage.setItem("sahro_admin", "1"); this.setState({ authed: true, p: "" }); }
+        else this.setState({ err: "Incorrect username or password." });
+      },
+      logout: () => { sessionStorage.removeItem("sahro_admin"); this.setState({ authed: false, u: "", p: "" }); },
+      layoutCols: lg ? "220px minmax(0,1fr)" : "minmax(0,1fr)", navDir: lg ? "column" : "row", navPos: lg ? "sticky" : "static",
+      slideCols: md ? "240px minmax(0,1fr)" : "minmax(0,1fr)", twoCols: md ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      addCatCols: lg ? "minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr) auto" : md ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      projCols: md ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      loading: !s.d,
+      nav: SCREENS.flatMap((x) => {
+        const on = x.id === s.screen && !(x.id === "products" && s.catalog);
+        const leave = () => (s.proj && !confirm("Leave the project editor? Unsaved project changes will be lost.")) || (s.pedit && !confirm("Leave the product editor? Unsaved image changes will be lost."));
+        const item = { label: x.label, dirty: this.dirty(x.keys), bg: on ? "#006c35" : "transparent", color: on ? "#ffffff" : "#0f2a1c", pad: "10px 14px", fs: 14, fw: 600,
+          go: () => { if (leave()) return; this.setState({ screen: x.id, proj: null, pedit: null }); window.scrollTo(0, 0); } };
+        if (x.id !== "products" || s.screen !== "products" || !s.catalog) return [item];
+        item.color = "#006c35";
+        return [item, ...s.catalog.categories.map((c) => { const a = c.slug === s.pcat; return { label: c.name, dirty: false, bg: a ? "#006c35" : "transparent", color: a ? "#ffffff" : "#4a5b52",
+          pad: lg ? "7px 14px 7px 26px" : "7px 12px", fs: 13, fw: a ? 600 : 500,
+          go: () => { if (leave()) return; this.setState({ pcat: c.slug, pedit: null }); window.scrollTo(0, 0); } }; })];
+      }),
+      isHome: !!s.d && s.screen === "home", isAbout: !!s.d && s.screen === "about", isProducts: s.screen === "products",
+      isCatalogues: !!s.d && s.screen === "catalogues", isProjects: !!s.d && s.screen === "projects", isContact: !!s.d && s.screen === "contact",
+      hasBar: !!s.d && !!sc.title,
+      scr: { kicker: sc.kicker || "", title: sc.title || "", desc: sc.desc || "", dirty: this.dirty(sc.keys),
+        save: () => this.saveKeys(sc.keys), discard: () => this.discardKeys(sc.keys), restore: () => this.restoreKeys(sc.keys) },
+      hasToast: !!s.toast, toast: s.toast, toastBg: s.toastErr ? "#b42318" : "#0f2a1c",
+    };
+
+    v.slides = d.slides.map((sl, i) => ({
+      n: i + 1, src: this.src(sl.img), hasImg: !!sl.img, noImg: !sl.img, imgLabel: sl.img ? "Replace image" : "Upload image",
+      kicker: sl.kicker, title: sl.title, sub: sl.sub,
+      onKicker: (e) => { const val = e.target.value; this.setD("slides", (a) => { a[i].kicker = val; return a; }); },
+      onTitle: (e) => { const val = e.target.value; this.setD("slides", (a) => { a[i].title = val; return a; }); },
+      onSub: (e) => { const val = e.target.value; this.setD("slides", (a) => { a[i].sub = val; return a; }); },
+      onImg: (e) => this.pickImg(e, (ref) => this.setD("slides", (a) => { a[i].img = ref; return a; })),
+      up: () => this.setD("slides", (a) => move(a, i, -1)), down: () => this.setD("slides", (a) => move(a, i, 1)),
+      remove: () => confirm(`Remove slide ${i + 1}?`) && this.setD("slides", (a) => { a.splice(i, 1); return a; }),
+    }));
+    v.addSlide = () => this.setD("slides", (a) => [...a, { img: "", kicker: "", title: "", sub: "" }]);
+    v.why = d.why.map((ref, i) => ({
+      n: i + 1, src: this.src(ref),
+      onImg: (e) => this.pickImg(e, (r) => this.setD("why", (a) => { a[i] = r; return a; })),
+      up: () => this.setD("why", (a) => move(a, i, -1)), down: () => this.setD("why", (a) => move(a, i, 1)),
+      remove: () => confirm(`Remove image ${i + 1}?`) && this.setD("why", (a) => { a.splice(i, 1); return a; }),
+    }));
+    v.addWhy = (e) => this.pickImgs(e, (refs) => this.setD("why", (a) => [...a, ...refs]));
+
+    v.aboutSrc = this.src(d.about.image);
+    v.onAboutImg = (e) => this.pickImg(e, (ref) => this.setD("about", (a) => { a.image = ref; return a; }));
+
+    v.cats = d.catalogues.map((c, i) => ({
+      title: c.title, filename: c.filename, size: fmtSize(c.size), url: this.src(c.url), thumb: this.src(c.thumb), hasThumb: !!c.thumb, noThumb: !c.thumb,
+      onTitle: (e) => { const val = e.target.value; this.setD("catalogues", (a) => { a[i].title = val; return a; }); },
+      onPdf: (e) => this.pickPdf(e, (ref, f) => this.setD("catalogues", (a) => { Object.assign(a[i], { url: ref, filename: f.name, size: f.size }); return a; })),
+      onThumb: (e) => this.pickImg(e, (ref) => this.setD("catalogues", (a) => { a[i].thumb = ref; return a; })),
+      clearThumb: () => this.setD("catalogues", (a) => { a[i].thumb = ""; return a; }),
+      up: () => this.setD("catalogues", (a) => move(a, i, -1)), down: () => this.setD("catalogues", (a) => move(a, i, 1)),
+      remove: () => confirm(`Delete "${c.title}"?`) && this.setD("catalogues", (a) => { a.splice(i, 1); return a; }),
+    }));
+    const nc = s.nc;
+    v.nc = {
+      title: nc.title, pdfName: nc.filename ? `${nc.filename} (${fmtSize(nc.size)})` : "No file chosen", thumbName: nc.thumbName || "None",
+      onTitle: (e) => { const val = e.target.value; this.setState((st) => ({ nc: { ...st.nc, title: val } })); },
+      onPdf: (e) => this.pickPdf(e, (ref, f) => this.setState((st) => ({ nc: { ...st.nc, url: ref, filename: f.name, size: f.size,
+        title: st.nc.title || f.name.replace(/\.pdf$/i, "") } }))),
+      onThumb: (e) => { const name = (e.target.files[0] || {}).name; this.pickImg(e, (ref) => this.setState((st) => ({ nc: { ...st.nc, thumb: ref, thumbName: name } }))); },
+      add: () => {
+        if (!nc.title.trim()) return this.flash("Enter a catalogue title.", true);
+        if (!nc.url) return this.flash("Choose a PDF file.", true);
+        this.setD("catalogues", (a) => [{ id: uid(), title: nc.title.trim(), filename: nc.filename, url: nc.url, size: nc.size, thumb: nc.thumb }, ...a]);
+        this.setState({ nc: { ...EMPTY_NC } });
+        this.flash("Catalogue added. Click Save changes to publish it.");
+      },
+    };
+
+    const pr = s.proj;
+    v.editing = !!pr; v.notEditing = !pr;
+    v.projHeading = !pr ? "Projects" : pr.index < 0 ? "Add project" : "Edit project";
+    v.addProject = () => this.setState({ proj: { index: -1, data: { id: uid(), title: "", location: "", year: String(new Date().getFullYear()), images: [], summary: "", scope: ["", "", ""] } } });
+    v.projects = d.projects.map((p, i) => ({
+      title: p.title || "Untitled project", meta: [p.location, p.year].filter(Boolean).join(" · "),
+      thumb: this.src(p.images[0]), hasImg: !!p.images.length, imgCount: `${p.images.length} image${p.images.length === 1 ? "" : "s"}`,
+      edit: () => { this.setState({ proj: { index: i, data: clone(p) } }); window.scrollTo(0, 0); },
+      remove: () => confirm(`Delete "${p.title}"?`) && this.persistProjects(d.projects.filter((_, j) => j !== i), "Project deleted."),
+      up: () => i > 0 && this.persistProjects(move(clone(d.projects), i, -1), "Order saved."),
+      down: () => i < d.projects.length - 1 && this.persistProjects(move(clone(d.projects), i, 1), "Order saved."),
+    }));
+    const pd = pr ? pr.data : { images: [], scope: [] };
+    const field = (k) => (e) => { const val = e.target.value; this.setPE((x) => { x[k] = val; return x; }); };
+    v.pe = {
+      title: pd.title, location: pd.location, year: pd.year, summary: pd.summary, noImages: !pd.images.length,
+      onTitle: field("title"), onLocation: field("location"), onYear: field("year"), onSummary: field("summary"),
+      images: pd.images.map((ref, i) => ({ src: this.src(ref),
+        onImg: (e) => this.pickImg(e, (r) => this.setPE((x) => { x.images[i] = r; return x; })),
+        up: () => this.setPE((x) => { move(x.images, i, -1); return x; }), down: () => this.setPE((x) => { move(x.images, i, 1); return x; }),
+        remove: () => this.setPE((x) => { x.images.splice(i, 1); return x; }) })),
+      addImages: (e) => this.pickImgs(e, (refs) => this.setPE((x) => { x.images.push(...refs); return x; })),
+      scope: pd.scope.map((t, i) => ({ text: t, ph: `Tick point ${i + 1}`,
+        onChange: (e) => { const val = e.target.value; this.setPE((x) => { x.scope[i] = val; return x; }); },
+        remove: () => this.setPE((x) => { x.scope.splice(i, 1); return x; }) })),
+      addScope: () => this.setPE((x) => { x.scope.push(""); return x; }),
+      cancel: () => this.setState({ proj: null }),
+      save: () => {
+        const x = clone(pd);
+        x.title = x.title.trim(); x.scope = x.scope.map((t) => t.trim()).filter(Boolean);
+        if (!x.title) return this.flash("Enter a project heading.", true);
+        if (!x.images.length) return this.flash("Add at least one project image.", true);
+        const list = clone(d.projects);
+        if (pr.index < 0) list.push(x); else list[pr.index] = x;
+        this.persistProjects(list, pr.index < 0 ? "Project added." : "Project saved.");
+      },
+    };
+
+    v.pc = this.productVals(md);
+    const ct = d.contact;
+    const cf = (k) => (e) => { const val = e.target.value; this.setD("contact", (a) => { a[k] = val; return a; }); };
+    v.ct = { phone: ct.phone, email: ct.email, address: ct.address, mapUrl: ct.mapUrl,
+      onPhone: cf("phone"), onEmail: cf("email"), onAddress: cf("address"), onMap: cf("mapUrl") };
+    return v;
+  }
+}
+</script>
+</body>
+</html>

@@ -40,23 +40,24 @@
       <ul style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:20px;color:rgba(248,250,249,0.7)">
         <li style="display:flex;gap:8px">
           <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.920z"></path></svg>
-          <a href="tel:+966564508627">+966 56 450 8627</a>
+          <a href="{{ telHref }}">{{ fPhone }}</a>
         </li>
         <li style="display:flex;gap:8px">
           <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-          <a href="mailto:kcdtc@gmail.com">kcdtc@gmail.com</a>
+          <a href="{{ mailHref }}">{{ fEmail }}</a>
         </li>
         <li style="display:flex;gap:8px">
           <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px;margin-top:2px;flex-shrink:0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>JQR4+798, Al Madina Al Munawwarah Rd, Al Sina'iyah, Riyadh 12845, KSA</span>
+          <span>{{ fAddr }}</span>
         </li>
       </ul>
     </div>
   </div>
   <div style="border-top:1px solid rgba(255,255,255,0.1)">
-    <div style="max-width:1240px;margin:0 auto;padding:20px;font-size:12px;line-height:16px;color:rgba(248,250,249,0.6);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
-      <span>© {{ year }} Top Line Glass Products Accessories. All rights reserved.</span>
-      <span>Manufacturer · Exporter · KSA</span>
+    <div style="max-width:1240px;margin:0 auto;padding:20px;font-size:12px;line-height:16px;color:rgba(248,250,249,0.6);display:grid;grid-template-columns:{{ barCols }};justify-items:{{ barAlign }};align-items:center;gap:12px">
+      <span style="justify-self:{{ barL }}">© {{ year }} Top Line Glass Products Accessories. All rights reserved.</span>
+      <a href="admin" style="justify-self:center" style-hover="color:#f8faf9">Admin Panel</a>
+      <span style="justify-self:{{ barR }}">Manufacturer · Exporter · KSA</span>
     </div>
   </div>
 </footer>
@@ -70,13 +71,21 @@
 <script type="text/x-dc" data-dc-script>
 const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const WA = "https://wa.me/966564508627?text=" + encodeURIComponent("Hi, I would like to send an enquiry about Top Line Glass Products Accessories.");
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
 class Component extends DCLogic {
-  state = { w: window.innerWidth, cats: [] };
-  componentDidMount() { fetch("src/data/products.json").then((r) => r.json()).then((d) => this.setState({ cats: d.categories })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  state = { w: window.innerWidth, cats: [], ct: null };
+  componentDidMount() { cms().then((c) => c.getStored("contact")).then((ct) => ct && this.setState({ ct })); fetch("src/data/products.json").then((r) => r.json()).then((d) => this.setState({ cats: d.categories })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
   componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
   renderVals() {
     return {
       wa: WA, year: new Date().getFullYear(),
+      barCols: this.state.w >= 768 ? "minmax(0,1fr) auto minmax(0,1fr)" : "minmax(0,1fr)", barAlign: this.state.w >= 768 ? "stretch" : "center",
+      barL: this.state.w >= 768 ? "start" : "center", barR: this.state.w >= 768 ? "end" : "center",
+      telHref: this.state.ct ? "tel:" + this.state.ct.phone.replace(/[^+\d]/g, "") : "tel:+966564508627",
+      fPhone: this.state.ct ? this.state.ct.phone : "+966 56 450 8627",
+      mailHref: "mailto:" + (this.state.ct ? this.state.ct.email : "kcdtc@gmail.com"),
+      fEmail: this.state.ct ? this.state.ct.email : "kcdtc@gmail.com",
+      fAddr: this.state.ct ? this.state.ct.address.split("\n").map((s) => s.trim().replace(/,$/, "")).join(", ") : "JQR4+798, Al Madina Al Munawwarah Rd, Al Sina'iyah, Riyadh 12845, KSA",
       footerCols: this.state.w >= 768 ? "repeat(4,minmax(0,1fr))" : "minmax(0,1fr)",
       footCats: this.state.cats.slice(0, 8).map((c) => ({ name: c.name, href: "products?c=" + c.slug })),
     };

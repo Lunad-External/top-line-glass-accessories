@@ -26,6 +26,8 @@ img,svg{display:block;vertical-align:middle}
 img{max-width:100%;height:auto}
 ul,ol{list-style:none}
 </style>
+<script src="src/site-cms.js"></script>
+<script src="src/i18n.js" data-sahro-i18n="1"></script>
 </helmet>
 <div style="display:flex;min-height:100vh;flex-direction:column">
 <dc-import name="SiteHeader" active="products" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
@@ -108,15 +110,17 @@ ul,ol{list-style:none}
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
 const PAGE_SIZE = 20;
 
 class Component extends DCLogic {
-  state = { w: window.innerWidth, data: null, q: "", page: 1, hov: null, focus: false };
+  state = { w: window.innerWidth, data: null, q: "", page: 1, hov: null, focus: false, pimg: {} };
   hc = {};
   cat = new URLSearchParams(location.search).get("c");
   componentDidMount() {
     this.onResize = () => this.setState({ w: window.innerWidth });
     window.addEventListener("resize", this.onResize);
+    cms().then(async (c) => { const v = await c.getStored("productImages"); if (v) this.setState({ pimg: await c.resolve(v) }); });
     fetch("src/data/products.json").then((r) => r.json()).then((raw) => {
       const data = {
         categories: raw.categories,
@@ -189,7 +193,7 @@ class Component extends DCLogic {
       tileCols: xl ? "repeat(3,minmax(0,1fr))" : sm ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
       tiles: visible.map((p) => {
         const k = "t:" + p.categorySlug + "/" + p.slug, on = hov === k;
-        return { href: pHref(p), img: p.image, alt: p.item_description, modelLabel: p.model_number ? `Model No. ${p.model_number}` : "",
+        return { href: pHref(p), img: (this.state.pimg[p.slug] || [p.image])[0], alt: p.item_description, modelLabel: p.model_number ? `Model No. ${p.model_number}` : "",
           title: p.item_description, h: this.h(k),
           lift: on ? "translateY(-4px)" : "none",
           shadow: on ? "0 10px 30px -10px rgb(15 23 42 / 0.25)" : "0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)",

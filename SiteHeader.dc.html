@@ -44,6 +44,21 @@
     </sc-if>
 
     <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+      <div translate="no" ref="{{ langRef }}" style="position:relative">
+        <button onClick="{{ toggleLang }}" aria-label="Change language" aria-expanded="{{ langOpenStr }}" style="display:inline-flex;align-items:center;gap:6px;border-radius:6px;border:1px solid #d6e2db;background:#ffffff;padding:7px 10px;font-size:13px;font-weight:600;color:#0f2a1c;white-space:nowrap;transition:border-color 150ms cubic-bezier(0.4,0,0.2,1)" style-hover="border-color:#006c35">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span>{{ langShort }}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:14px;width:14px;opacity:0.6"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div style="position:absolute;top:100%;inset-inline-end:0;padding-top:6px;z-index:50;visibility:{{ langVis }};opacity:{{ langOp }};translate:0 {{ langY }};transition:all 200ms cubic-bezier(0.4,0,0.2,1)">
+          <div style="min-width:160px;border-radius:12px;border:1px solid #d6e2db;background:#ffffff;box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25);padding:6px;display:flex;flex-direction:column;gap:2px">
+            <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+              <button onClick="{{ l.pick }}" lang="{{ l.code }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:6px;padding:8px 10px;font-size:14px;line-height:20px;text-align:start;font-weight:{{ l.fw }};color:{{ l.color }};background:{{ l.bg }};transition:background-color 150ms cubic-bezier(0.4,0,0.2,1)" style-hover="background-color:#dbe9e0">
+                <span>{{ l.label }}</span><span style="font-size:11px;letter-spacing:0.12em;color:#4a5b52">{{ l.short }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
       <sc-if value="{{ sm }}" hint-placeholder-val="{{ true }}">
         <a href="{{ wa }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;padding:8px 14px;font-size:13px;font-weight:600;color:#ffffff;background-color:#25D366;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
           <svg viewBox="0 0 32 32" fill="currentColor" style="height:16px;width:16px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
@@ -71,6 +86,11 @@
         <a href="catalogues" onClick="{{ closeMenu }}" style="padding:8px 0;font-size:14px;line-height:20px;font-weight:500">Catalogues</a>
         <a href="projects" onClick="{{ closeMenu }}" style="padding:8px 0;font-size:14px;line-height:20px;font-weight:500">Projects</a>
         <a href="contact" onClick="{{ closeMenu }}" style="padding:8px 0;font-size:14px;line-height:20px;font-weight:500">Contact Us</a>
+        <div translate="no" style="margin-top:8px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px">
+          <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+            <button onClick="{{ l.pick }}" lang="{{ l.code }}" style="border-radius:6px;border:1px solid {{ l.bc }};padding:8px 6px;font-size:14px;line-height:20px;font-weight:600;color:{{ l.mColor }};background:{{ l.mBg }}">{{ l.label }}</button>
+          </sc-for>
+        </div>
         <a href="{{ wa }}" target="_blank" rel="noopener noreferrer" style="margin-top:8px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:6px;padding:8px 16px;font-size:14px;line-height:20px;font-weight:600;color:#ffffff;background-color:#25D366">
           <svg viewBox="0 0 32 32" fill="currentColor" style="height:16px;width:16px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
           Send Enquiry
@@ -82,12 +102,23 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"active":{"editor":"enum","options":["home","about","products","catalogues","projects","contact"],"default":"home","tsType":"string"}}'>
 const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const LANGS = [["en", "English", "EN"], ["ar", "العربية", "AR"], ["bn", "বাংলা", "BN"]];
+const LS_KEY = "sahro_lang";
+const getLang = () => { let v = null; try { v = localStorage.getItem(LS_KEY); } catch (e) {} return LANGS.some((l) => l[0] === v) ? v : "en"; };
+function initTranslate() {
+  if (window.SahroI18n || document.querySelector('script[data-sahro-i18n]')) return;
+  const s = document.createElement("script"); s.src = "src/i18n.js"; s.dataset.sahroI18n = "1"; document.head.appendChild(s);
+}
 const WA = "https://wa.me/966564508627?text=" + encodeURIComponent("Hi, I would like to send an enquiry about Top Line Glass Products Accessories.");
 class Component extends DCLogic {
-  state = { w: window.innerWidth, open: false, hov: null, cats: [] };
+  state = { w: window.innerWidth, open: false, hov: null, cats: [], lang: getLang(), langOpen: false };
   hc = {};
-  componentDidMount() { fetch("src/data/products.json").then((r) => r.json()).then((d) => this.setState({ cats: d.categories })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
-  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  langRef = React.createRef();
+  componentDidMount() { initTranslate();
+    this.onDocDown = (e) => { if (this.state.langOpen && this.langRef.current && !this.langRef.current.contains(e.target)) this.setState({ langOpen: false }); };
+    this.onKey = (e) => { if (e.key === "Escape" && this.state.langOpen) this.setState({ langOpen: false }); };
+    document.addEventListener("pointerdown", this.onDocDown); document.addEventListener("keydown", this.onKey); fetch("src/data/products.json").then((r) => r.json()).then((d) => this.setState({ cats: d.categories })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); document.removeEventListener("pointerdown", this.onDocDown); document.removeEventListener("keydown", this.onKey); }
   h(key) {
     if (!this.hc[key]) this.hc[key] = { enter: () => this.setState({ hov: key }), leave: () => this.setState((s) => (s.hov === key ? { hov: null } : null)) };
     return this.hc[key];
@@ -106,6 +137,15 @@ class Component extends DCLogic {
       ddVis: hov === "nav" ? "visible" : "hidden", ddOp: hov === "nav" ? 1 : 0, ddY: hov === "nav" ? "0" : "4px",
       toggleMenu: () => this.setState((s) => ({ open: !s.open })),
       closeMenu: () => this.setState({ open: false }),
+      langRef: this.langRef,
+      toggleLang: () => this.setState((s) => ({ langOpen: !s.langOpen })),
+      langOpenStr: this.state.langOpen ? "true" : "false",
+      langVis: this.state.langOpen ? "visible" : "hidden", langOp: this.state.langOpen ? 1 : 0, langY: this.state.langOpen ? "0" : "4px",
+      langShort: (LANGS.find((l) => l[0] === this.state.lang) || LANGS[0])[2],
+      langs: LANGS.map(([code, label, short]) => { const on = code === this.state.lang; return { code, label, short,
+        fw: on ? 600 : 500, color: on ? "#006c35" : "#0f2a1c", bg: on ? "#eef5f1" : "transparent",
+        bc: on ? "#006c35" : "#d6e2db", mColor: on ? "#f8faf9" : "#0f2a1c", mBg: on ? "#006c35" : "#ffffff",
+        pick: () => { if (code === this.state.lang) return this.setState({ langOpen: false }); try { code === "en" ? localStorage.removeItem(LS_KEY) : localStorage.setItem(LS_KEY, code); } catch (e) {} document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"; location.reload(); } }; }),
       cats: this.state.cats.map((c, i) => ({ name: c.name, n: i + 1, href: "products?c=" + c.slug })),
     };
   }

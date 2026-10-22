@@ -23,6 +23,8 @@ img,svg{display:block;vertical-align:middle}
 img{max-width:100%;height:auto}
 ul,ol{list-style:none}
 </style>
+<script src="src/site-cms.js"></script>
+<script src="src/i18n.js" data-sahro-i18n="1"></script>
 </helmet>
 <div style="display:flex;min-height:100vh;flex-direction:column">
 <dc-import name="SiteHeader" active="products" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
@@ -47,12 +49,23 @@ ul,ol{list-style:none}
   </nav>
 
   <div style="margin-top:24px;display:grid;grid-template-columns:{{ twoCols }};gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
     <div onMouseEnter="{{ imgH.enter }}" onMouseLeave="{{ imgH.leave }}" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08);overflow:hidden">
       <div style="position:relative;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80))">
         <img src="{{ img }}" alt="{{ title }}" width="800" height="800" decoding="async" style="position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:24px;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease;transform:{{ zoom }};filter:{{ bright }}">
         <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, oklch(1 0 0 / 0.6), transparent 60%);pointer-events:none"></div>
         <div style="position:absolute;top:0;left:{{ shine }};width:50%;height:100%;background:linear-gradient(120deg, transparent, rgb(255 255 255 / 0.45), transparent);transform:skewX(-20deg);transition:left 800ms ease;pointer-events:none;z-index:2"></div>
       </div>
+    </div>
+    <sc-if value="{{ multi }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid;grid-template-columns:repeat({{ thumbCols }},minmax(0,1fr));gap:12px">
+        <sc-for list="{{ thumbs }}" as="t" hint-placeholder-count="4">
+          <button onClick="{{ t.go }}" aria-label="{{ t.label }}" style="position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80));border:2px solid {{ t.bc }};transition:border-color 150ms cubic-bezier(0.4,0,0.2,1)" style-hover="border-color:#c9a24a">
+            <img src="{{ t.src }}" alt="" loading="lazy" style="position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:6px">
+          </button>
+        </sc-for>
+      </div>
+    </sc-if>
     </div>
 
     <div>
@@ -162,12 +175,13 @@ ul,ol{list-style:none}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
 const waLink = (msg) => `https://wa.me/966564508627?text=${encodeURIComponent(msg)}`;
 const SHADOW_CARD = "0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)";
 const SHADOW_LIFT = "0 10px 30px -10px rgb(15 23 42 / 0.25)";
 
 class Component extends DCLogic {
-  state = { w: window.innerWidth, data: null, hov: null, specOpen: false, full: false };
+  state = { w: window.innerWidth, data: null, hov: null, specOpen: false, full: false, pimg: {}, sel: 0 };
   hc = {};
   params = new URLSearchParams(location.search);
   componentDidMount() {
@@ -175,6 +189,7 @@ class Component extends DCLogic {
     this.onKey = (e) => { if (e.key === "Escape") this.setState({ specOpen: false, full: false }); };
     window.addEventListener("resize", this.onResize);
     window.addEventListener("keydown", this.onKey);
+    cms().then(async (c) => { const v = await c.getStored("productImages"); if (v) this.setState({ pimg: await c.resolve(v) }); });
     fetch("src/data/products.json").then((r) => r.json()).then((data) => {
       this.setState({ data });
       const f = this.find(data);
@@ -209,6 +224,7 @@ class Component extends DCLogic {
     const on = hov === "img";
     const related = cat.products.filter((x) => x.slug !== p.slug).slice(0, 4).map((x) => this.resolve(data, x)).filter(Boolean);
     const firstCat = data.categories[0].slug;
+    const imgs = this.state.pimg[p.slug] || [p.image], sel = Math.min(this.state.sel, imgs.length - 1);
     const hideModel = !p.model_number && cat.slug !== firstCat && f.native;
     return {
       notFound: false, found: true,
@@ -219,7 +235,9 @@ class Component extends DCLogic {
       hasFinish: (p.available_finish || []).length > 0, hasMaterial: (p.main_material || []).length > 0,
       hasSize: !!p.size, hasWeight: !!p.weight, size: p.size || "", weight: p.weight || "",
       finishes: p.available_finish, materials: p.main_material,
-      img: p.image, spec: p.specification_image, specAlt: `${p.item_description} — specification drawing`,
+      img: imgs[sel], multi: imgs.length > 1, thumbCols: sm ? 5 : 4,
+      thumbs: imgs.map((src, i) => ({ src, label: `Show image ${i + 1}`, bc: i === sel ? "#c9a24a" : "#d6e2db", go: () => this.setState({ sel: i }) })),
+      spec: p.specification_image, specAlt: `${p.item_description} — specification drawing`,
       imgH: this.h("img"), zoom: on ? "scale(1.06)" : "none", bright: on ? "brightness(1.05)" : "none", shine: on ? "130%" : "-75%",
       twoCols: lg ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
       rowCols: sm ? "160px 1fr" : "120px 1fr",
@@ -236,7 +254,7 @@ class Component extends DCLogic {
       relCols: lg ? "repeat(4,minmax(0,1fr))" : sm ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
       related: related.map((r) => {
         const k = "r:" + r.slug, o = hov === k;
-        return { href: `product?c=${cat.slug}&p=${r.slug}`, img: r.image, title: r.item_description,
+        return { href: `product?c=${cat.slug}&p=${r.slug}`, img: (this.state.pimg[r.slug] || [r.image])[0], title: r.item_description,
           modelLabel: r.model_number ? `Model No. ${r.model_number}` : "", h: this.h(k),
           lift: o ? "translateY(-4px)" : "none", shadow: o ? SHADOW_LIFT : SHADOW_CARD,
           zoom: o ? "scale(1.06)" : "none", bright: o ? "brightness(1.05)" : "none", shine: o ? "130%" : "-75%" };

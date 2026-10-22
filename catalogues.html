@@ -22,6 +22,8 @@ img,svg{display:block;vertical-align:middle}
 img{max-width:100%;height:auto}
 ul,ol{list-style:none}
 </style>
+<script src="src/site-cms.js"></script>
+<script src="src/i18n.js" data-sahro-i18n="1"></script>
 </helmet>
 <div style="display:flex;min-height:100vh;flex-direction:column">
 <dc-import name="SiteHeader" active="catalogues" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
@@ -40,7 +42,15 @@ ul,ol{list-style:none}
     <sc-for list="{{ cats }}" as="c" hint-placeholder-count="9">
       <a href="{{ c.url }}" target="_blank" rel="noopener noreferrer" download="{{ c.filename }}" onMouseEnter="{{ c.h.enter }}" onMouseLeave="{{ c.h.leave }}" style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;display:flex;flex-direction:column;transition:transform 300ms ease, box-shadow 300ms ease;transform:{{ c.lift }};box-shadow:{{ c.shadow }}">
         <div style="position:relative;aspect-ratio:1/1.414;overflow:hidden;background:#ffffff;display:flex;align-items:center;justify-content:center;padding:12px">
-          <img src="{{ c.thumb }}" alt="{{ c.alt }}" width="420" height="594" loading="lazy" decoding="async" style="max-height:100%;max-width:100%;object-fit:contain;transition:transform 500ms cubic-bezier(0.4,0,0.2,1);transform:{{ c.zoom }}">
+          <sc-if value="{{ c.hasThumb }}" hint-placeholder-val="{{ true }}">
+            <img src="{{ c.thumb }}" alt="{{ c.alt }}" width="420" height="594" loading="lazy" decoding="async" style="max-height:100%;max-width:100%;object-fit:contain;transition:transform 500ms cubic-bezier(0.4,0,0.2,1);transform:{{ c.zoom }}">
+          </sc-if>
+          <sc-if value="{{ c.noThumb }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;color:#006c35;transition:transform 500ms cubic-bezier(0.4,0,0.2,1);transform:{{ c.zoom }}">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="height:64px;width:64px"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path></svg>
+              <span style="font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c;text-align:center;padding:0 16px">{{ c.title }}</span>
+            </div>
+          </sc-if>
           <div style="position:absolute;top:12px;left:12px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c;font-size:10px;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;padding:4px 8px">PDF</div>
           <div style="position:absolute;inset:0;background-image:linear-gradient(to top in oklab, rgb(0 0 0 / 0.6), transparent, transparent);opacity:{{ c.op }};transition:opacity 150ms cubic-bezier(0.4,0,0.2,1)"></div>
           <div style="position:absolute;bottom:12px;right:12px;display:grid;height:40px;width:40px;place-items:center;border-radius:9999px;background:#ffffff;color:#006c35;opacity:{{ c.op }};translate:0 {{ c.ty }};transition:all 150ms cubic-bezier(0.4,0,0.2,1);box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)">
@@ -74,16 +84,13 @@ ul,ol{list-style:none}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-const ASSETS = "public/catalogues";
-const CATALOGUES = [
-  ["Master Catalogue - All Categories","Master_Catalogue_All_Categories.pdf","Master_Catalogue_All_Categories.pdf",19097596,"Master_Catalogue_All_Categories_thumb.jpg"],
-];
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
 const formatSize = (b) => (b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b / (1024 * 1024)).toFixed(1)} MB`);
 
 class Component extends DCLogic {
-  state = { w: window.innerWidth, hov: null };
+  state = { w: window.innerWidth, hov: null, cats: [] };
   hc = {};
-  componentDidMount() { this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  componentDidMount() { cms().then((c) => c.load("catalogues")).then((cats) => this.setState({ cats })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
   componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
   h(key) {
     if (!this.hc[key]) this.hc[key] = { enter: () => this.setState({ hov: key }), leave: () => this.setState((s) => (s.hov === key ? { hov: null } : null)) };
@@ -93,10 +100,10 @@ class Component extends DCLogic {
     const { w, hov } = this.state;
     return {
       cols: w >= 1024 ? "repeat(3,minmax(0,1fr))" : w >= 640 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
-      cats: CATALOGUES.map(([title, filename, url, size, thumb]) => {
-        const on = hov === filename;
-        return { title, filename, url: `${ASSETS}/${url}`, thumb: `${ASSETS}/${thumb}`,
-          alt: `${title} — first page preview`, size: formatSize(size), h: this.h(filename),
+      cats: this.state.cats.map(({ id, title, filename, url, size, thumb }) => {
+        const on = hov === id;
+        return { title, filename, url, thumb, hasThumb: !!thumb, noThumb: !thumb,
+          alt: `${title} — first page preview`, size: formatSize(size), h: this.h(id),
           lift: on ? "translateY(-4px)" : "none", shadow: on ? "0 10px 30px -10px rgb(15 23 42 / 0.25)" : "none",
           zoom: on ? "scale(1.05)" : "none", op: on ? 1 : 0, ty: on ? "0" : "8px" };
       }),

@@ -23,6 +23,8 @@ img,svg{display:block;vertical-align:middle}
 img{max-width:100%;height:auto}
 ul,ol{list-style:none}
 </style>
+<script src="src/site-cms.js"></script>
+<script src="src/i18n.js" data-sahro-i18n="1"></script>
 </helmet>
 <div style="display:flex;min-height:100vh;flex-direction:column">
 <dc-import name="SiteHeader" active="about" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
@@ -44,13 +46,13 @@ ul,ol{list-style:none}
 
   <section style="max-width:1240px;margin:0 auto;padding:0 20px 64px;display:grid;grid-template-columns:{{ gridCols }};gap:40px">
     <div style="grid-column:{{ textSpan }};color:rgba(15,42,28,0.85);line-height:1.625;font-size:15px;display:flex;flex-direction:column;gap:20px">
-      <p><strong>TOP LINE</strong> is a leading manufacturer serving the Middle East market, specializing in premium <strong>glass door control systems</strong>, <strong>bathroom accessories</strong>, and <strong>door &amp; window hardware</strong>. With strong in-house research, development, and manufacturing capabilities, we provide complete hardware solutions by integrating design, production, and sales under one roof.</p>
+      <p><strong>TOP Line (Sahro)</strong> is a leading manufacturer serving the Middle East market, specializing in premium <strong>glass door accessories</strong>, <strong>shower enclosure accessories</strong>, <strong>handrail accessories</strong>, <strong>automatic door accessories</strong>, <strong>curtain accessories</strong> and <strong>metal channels</strong>. With strong in-house research, development, and manufacturing capabilities, we provide complete hardware solutions by integrating design, production, and sales under one roof.</p>
       <p>Our product portfolio includes <strong>glass hardware fittings</strong>, <strong>door control hardware</strong>,<strong> bathroom hardware</strong>, and <strong>door &amp; window accessories</strong>. Operating two factories and two showrooms with a combined area of nearly <strong>20,000 square meters</strong>, we export over<strong> 90% of our products</strong> to Saudi Arabia, the UAE, Bahrain, Kuwait, and other regional markets.</p>
       <p>From frameless shower enclosures and bathroom mirrors to floor springs, glass clamps, glass connectors and architectural door hardware — every product we ship is engineered for the climate, water quality and architectural style of the Gulf region.</p>
     </div>
     <div style="grid-column:{{ imgSpan }}">
       <div style="overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
-        <img src="src/assets/about.webp" alt="Luxury bathroom with frameless glass shower and premium hardware by Top Line Glass Products Accessories" loading="lazy" width="1400" height="960" style="aspect-ratio:4/5;width:100%;object-fit:cover;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease" style-hover="transform:scale(1.06);filter:brightness(1.05)">
+        <img src="{{ aboutImg }}" alt="Luxury bathroom with frameless glass shower and premium hardware by Top Line Glass Products Accessories" loading="lazy" width="1400" height="960" style="aspect-ratio:4/5;width:100%;object-fit:cover;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease" style-hover="transform:scale(1.06);filter:brightness(1.05)">
       </div>
     </div>
   </section>
@@ -85,18 +87,62 @@ ul,ol{list-style:none}
     <div style="border-radius:12px;border:1px solid #d6e2db;background:#ffffff;padding:24px"><div style="font-size:24px;line-height:32px">5 Markets</div><div style="font-size:12px;line-height:16px;color:#4a5b52;margin-top:4px">KSA · UAE · Bahrain · Kuwait · more</div></div>
   </section>
 </div>
+<section data-screen-label="Reviews" style="border-top:1px solid #d6e2db">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 20px">
+    <div style="text-align:center">
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.3em;color:#c9a24a">Reviews</div>
+      <h2 style="margin-top:12px;font-size:36px;line-height:40px">Read what our customers have to say</h2>
+    </div>
+    <div style="margin-top:40px;display:grid;grid-template-columns:{{ revCols }};gap:20px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+        <figure style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
+          <div role="img" aria-label="{{ r.ratingLabel }}" style="display:flex;gap:4px">
+            <sc-for list="{{ r.stars }}" as="s" hint-placeholder-count="5"><svg viewBox="0 0 24 24" fill="#c9a24a" stroke="#c9a24a" stroke-width="1.5" stroke-linejoin="round" style="height:18px;width:18px"><path d="M11.5 2.6a.6.6 0 0 1 1 0l2.8 5.7 6.3.9a.6.6 0 0 1 .3 1l-4.6 4.4 1.1 6.3a.6.6 0 0 1-.8.6L12 18.6l-5.6 2.9a.6.6 0 0 1-.8-.6l1.1-6.3L2.1 10.2a.6.6 0 0 1 .3-1l6.3-.9Z"></path></svg></sc-for>
+          </div>
+          <blockquote style="flex:1 1 0%;color:#0f2a1c;line-height:1.625;text-wrap:pretty">“{{ r.text }}”</blockquote>
+          <figcaption style="display:flex;align-items:center;gap:12px;border-top:1px solid #d6e2db;padding-top:16px">
+            <span style="display:grid;place-items:center;height:40px;width:40px;border-radius:9999px;background:#006c35;color:#f8faf9;font-size:14px;font-weight:600">{{ r.initials }}</span>
+            <span style="font-size:15px;line-height:20px;font-weight:600">{{ r.name }}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
 </main>
 <dc-import name="SiteFooter" hint-size="100%,400px" style="display:block"></dc-import>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
+const REVIEWS = [
+  [
+    "Maya Bini",
+    5,
+    "Excellent merchandise, good prices, and top-notch service. We thank the management and the entire staff, especially Abu Ahmed. All our appreciation and respect to him."
+  ],
+  [
+    "Sobhi Saad",
+    5,
+    "Excellent quality goods, superb service from our Yemeni sales team, and reasonable prices. Our regards to them; we highly recommend dealing with them."
+  ],
+  [
+    "Fahd",
+    5,
+    "Excellent company and great prices"
+  ]
+];
 class Component extends DCLogic {
-  state = { w: window.innerWidth };
-  componentDidMount() { this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
+  state = { w: window.innerWidth, aboutImg: undefined };
+  componentDidMount() { cms().then((c) => c.load("about")).then((a) => this.setState({ aboutImg: a.image })); this.onResize = () => this.setState({ w: window.innerWidth }); window.addEventListener("resize", this.onResize); }
   componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
   renderVals() {
     const w = this.state.w, md = w >= 768, lg = w >= 1024;
     return {
+      aboutImg: this.state.aboutImg,
+      revCols: md ? "repeat(3,minmax(0,1fr))" : "minmax(0,1fr)",
+      reviews: REVIEWS.map(([name, rating, text]) => ({ name, text, stars: Array.from({ length: rating }, (_, i) => i), ratingLabel: `${rating} out of 5 stars`,
+        initials: name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase() })),
       gridCols: lg ? "repeat(5,minmax(0,1fr))" : "minmax(0,1fr)",
       textSpan: lg ? "span 3 / span 3" : "auto", imgSpan: lg ? "span 2 / span 2" : "auto",
       twoCols: md ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
