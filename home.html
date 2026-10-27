@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Top Line Glass Products Accessories — Glass Door Hardware &amp; Bathroom Accessories Manufacturer | KSA</title>
+<link rel="icon" type="image/png" href="public/favicon.png">
+<link rel="stylesheet" href="public/fonts/inter.css">
+<style>
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid;border-color:#d6e2db}
+html{font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+body{background-color:#f8faf9;color:#0f2a1c}
+h1,h2,h3,h4{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.02em;font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+a:hover{color:inherit}
+button{font:inherit;color:inherit;background:transparent;cursor:pointer}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+ul{list-style:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+</style>
+<script src="src/site-cms.js"></script>
+<script src="src/i18n.js" data-sahro-i18n="1"></script>
+</helmet>
+<div style="display:flex;min-height:100vh;flex-direction:column">
+
+<dc-import name="SiteHeader" active="home" hint-size="100%,80px" style="position:sticky;top:0;z-index:40;display:block"></dc-import>
+
+<main style="flex:1 1 0%">
+<div>
+
+<section data-screen-label="Hero" aria-roledescription="carousel" onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" style="position:relative;overflow:hidden;background:linear-gradient(135deg, #005228, #008a44);color:#f8faf9">
+  <sc-for list="{{ slides }}" as="s" hint-placeholder-count="5">
+    <div aria-hidden="{{ s.hidden }}" style="position:absolute;inset:0;transition:opacity 1000ms cubic-bezier(0.4,0,0.2,1);opacity:{{ s.opacity }}">
+      <sc-if value="{{ s.img }}" hint-placeholder-val="{{ false }}"><img src="{{ s.img }}" alt="{{ s.kicker }}" width="1920" height="1080" loading="{{ s.loading }}" style="height:100%;width:100%;object-fit:cover"></sc-if>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(to right in oklab, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.4), transparent)"></div>
+    </div>
+  </sc-for>
+
+  <div style="position:relative;max-width:1240px;margin:0 auto;padding:{{ heroPad }}px 20px">
+    <sc-for list="{{ slides }}" as="s" hint-placeholder-count="1">
+      <div style="display:{{ s.display }}">
+        <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.3em;color:#c9a24a;margin-bottom:16px;animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) both">{{ s.kicker }} · Riyadh, KSA</div>
+        <h1 style="font-size:{{ h1Size }}px;line-height:1.05;text-wrap:balance;animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) both">{{ s.title }}</h1>
+        <p style="margin-top:24px;font-size:18px;line-height:28px;color:rgba(248,250,249,0.8);max-width:672px;animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) both">{{ s.sub }}</p>
+      </div>
+    </sc-for>
+    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px;animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) both">
+      <a href="products" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:12px 20px;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c;transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+        Explore Products
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+      <a href="{{ wa }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background-color:rgba(255,255,255,0.05);padding:12px 20px;font-size:14px;line-height:20px;font-weight:600;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)" style-hover="background-color:rgba(255,255,255,0.1)">
+        <svg viewBox="0 0 32 32" fill="currentColor" style="height:16px;width:16px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
+        Send Enquiry on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <button onClick="{{ prev }}" aria-label="Previous slide" style="position:absolute;left:{{ arrowInset }}px;top:50%;translate:0 -50%;display:grid;height:44px;width:44px;place-items:center;border-radius:9999px;background-color:rgba(255,255,255,0.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#ffffff;transition:all 150ms cubic-bezier(0.4,0,0.2,1)" style-hover="background-color:rgba(255,255,255,0.25)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="m15 18-6-6 6-6"></path></svg>
+  </button>
+  <button onClick="{{ next }}" aria-label="Next slide" style="position:absolute;right:{{ arrowInset }}px;top:50%;translate:0 -50%;display:grid;height:44px;width:44px;place-items:center;border-radius:9999px;background-color:rgba(255,255,255,0.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);color:#ffffff;transition:all 150ms cubic-bezier(0.4,0,0.2,1)" style-hover="background-color:rgba(255,255,255,0.25)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="m9 18 6-6-6-6"></path></svg>
+  </button>
+
+  <div style="position:absolute;bottom:20px;left:50%;translate:-50% 0;display:flex;gap:8px;z-index:10">
+    <sc-for list="{{ slides }}" as="s" hint-placeholder-count="5">
+      <button onClick="{{ s.go }}" aria-label="{{ s.label }}" onMouseEnter="{{ s.dotH.enter }}" onMouseLeave="{{ s.dotH.leave }}" style="height:6px;border-radius:9999px;transition:all 150ms cubic-bezier(0.4,0,0.2,1);width:{{ s.dotW }}px;background-color:{{ s.dotBg }}"></button>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Stats" style="border-bottom:1px solid #d6e2db;background:#f8faf9">
+  <div style="max-width:1240px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:repeat({{ statsCols }},minmax(0,1fr));gap:24px">
+    <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+      <div style="text-align:{{ statsAlign }}">
+        <div style="font-size:30px;line-height:36px;font-weight:700;color:#0f2a1c"><span ref="{{ st.ref }}"></span></div>
+        <div style="font-size:12px;line-height:16px;color:#4a5b52;margin-top:4px">{{ st.l }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="Why Choose Us" style="background:#f8faf9;border-top:1px solid #d6e2db;border-bottom:1px solid #d6e2db">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 20px;display:grid;grid-template-columns:{{ whyCols }};gap:48px;align-items:center">
+    <div style="overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
+      <div style="position:relative;aspect-ratio:4/3">
+        <sc-for list="{{ whyImgs }}" as="wi" hint-placeholder-count="1">
+          <img src="{{ wi.src }}" alt="Frameless glass shower with premium chrome hardware" loading="lazy" width="1400" height="960" style="position:absolute;inset:0;height:100%;width:100%;object-fit:cover;opacity:{{ wi.op }};pointer-events:{{ wi.pe }};transition:opacity 1000ms cubic-bezier(0.4,0,0.2,1), transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease" style-hover="transform:scale(1.06);filter:brightness(1.05)">
+        </sc-for>
+        <sc-if value="{{ whyMulti }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;bottom:16px;left:50%;translate:-50% 0;display:flex;gap:8px;z-index:2">
+            <sc-for list="{{ whyImgs }}" as="wi" hint-placeholder-count="2">
+              <button onClick="{{ wi.go }}" aria-label="{{ wi.label }}" style="height:6px;border-radius:9999px;transition:all 150ms cubic-bezier(0.4,0,0.2,1);width:{{ wi.dotW }}px;background-color:{{ wi.dotBg }}"></button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.22em;color:#c9a24a">Why Choose Us</div>
+      <h2 style="font-size:36px;line-height:40px;margin-top:8px">Source factory. Strict quality. One-stop solution.</h2>
+      <ul style="margin-top:32px;display:flex;flex-direction:column;gap:20px">
+        <li style="display:flex;gap:16px">
+          <div style="display:grid;height:40px;width:40px;flex-shrink:0;place-items:center;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M17 18h1"></path><path d="M12 18h1"></path><path d="M7 18h1"></path></svg>
+          </div>
+          <div>
+            <div style="font-weight:600">Source factory</div>
+            <div style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px">70% manufactured in-house; 30% sourced from trusted German and Italian partners.</div>
+          </div>
+        </li>
+        <li style="display:flex;gap:16px">
+          <div style="display:grid;height:40px;width:40px;flex-shrink:0;place-items:center;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.810 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <div>
+            <div style="font-weight:600">Quality control</div>
+            <div style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px">Automated production lines and rigorous QC for precision, durability and performance.</div>
+          </div>
+        </li>
+        <li style="display:flex;gap:16px">
+          <div style="display:grid;height:40px;width:40px;flex-shrink:0;place-items:center;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);color:#0f2a1c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"></path><path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17"></path><path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"></path><circle cx="12" cy="12" r="10"></circle></svg>
+          </div>
+          <div>
+            <div style="font-weight:600">Export-ready</div>
+            <div style="font-size:14px;line-height:20px;color:#4a5b52;margin-top:4px">Servicing Saudi Arabia, UAE, Bahrain, Kuwait and the wider GCC region.</div>
+          </div>
+        </li>
+      </ul>
+      <a href="about" onMouseEnter="{{ u2.enter }}" onMouseLeave="{{ u2.leave }}" style="position:relative;margin-top:32px;display:inline-flex;align-items:center;gap:8px;font-size:14px;line-height:20px;font-weight:600">Learn more about us →<span style="position:absolute;left:0;bottom:-2px;height:2px;width:100%;background:#c9a24a;transition:transform .3s ease;transform:{{ u2T }};transform-origin:{{ u2O }}"></span></a>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ catSegs }}" as="cs" hint-placeholder-count="6">
+<section data-screen-label="{{ cs.label }}" style="background:{{ cs.bg }};border-top:1px solid #d6e2db">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 20px;display:flex;flex-direction:column;gap:40px">
+    <div style="max-width:768px">
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.3em;color:#c9a24a">{{ cs.kicker }}</div>
+      <h2 style="margin-top:12px;font-size:36px;line-height:40px">{{ cs.name }}</h2>
+      <p style="margin-top:16px;color:#4a5b52;line-height:1.625;text-wrap:pretty">{{ cs.text }}</p>
+    </div>
+    <div style="display:grid;grid-template-columns:{{ segCols }};gap:20px">
+      <sc-for list="{{ cs.cards }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.href }}" onMouseEnter="{{ p.h.enter }}" onMouseLeave="{{ p.h.leave }}" style="display:block;border-radius:12px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden;transition:transform 300ms ease, box-shadow 300ms ease;transform:{{ p.lift }};box-shadow:{{ p.shadow }}">
+          <div style="position:relative;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg, oklch(0.96 0.01 80), oklch(0.9 0.015 80))">
+            <img src="{{ p.img }}" alt="{{ p.title }}" width="640" height="480" loading="lazy" decoding="async" style="position:absolute;inset:0;height:100%;width:100%;object-fit:contain;padding:12px;transition:transform 700ms cubic-bezier(.2,.7,.2,1), filter 500ms ease;transform:{{ p.zoom }};filter:{{ p.bright }}">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, oklch(1 0 0 / 0.6), transparent 60%);pointer-events:none"></div>
+            <div style="position:absolute;top:0;left:{{ p.shine }};width:50%;height:100%;background:linear-gradient(120deg, transparent, rgb(255 255 255 / 0.45), transparent);transform:skewX(-20deg);transition:left 800ms ease;pointer-events:none;z-index:2"></div>
+          </div>
+          <div style="padding:16px">
+            <h3 style="font-size:14px;line-height:1.375;font-weight:500;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2">{{ p.title }}</h3>
+            <div style="margin-top:4px;font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:#4a5b52;min-height:15px">{{ p.modelLabel }}</div>
+            <div style="margin-top:8px;display:inline-flex;align-items:center;font-size:12px;line-height:16px;color:#c9a24a;font-weight:500">View details →</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <a href="{{ cs.href }}" aria-label="{{ cs.viewLabel }}" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;background:linear-gradient(135deg, #d9b25a, #b2863a);padding:12px 24px;font-size:14px;line-height:20px;font-weight:600;color:#0f2a1c;transition:transform 150ms ease, box-shadow 150ms ease" style-hover="transform:translateY(-1px);box-shadow:0 10px 30px -10px rgb(178 134 58 / 0.6)">View all
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:16px;width:16px"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+</sc-for>
+
+<section data-screen-label="FAQ" style="background:#f8faf9;border-top:1px solid #d6e2db">
+  <div style="max-width:896px;margin:0 auto;padding:80px 20px">
+    <div style="text-align:center">
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.3em;color:#c9a24a">FAQ</div>
+      <h2 style="margin-top:12px;font-size:36px;line-height:40px">Frequently asked questions</h2>
+      <p style="margin:12px auto 0;color:#4a5b52;max-width:576px">Answers about our glass hardware, materials, finishes and ordering in Saudi Arabia.</p>
+    </div>
+    <div style="margin-top:40px;display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="8">
+        <div style="border-radius:12px;border:1px solid #d6e2db;background:#ffffff;overflow:hidden">
+          <button onClick="{{ q.toggle }}" aria-expanded="{{ q.open }}" style="display:flex;width:100%;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;text-align:left;font-size:16px;line-height:24px;font-weight:600" style-hover="color:#006c35">
+            <h3 style="font-size:16px;line-height:24px;font-weight:600">{{ q.q }}</h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="height:20px;width:20px;flex-shrink:0;color:#c9a24a;transition:transform 200ms ease;transform:{{ q.rot }}"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+          <div style="display:grid;grid-template-rows:{{ q.rows }};transition:grid-template-rows 250ms ease">
+            <div style="overflow:hidden">
+              <p style="padding:0 24px 20px;color:#4a5b52;line-height:1.625;text-wrap:pretty">{{ q.a }}</p>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Reviews" style="border-top:1px solid #d6e2db">
+  <div style="max-width:1240px;margin:0 auto;padding:80px 20px">
+    <div style="text-align:center">
+      <div style="font-size:12px;line-height:16px;text-transform:uppercase;letter-spacing:0.3em;color:#c9a24a">Reviews</div>
+      <h2 style="margin-top:12px;font-size:36px;line-height:40px">Read what our customers have to say</h2>
+    </div>
+    <div style="margin-top:40px;display:grid;grid-template-columns:{{ revCols }};gap:20px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+        <figure style="border-radius:16px;border:1px solid #d6e2db;background:#ffffff;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -8px rgb(15 23 42 / 0.08)">
+          <div role="img" aria-label="{{ r.ratingLabel }}" style="display:flex;gap:4px">
+            <sc-for list="{{ r.stars }}" as="s" hint-placeholder-count="5"><svg viewBox="0 0 24 24" fill="#c9a24a" stroke="#c9a24a" stroke-width="1.5" stroke-linejoin="round" style="height:18px;width:18px"><path d="M11.5 2.6a.6.6 0 0 1 1 0l2.8 5.7 6.3.9a.6.6 0 0 1 .3 1l-4.6 4.4 1.1 6.3a.6.6 0 0 1-.8.6L12 18.6l-5.6 2.9a.6.6 0 0 1-.8-.6l1.1-6.3L2.1 10.2a.6.6 0 0 1 .3-1l6.3-.9Z"></path></svg></sc-for>
+          </div>
+          <blockquote style="flex:1 1 0%;color:#0f2a1c;line-height:1.625;text-wrap:pretty">“{{ r.text }}”</blockquote>
+          <figcaption style="display:flex;align-items:center;gap:12px;border-top:1px solid #d6e2db;padding-top:16px">
+            <span style="display:grid;place-items:center;height:40px;width:40px;border-radius:9999px;background:#006c35;color:#f8faf9;font-size:14px;font-weight:600">{{ r.initials }}</span>
+            <span style="font-size:15px;line-height:20px;font-weight:600">{{ r.name }}</span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="max-width:1240px;margin:0 auto;padding:80px 20px;text-align:center">
+  <h2 style="font-size:36px;line-height:40px">Ready to specify the right hardware?</h2>
+  <p style="margin:12px auto 0;color:#4a5b52;max-width:576px">Talk to our team for catalogues, quantity pricing and project consultation.</p>
+  <div style="margin-top:24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+    <a href="{{ wa }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;padding:12px 20px;font-size:14px;line-height:20px;font-weight:600;color:#ffffff;background-color:#25D366;transition:transform 300ms ease, box-shadow 300ms ease" style-hover="transform:translateY(-4px);box-shadow:0 10px 30px -10px rgb(15 23 42 / 0.25)">
+      <svg viewBox="0 0 32 32" fill="currentColor" style="height:16px;width:16px"><path d="M16 .396C7.164.396 0 7.560 0 16.396c0 2.832.744 5.6 2.164 8.020L.060 32l7.828-2.052A15.94 15.94 0 0 0 16 32.396c8.836 0 16-7.164 16-16s-7.164-16-16-16zm0 29.204a13.19 13.19 0 0 1-6.73-1.844l-.48-.288-4.652 1.220 1.240-4.532-.312-.468a13.14 13.14 0 0 1-2.020-7.088c0-7.280 5.924-13.204 13.208-13.204 3.528 0 6.844 1.376 9.340 3.876a13.11 13.11 0 0 1 3.868 9.336c-.004 7.280-5.928 13.204-13.208 13.204zm7.264-9.884c-.396-.2-2.348-1.160-2.712-1.292-.364-.132-.628-.2-.892.2s-1.024 1.292-1.256 1.556c-.232.264-.464.296-.86.1-.396-.2-1.676-.616-3.192-1.964-1.180-1.052-1.976-2.352-2.208-2.748-.232-.396-.024-.612.176-.808.18-.176.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696s-.892-2.152-1.224-2.948c-.324-.776-.652-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.060.496-1.392 1.360-1.392 3.316 1.424 3.848 1.624 4.112c.2.264 2.804 4.284 6.792 6.008.948.408 1.688.652 2.264.836.952.304 1.816.26 2.5.16.764-.116 2.348-.96 2.680-1.888.332-.928.332-1.724.232-1.888-.1-.164-.364-.264-.76-.464z"></path></svg>
+      WhatsApp Enquiry
+    </a>
+    <a href="contact" style="display:inline-flex;align-items:center;gap:8px;border-radius:6px;border:1px solid #d6e2db;background:#f8faf9;padding:12px 20px;font-size:14px;line-height:20px;font-weight:600">Contact Us</a>
+  </div>
+</section>
+
+</div>
+</main>
+
+<dc-import name="SiteFooter" hint-size="100%,400px" style="display:block"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const WA = "https://wa.me/966564508627?text=" + encodeURIComponent("Hi, I would like to send an enquiry about Top Line Glass Products Accessories.");
+const cms = () => new Promise((r) => { let n = 0; const t = () => (window.SahroCMS ? r(window.SahroCMS) : ++n < 250 && setTimeout(t, 20)); t(); });
+const STATS = [
+  { n: 20000, suffix: "+ sqm", l: "of factories & showrooms" },
+  { n: 2, suffix: "", l: "factories, 2 showrooms" },
+  { n: 90, suffix: "%+", l: "exported to GCC markets" },
+  { n: 250, suffix: "+", l: "products in our catalogue" },
+];
+const REVIEWS = [
+  [
+    "Maya Bini",
+    5,
+    "Excellent merchandise, good prices, and top-notch service. We thank the management and the entire staff, especially Abu Ahmed. All our appreciation and respect to him."
+  ],
+  [
+    "Sobhi Saad",
+    5,
+    "Excellent quality goods, superb service from our Yemeni sales team, and reasonable prices. Our regards to them; we highly recommend dealing with them."
+  ],
+  [
+    "Fahd",
+    5,
+    "Excellent company and great prices"
+  ]
+];
+const FAQS = [
+  [
+    "What products does Top Line Glass Products Accessories supply?",
+    "We manufacture and supply glass door accessories, shower enclosure accessories, handrail accessories, automatic door accessories, curtain accessories and metal channels. The range covers patch fittings, hinges, glass clamps, handrail brackets, sliding door operators, curtain fittings and stainless steel U-channels and L-corners for residential and commercial projects in Saudi Arabia."
+  ],
+  [
+    "Which materials and finishes are available for your glass hardware?",
+    "Most of our glass hardware is made from stainless steel, brass, zinc alloy or aluminium. Available finishes include polished chrome, satin (brushed) stainless steel, matt black and gold, depending on the product. Each product page lists its exact main material and available finishes."
+  ],
+  [
+    "Are your shower enclosure accessories suitable for humid bathrooms?",
+    "Yes. Our shower hinges, glass clamps, support bars and sliding rollers are made from corrosion-resistant stainless steel and brass with protective finishes, so they stay secure and keep their appearance in humid bathroom conditions with regular cleaning."
+  ],
+  [
+    "Do you supply automatic sliding door operators and spare parts?",
+    "Yes. We supply complete SAHRO automatic sliding door operators for single and double doors, together with components such as motor units, controllers, belts, pulleys, hanging wheels and terminal blocks for installation, repair and maintenance of commercial entrances."
+  ],
+  [
+    "Can I order handrail and balustrade fittings for a full project?",
+    "Yes. We supply handrail brackets, connectors, end caps, elbows, standoffs and glass balustrade fittings in project quantities for villas, towers, hotels, malls and offices. Contact our team with your drawings or bill of quantities for pricing and availability."
+  ],
+  [
+    "What glass thickness do your metal channels and glass clamps support?",
+    "Our stainless steel U-channels and L-corner profiles come in several sizes for different glass thicknesses. Glass clamps, hinges and patch fittings are designed for tempered glass, and the supported thickness for each item is shown in its specification drawing on the product page."
+  ],
+  [
+    "Where is your showroom and do you deliver across Saudi Arabia?",
+    "Our showroom is on Al Madina Al Munawwarah Road in Al Sina'iyah, Riyadh. We supply contractors, glass installers and distributors in Riyadh and across the Kingdom of Saudi Arabia. Call, email or message us on WhatsApp to arrange delivery for your order."
+  ],
+  [
+    "How can I get a catalogue or a quotation?",
+    "You can download our product catalogues as PDF files from the Catalogues page, or contact us through the Contact Us page, by phone or on WhatsApp. Share the model numbers and quantities you need and our team will send you a quotation."
+  ]
+];
+const CAT_SEO = {
+  "glass-door-accessories": "Premium glass door accessories for frameless entrances, offices and retail fronts in Saudi Arabia. Explore stainless steel patch fittings, floor springs, pull handles, glass door locks and hinges engineered for tempered glass, smooth daily operation and a clean architectural finish in every project.",
+  "shower-enclosure-accessories": "Shower enclosure accessories for frameless and semi-frameless bathrooms. Choose glass-to-wall hinges, glass clamps, support bars, sliding rollers, knobs and seals made from corrosion-resistant stainless steel and brass, built to stay secure, smooth and polished in humid bathroom conditions.",
+  "handrail-accessories": "Handrail accessories for glass balustrades, staircases and balconies. Our range covers stainless steel brackets, end caps, elbows, connectors, standoffs and base fittings that deliver secure, durable railings with a refined finish for residential, hospitality and commercial projects across KSA.",
+  "automatic-door-accessories": "Automatic door accessories for commercial entrances, malls, hospitals and hotels. Discover SAHRO sliding door operators, motor units, controllers, belts, pulleys and hanging wheels built for quiet, reliable and efficient performance under heavy daily traffic in the demanding Gulf climate.",
+  "curtain-accessories": "Curtain accessories that combine smooth operation with a premium look. Browse curtain tracks, brackets, gliders, end stops and fittings in durable materials, suited to villas, hotels and offices that need quiet, dependable curtain systems with a clean, refined finish in every room and space.",
+  "metal-channels": "Metal channels for secure and elegant glass installation. Our stainless steel U-channel profiles and L-corner trims hold glass panels firmly, protect exposed edges and give partitions, shower screens and balustrades a precise, clean finish, available in several sizes for different glass thicknesses."
+};
+class Component extends DCLogic {
+  state = { idx: 0, paused: false, w: window.innerWidth, open: false, hov: null, slides: [], why: [], whyIdx: 0, catalog: null, pimg: {}, faq: 0 };
+  hc = {}; refCbs = {}; countEls = [];
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this.onResize);
+    cms().then((c) => Promise.all([c.load("slides"), c.load("why")])).then(([slides, why]) => this.setState({ slides, why }));
+    cms().then(async (c) => { const v = await c.getStored("productImages"); if (v) this.setState({ pimg: await c.resolve(v) }); });
+    fetch("src/data/products.json").then((r) => r.json()).then((catalog) => this.setState({ catalog }));
+    if (!document.getElementById("faq-ld")) { const s = document.createElement("script"); s.type = "application/ld+json"; s.id = "faq-ld";
+      s.textContent = JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
+      document.head.appendChild(s); }
+    this.whyTimer = setInterval(() => this.setState((s) => (s.why.length > 1 ? { whyIdx: (s.whyIdx + 1) % s.why.length } : null)), 4000);
+    this.startTimer();
+  }
+  componentDidUpdate(_, prev) { if (prev.paused !== this.state.paused || prev.slides !== this.state.slides) this.startTimer(); }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize);
+    clearInterval(this.timer);
+    clearInterval(this.whyTimer);
+    (this.ios || []).forEach((io) => io.disconnect());
+  }
+  startTimer() {
+    clearInterval(this.timer);
+    const n = this.state.slides.length;
+    if (this.state.paused || n < 2) return;
+    this.timer = setInterval(() => this.setState((s) => ({ idx: (s.idx + 1) % (s.slides.length || 1) })), 5500);
+  }
+  h(key) {
+    if (!this.hc[key]) this.hc[key] = {
+      enter: () => this.setState({ hov: key }),
+      leave: () => this.setState((s) => (s.hov === key ? { hov: null } : null)),
+    };
+    return this.hc[key];
+  }
+  countRef(i) {
+    const k = "count" + i;
+    if (!this.refCbs[k]) this.refCbs[k] = (el) => {
+      if (!el || el.__init) return;
+      el.__init = true;
+      const { n, suffix } = STATS[i];
+      el.textContent = "0" + suffix;
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !el.__started) {
+            el.__started = true;
+            const start = performance.now();
+            const tick = (now) => {
+              const t = Math.min(1, (now - start) / 1800);
+              const eased = 1 - Math.pow(1 - t, 3);
+              el.textContent = Math.round(n * eased).toLocaleString() + suffix;
+              if (t < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        });
+      }, { threshold: 0.3 });
+      io.observe(el);
+      (this.ios = this.ios || []).push(io);
+    };
+    return this.refCbs[k];
+  }
+
+  catSegs(sm, lg) {
+    const cat = this.state.catalog, hov = this.state.hov;
+    if (!cat) return [];
+    const find = (slug) => { for (const c of cat.categories) { const p = c.products.find((y) => !y.ref && y.slug === slug); if (p) return p; } };
+    return cat.categories.map((c, ci) => ({
+      label: c.name, name: c.name, text: CAT_SEO[c.slug] || "", kicker: `Category ${String(ci + 1).padStart(2, "0")}`,
+      bg: ci % 2 ? "#f8faf9" : "#ffffff", href: `products?c=${c.slug}`, viewLabel: `View all ${c.name}`,
+      cards: c.products.slice(0, 3).map((e) => {
+        const p = e.ref ? find(e.slug) : e, k = `seg:${c.slug}:${p.slug}`, on = hov === k;
+        return { href: `product?c=${c.slug}&p=${p.slug}`, img: (this.state.pimg[p.slug] || [p.image])[0], title: p.item_description,
+          modelLabel: p.model_number ? `Model No. ${p.model_number}` : "", h: this.h(k),
+          lift: on ? "translateY(-4px)" : "none", shadow: on ? "0 20px 40px -20px rgb(15 42 28 / 0.25)" : "none",
+          zoom: on ? "scale(1.06)" : "none", bright: on ? "brightness(1.05)" : "none", shine: on ? "150%" : "-75%" };
+      }),
+    }));
+  }
+
+  renderVals() {
+    const { idx, w, open, hov } = this.state;
+    const sm = w >= 640, md = w >= 768, lg = w >= 1024, xl = w >= 1280;
+    const SLIDES = this.state.slides, total = SLIDES.length || 1;
+    const whyN = this.state.why.length, wIdx = this.state.whyIdx % (whyN || 1);
+    const whyImgs = this.state.why.map((src, i) => ({ src, op: i === wIdx ? 1 : 0, pe: i === wIdx ? "auto" : "none", label: `Show image ${i + 1}`,
+      go: () => this.setState({ whyIdx: i }), dotW: i === wIdx ? 32 : 16, dotBg: i === wIdx ? "#c9a24a" : "rgba(255,255,255,0.6)" }));
+    const ul = (k) => hov === k;
+
+    const slides = SLIDES.map((s, i) => ({
+      ...s,
+      hidden: i !== idx,
+      opacity: i === idx ? 1 : 0,
+      display: i === idx ? "block" : "none",
+      loading: i === 0 ? "eager" : "lazy",
+      label: `Go to slide ${i + 1}`,
+      go: () => this.setState({ idx: i }),
+      dotH: this.h("dot" + i),
+      dotW: i === idx ? 32 : 16,
+      dotBg: i === idx ? "#c9a24a" : (hov === "dot" + i ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.4)"),
+    }));
+
+    return {
+      wa: WA, year: new Date().getFullYear(),
+      sm, md, lg, xl, notLg: !lg, open, closed: !open, showMobileMenu: open && !lg,
+      hdrPad: lg ? 16 : 12,
+      logoH: this.h("logo"), logoScale: hov === "logo" ? "scale(1.05)" : "none",
+      navH: this.h("nav"),
+      ddVis: hov === "nav" ? "visible" : "hidden", ddOp: hov === "nav" ? 1 : 0, ddY: hov === "nav" ? "0" : "4px",
+      toggleMenu: () => this.setState((s) => ({ open: !s.open })),
+      closeMenu: () => this.setState({ open: false }),
+      slides, whyImgs, whyMulti: whyN > 1,
+      segCols: md ? "repeat(3,minmax(0,1fr))" : "minmax(0,1fr)",
+      catSegs: this.catSegs(sm, lg),
+      revCols: md ? "repeat(3,minmax(0,1fr))" : "minmax(0,1fr)",
+      reviews: REVIEWS.map(([name, rating, text]) => ({ name, text, stars: Array.from({ length: rating }, (_, i) => i), ratingLabel: `${rating} out of 5 stars`,
+        initials: name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("").toUpperCase() })),
+      faqs: FAQS.map(([q, a], i) => { const o = this.state.faq === i; return { q, a, open: o ? "true" : "false", rot: o ? "rotate(180deg)" : "none", rows: o ? "1fr" : "0fr",
+        toggle: () => this.setState((s) => ({ faq: s.faq === i ? null : i })) }; }),
+      pause: () => this.setState({ paused: true }), resume: () => this.setState({ paused: false }),
+      prev: () => this.setState((s) => ({ idx: (s.idx - 1 + total) % total })),
+      next: () => this.setState((s) => ({ idx: (s.idx + 1) % total })),
+      heroPad: md ? 128 : 96, h1Size: md ? 60 : 48, arrowInset: md ? 24 : 12,
+      stats: STATS.map((s, i) => ({ ...s, ref: this.countRef(i) })),
+      statsCols: md ? 4 : 2, statsAlign: md ? "left" : "center",
+      u2: this.h("u2"), u2T: ul("u2") ? "scaleX(1)" : "scaleX(0)", u2O: ul("u2") ? "left" : "right",
+      whyCols: lg ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      footerCols: md ? "repeat(4,minmax(0,1fr))" : "minmax(0,1fr)",
+    };
+  }
+}
+</script>
+</body>
+</html>

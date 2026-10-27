@@ -9,7 +9,7 @@
 <x-dc>
 <header style="border-bottom:1px solid #d6e2db;background:rgba(248,250,249,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">
   <div style="margin:0 auto;max-width:1280px;padding:0 {{ hdrPad }}px;display:flex;height:80px;align-items:center;justify-content:space-between;gap:12px">
-    <a href="./" onMouseEnter="{{ logoH.enter }}" onMouseLeave="{{ logoH.leave }}" style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+    <a href="home" onMouseEnter="{{ logoH.enter }}" onMouseLeave="{{ logoH.leave }}" style="display:flex;align-items:center;gap:12px;flex-shrink:0">
       <img src="public/favicon.png" alt="Top Line Glass Products Accessories" width="108" height="56" style="height:56px;width:auto;transition:transform 150ms cubic-bezier(0.4,0,0.2,1);transform:{{ logoScale }}">
       <sc-if value="{{ xl }}" hint-placeholder-val="{{ true }}">
         <div style="line-height:1.25">
@@ -104,7 +104,7 @@
 const slugify = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const LANGS = [["en", "English", "EN"], ["ar", "العربية", "AR"], ["bn", "বাংলা", "BN"]];
 const LS_KEY = "sahro_lang";
-const getLang = () => { let v = null; try { v = localStorage.getItem(LS_KEY); } catch (e) {} return LANGS.some((l) => l[0] === v) ? v : "en"; };
+const getLang = () => { let v = null; try { v = localStorage.getItem(LS_KEY); } catch (e) {} return LANGS.some((l) => l[0] === v) ? v : "ar"; };
 function initTranslate() {
   if (window.SahroI18n || document.querySelector('script[data-sahro-i18n]')) return;
   const s = document.createElement("script"); s.src = "src/i18n.js"; s.dataset.sahroI18n = "1"; document.head.appendChild(s);
@@ -145,7 +145,7 @@ class Component extends DCLogic {
       langs: LANGS.map(([code, label, short]) => { const on = code === this.state.lang; return { code, label, short,
         fw: on ? 600 : 500, color: on ? "#006c35" : "#0f2a1c", bg: on ? "#eef5f1" : "transparent",
         bc: on ? "#006c35" : "#d6e2db", mColor: on ? "#f8faf9" : "#0f2a1c", mBg: on ? "#006c35" : "#ffffff",
-        pick: () => { if (code === this.state.lang) return this.setState({ langOpen: false }); try { code === "en" ? localStorage.removeItem(LS_KEY) : localStorage.setItem(LS_KEY, code); } catch (e) {} document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"; location.reload(); } }; }),
+        pick: () => { if (code === this.state.lang) return this.setState({ langOpen: false }); try { localStorage.setItem(LS_KEY, code); } catch (e) {} document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"; location.reload(); } }; }),
       cats: this.state.cats.map((c, i) => ({ name: c.name, n: i + 1, href: "products?c=" + c.slug })),
     };
   }

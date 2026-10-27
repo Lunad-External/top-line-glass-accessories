@@ -164,8 +164,8 @@ class Component extends DCLogic {
     const pHref = (p) => `product?c=${p.categorySlug}&p=${p.slug}`;
 
     const crumbs = catName
-      ? [{ label: "Home", href: "./" }, { label: "Products", href: "products" }, { label: catName }]
-      : [{ label: "Home", href: "./" }, { label: "Products" }];
+      ? [{ label: "Home", href: "home" }, { label: "Products", href: "products" }, { label: catName }]
+      : [{ label: "Home", href: "home" }, { label: "Products" }];
 
     return {
       notFound, found: !notFound,
