@@ -1,9 +1,9 @@
 (function () {
   if (window.SahroI18n) return;
   const KEY = "sahro_lang";
-  let lang = "en";
-  try { lang = localStorage.getItem(KEY) || "en"; } catch (e) {}
-  if (!["en", "ar", "bn"].includes(lang)) lang = "en";
+  let lang = "ar";
+  try { lang = localStorage.getItem(KEY) || "ar"; } catch (e) {}
+  if (!["en", "ar", "bn"].includes(lang)) lang = "ar";
   const I = { ar: 0, bn: 1 };
 
   // English → [Arabic, Bangla]
@@ -423,7 +423,7 @@
 
   window.SahroI18n = {
     lang,
-    set(v) { try { v === "en" ? localStorage.removeItem(KEY) : localStorage.setItem(KEY, v); } catch (e) {} location.reload(); },
+    set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} location.reload(); },
   };
   if (document.body) start(); else document.addEventListener("DOMContentLoaded", start);
 })();
